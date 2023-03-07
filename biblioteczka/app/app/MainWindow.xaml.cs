@@ -59,25 +59,18 @@ namespace app
             var database = new database();
             if (database.connect_db())
             {
+
                 string query = "SELECT * FROM books";
                 MySqlCommand command = new MySqlCommand(query);
                 command.Connection = database.sql;
                 MySqlDataAdapter adapter = new MySqlDataAdapter();
                 adapter.SelectCommand = command;
                 DataTable dt = new DataTable();
-
-                //dt.Load(command.ExecuteReader());
-
-
                 adapter.Fill(dt);
                 BindingSource bindingSource = new BindingSource();
                 bindingSource.DataSource = dt;
-
-                //dane.DataSource = bindingSource;
-
+                dane.ItemsSource = bindingSource;
                 database.close_db();
-
-                //dane.DataContext = dt;
 
             }
            
