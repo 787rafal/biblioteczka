@@ -453,7 +453,7 @@
             </Button>
         </Grid>
         <Grid HorizontalAlignment="Center" Height="442" Margin="0,158,0,0" VerticalAlignment="Top" Width="1000">
-            <DataGrid x:Name="dane" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="10,10,10,10"/>
+            <DataGrid x:Name="dane" d:ItemsSource="{d:SampleData ItemCount=4}" Margin="10,10,10,10"/>
         </Grid>
         <RadioButton Content="AUTHOR" HorizontalAlignment="Left" Margin="691,73,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
         <RadioButton Content="TITLE" HorizontalAlignment="Left" Margin="826,73,0,0" VerticalAlignment="Top" FontWeight="Bold"/>

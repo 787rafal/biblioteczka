@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using MySql.Data.MySqlClient;
 using System.Data;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace app
 {
@@ -70,8 +71,50 @@ namespace app
                 BindingSource bindingSource = new BindingSource();
                 bindingSource.DataSource = dt;
                 dane.ItemsSource = bindingSource;
-                database.close_db();
 
+
+                /* Panie Czech
+                 * Tutaj na dole jest jak wyciagnac kazda skladowa z danego wiersza
+                 * W ten sposob moglibysmy je wpisywac do danego nwm "textboxa" poprzez zwykle value czy cos
+                 * Wydaje mi sie ze moze byc mniej pierdolenia niz z tym DataGrid, bo moze kazdym elementem z osobna sterowac
+                 * Wyniki tego kodu mozesz zobaczyc w okienku "Dane wyjsciowe" tylko musi tam byc zaznaczone pokaz dane wyjsciowe z DEBUGOWANIA
+                 * 
+                 * 
+                 * 
+                 */
+
+                MySqlCommand cmd = new MySqlCommand(query, database.sql);
+               
+                MySqlDataReader ItemsAmount = cmd.ExecuteReader();
+                int rowCount = 0;
+                int columnCount = ItemsAmount.FieldCount;
+                while (ItemsAmount.Read())
+                {
+                    rowCount++;
+                }
+                Trace.WriteLine("Number of rows = " + rowCount + "\nNumber of columns = " + columnCount +"\n");
+                ItemsAmount.Close();
+
+
+
+                MySqlDataReader dataReader = cmd.ExecuteReader(); 
+                while (dataReader.Read())
+                {
+                    Trace.WriteLine(dataReader["id_book"]);
+                    Trace.WriteLine(dataReader["title"]);
+                    Trace.WriteLine(dataReader["image"]);
+                    string pubDate = dataReader["publication_date"].ToString();
+                    pubDate = pubDate.Substring(0, pubDate.IndexOf(" "));
+                    Trace.WriteLine(pubDate);
+                    //Trace.WriteLine(dataReader["publication_date"]);
+                    Trace.WriteLine(dataReader["author_id"]);
+                    Trace.WriteLine(dataReader["genre_id"]);
+                    Trace.WriteLine("");
+                }
+                dataReader.Close();
+
+                database.close_db();
+   
             }
            
         }
