@@ -12,6 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using MySql.Data.MySqlClient;
+using System.Data;
+using System.Windows.Forms;
 
 namespace app
 {
@@ -23,6 +26,7 @@ namespace app
         public MainWindow()
         {
             InitializeComponent();
+            Loaded += load;
         }
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -33,6 +37,55 @@ namespace app
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
 
+        }
+
+        private void przeciagnij(object sender, MouseButtonEventArgs e)
+        {
+            this.DragMove();
+        }
+
+        private void close_btn(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void min_btn(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
+        }
+
+        public void loadData()
+        {
+            var database = new database();
+            if (database.connect_db())
+            {
+                string query = "SELECT * FROM books";
+                MySqlCommand command = new MySqlCommand(query);
+                command.Connection = database.sql;
+                MySqlDataAdapter adapter = new MySqlDataAdapter();
+                adapter.SelectCommand = command;
+                DataTable dt = new DataTable();
+
+                //dt.Load(command.ExecuteReader());
+
+
+                adapter.Fill(dt);
+                BindingSource bindingSource = new BindingSource();
+                bindingSource.DataSource = dt;
+
+                //dane.DataSource = bindingSource;
+
+                database.close_db();
+
+                //dane.DataContext = dt;
+
+            }
+           
+        }
+
+        private void load(object sender, RoutedEventArgs e)
+        {
+            loadData();
         }
     }
 }
