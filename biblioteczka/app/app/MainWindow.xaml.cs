@@ -14,7 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using MySql.Data.MySqlClient;
 using System.Data;
-using System.Windows.Forms;
+//using System.Windows.Forms;
 using System.Diagnostics;
 
 namespace app
@@ -24,8 +24,10 @@ namespace app
     /// </summary>
     public partial class MainWindow : Window
     {
+        public static MainWindow _instance;
         public MainWindow()
         {
+            _instance = this;
             InitializeComponent();
             Loaded += load;
         }
@@ -61,58 +63,179 @@ namespace app
             if (database.connect_db())
             {
 
-                string query = "SELECT * FROM books";
-                MySqlCommand command = new MySqlCommand(query);
-                command.Connection = database.sql;
-                MySqlDataAdapter adapter = new MySqlDataAdapter();
-                adapter.SelectCommand = command;
-                DataTable dt = new DataTable();
-                adapter.Fill(dt);
-                BindingSource bindingSource = new BindingSource();
-                bindingSource.DataSource = dt;
-                dane.ItemsSource = bindingSource;
+                string query = "SELECT * FROM books JOIN authors ON author_id = id_author JOIN genres ON genre_id = id_genres;";
+                string query2 = "SELECT * FROM genres";
 
 
-                /* Panie Czech
-                 * Tutaj na dole jest jak wyciagnac kazda skladowa z danego wiersza
-                 * W ten sposob moglibysmy je wpisywac do danego nwm "textboxa" poprzez zwykle value czy cos
-                 * Wydaje mi sie ze moze byc mniej pierdolenia niz z tym DataGrid, bo moze kazdym elementem z osobna sterowac
-                 * Wyniki tego kodu mozesz zobaczyc w okienku "Dane wyjsciowe" tylko musi tam byc zaznaczone pokaz dane wyjsciowe z DEBUGOWANIA
-                 * 
-                 * 
-                 * 
-                 */
+                //MySqlCommand command = new MySqlCommand(query);
+                //command.Connection = database.sql;
+                //MySqlDataAdapter adapter = new MySqlDataAdapter();
+                //adapter.SelectCommand = command;
+                //DataTable dt = new DataTable();
+                //adapter.Fill(dt);
+                //BindingSource bindingSource = new BindingSource();
+                //bindingSource.DataSource = dt;
+                //dane.ItemsSource = bindingSource;   
 
-                MySqlCommand cmd = new MySqlCommand(query, database.sql);
-               
-                MySqlDataReader ItemsAmount = cmd.ExecuteReader();
+
+                MySqlCommand cmd3 = new MySqlCommand(query, database.sql);            
+                MySqlDataReader ItemsAmount = cmd3.ExecuteReader();
                 int rowCount = 0;
-                int columnCount = ItemsAmount.FieldCount;
+                //int columnCount = ItemsAmount.FieldCount;
                 while (ItemsAmount.Read())
                 {
                     rowCount++;
                 }
-                Trace.WriteLine("Number of rows = " + rowCount + "\nNumber of columns = " + columnCount +"\n");
+                //Trace.WriteLine("Number of rows = " + rowCount + "\nNumber of columns = " + columnCount +"\n");
                 ItemsAmount.Close();
 
 
+                MySqlCommand cmd2 = new MySqlCommand(query2, database.sql);
+                MySqlDataReader dataReader2 = cmd2.ExecuteReader();
+                //dataReader.Read();
+                //while (dataReader.Read())
+                //{
+                //    Trace.WriteLine(dataReader["id_book"]);
+                //    Trace.WriteLine(dataReader["title"]);
+                //    Trace.WriteLine(dataReader["image"]);
+                //    string pubDate = dataReader["publication_date"].ToString();
+                //    pubDate = pubDate.Substring(0, pubDate.IndexOf(" "));
+                //    Trace.WriteLine(pubDate);
+                //    //Trace.WriteLine(dataReader["publication_date"]);
+                //    Trace.WriteLine(dataReader["author_id"]);
+                //    Trace.WriteLine(dataReader["genre_id"]);
+                //    Trace.WriteLine("");
+                //}
 
-                MySqlDataReader dataReader = cmd.ExecuteReader(); 
-                while (dataReader.Read())
+                while (dataReader2.Read())
                 {
-                    Trace.WriteLine(dataReader["id_book"]);
-                    Trace.WriteLine(dataReader["title"]);
-                    Trace.WriteLine(dataReader["image"]);
-                    string pubDate = dataReader["publication_date"].ToString();
-                    pubDate = pubDate.Substring(0, pubDate.IndexOf(" "));
-                    Trace.WriteLine(pubDate);
-                    //Trace.WriteLine(dataReader["publication_date"]);
-                    Trace.WriteLine(dataReader["author_id"]);
-                    Trace.WriteLine(dataReader["genre_id"]);
-                    Trace.WriteLine("");
+                    selectGenres.Items.Add(dataReader2["name_genre"]);
                 }
-                dataReader.Close();
+                    
+                dataReader2.Close();
 
+                MySqlCommand cmd = new MySqlCommand(query, database.sql);
+                MySqlDataReader dataReader = cmd.ExecuteReader();
+
+                SolidColorBrush losos = new SolidColorBrush(Color.FromRgb(180, 91, 91));
+                SolidColorBrush bialy = new SolidColorBrush(Color.FromRgb(255, 255, 255));
+                SolidColorBrush siwy = new SolidColorBrush(Color.FromRgb(217, 217, 217));
+                scroll.VerticalScrollBarVisibility = ScrollBarVisibility.Auto;
+                
+                for (int i = 0; i < rowCount; i++)
+                {
+                    dataReader.Read();
+                    Rectangle newRectangle = new Rectangle
+                    {
+                        Width = 850,
+                        Height = 200,
+                        Fill = losos,
+                        StrokeThickness = 0,
+                        VerticalAlignment = VerticalAlignment.Top,
+                        Margin = new Thickness(0, 213 * i, 0, 0),
+                    };
+                    kafelki.Children.Add(newRectangle);
+
+
+                    Rectangle tlo = new Rectangle
+                    {
+                        Width = 180,
+                        Height = 180,
+                        Fill = bialy,
+                        StrokeThickness = 0,
+                        VerticalAlignment = VerticalAlignment.Top,
+                        Margin = new Thickness(-642, (213 * i) + 10, 0, 0),
+                    };
+                    kafelki.Children.Add(tlo);
+
+
+                    Image newImage = new Image
+                    {
+                        Width = 180,
+                        Height = 180,
+                        Source = new BitmapImage(new Uri("C:/Users/komputer/Desktop/git/biblioteczka/biblioteczka/app/app/" + dataReader["image"])),
+                        Margin = new Thickness(-642, (213 * i) + 10, 0, 0),
+                        VerticalAlignment = VerticalAlignment.Top,
+                        
+                    };
+                    kafelki.Children.Add(newImage);
+
+
+                    TextBlock title = new TextBlock
+                    {
+                        Width = 450,
+                        Height = 25,
+                        FontSize = 16,
+                        Foreground = bialy,
+                        FontWeight = FontWeights.Bold,
+                        Text = dataReader["title"].ToString(),
+                        VerticalAlignment = VerticalAlignment.Top,
+                        Margin = new Thickness(70, (213 * i) + 40, 0, 0),
+                        Background = null,                      
+                    };
+                    kafelki.Children.Add(title);
+
+
+                    TextBlock author = new TextBlock
+                    {
+                        Width = 450,
+                        Height = 20,
+                        FontSize = 14,
+                        Foreground = bialy,
+                        Text = dataReader["name"].ToString() + " " + dataReader["last_name"].ToString(),
+                        VerticalAlignment = VerticalAlignment.Top,
+                        Margin = new Thickness(70, (213 * i) + 75, 0, 0),
+                        Background = null,
+                    };
+                    kafelki.Children.Add(author);
+
+
+                    TextBlock genre = new TextBlock
+                    {
+                        Width = 450,
+                        Height = 20,
+                        FontSize = 14,
+                        Foreground = bialy,
+                        Text = dataReader["name_genre"].ToString(),
+                        VerticalAlignment = VerticalAlignment.Top,
+                        Margin = new Thickness(70, (213 * i) + 105, 0, 0),
+                        Background = null,
+                    };
+                    kafelki.Children.Add(genre);
+
+
+                    TextBlock date = new TextBlock
+                    {
+                        Width = 450,
+                        Height = 20,
+                        FontSize = 14,
+                        Foreground = bialy,
+                        Text = dataReader["publication_date"].ToString(),
+                        VerticalAlignment = VerticalAlignment.Top,
+                        Margin = new Thickness(70, (213 * i) + 135, 0, 0),
+                        Background = null,
+                    };
+                    kafelki.Children.Add(date);
+
+
+                    //Button usun = new Button
+                    //{
+                    //    Width = 100,
+                    //    Height = 30,
+                    //    Name = "button" + dataReader["id_book"].ToString(),
+                    //    Background = siwy,
+                    //    Margin = new Thickness(690, (420 * i) - 550, 0, 0),
+                    //    Content = "DELETE BOOK",
+                    //    FontWeight = FontWeights.Bold,                 
+                    //};
+                    //usun.Click += new RoutedEventHandler(deleteRow);
+                    //kafelki.Children.Add(usun);
+
+
+                }
+
+
+                dataReader.Close();
                 database.close_db();
    
             }
@@ -123,5 +246,30 @@ namespace app
         {
             loadData();
         }
+
+        private void deleteRow(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void add_book(object sender, RoutedEventArgs e)
+        {
+            addBook dodaj = new addBook();
+            dodaj.Show();
+        }
+
+        private void newAuthor_Click(object sender, RoutedEventArgs e)
+        {
+            addAuthor autor = new addAuthor();
+            autor.Show();
+        }
+
+        //TO DO:
+        //wyszukiwanie
+        //dodanue autora
+        //import pliku do apki
+        //poprawa wygladu 
+        //jak nam sie chce walidaja danych
+
     }
 }

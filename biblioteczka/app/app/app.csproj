@@ -9,8 +9,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="czystykod.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="MySql.Data" Version="8.0.32" />
     <PackageReference Include="NuGet.Frameworks" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="czystykod.jpg" />
   </ItemGroup>
 
 </Project>

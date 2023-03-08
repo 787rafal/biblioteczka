@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-G:\STUDIA\PROGRAMOWANIE IV\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\
+C:\Users\komputer\Desktop\git\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\
 app
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-G:\STUDIA\PROGRAMOWANIE IV\biblioteczka\biblioteczka\app\app\App.xaml
-11407045341
+C:\Users\komputer\Desktop\git\biblioteczka\biblioteczka\app\app\App.xaml
+3-876284101
 
-6-1342524307
-211-711343232
-MainWindow.xaml;
+8-843238856
+211-665721696
+addAuthor.xaml;addBook.xaml;MainWindow.xaml;
 
-True
+False
 
