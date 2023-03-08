@@ -66,57 +66,25 @@ namespace app
                 string query = "SELECT * FROM books JOIN authors ON author_id = id_author JOIN genres ON genre_id = id_genres;";
                 string query2 = "SELECT * FROM genres";
 
-
-                //MySqlCommand command = new MySqlCommand(query);
-                //command.Connection = database.sql;
-                //MySqlDataAdapter adapter = new MySqlDataAdapter();
-                //adapter.SelectCommand = command;
-                //DataTable dt = new DataTable();
-                //adapter.Fill(dt);
-                //BindingSource bindingSource = new BindingSource();
-                //bindingSource.DataSource = dt;
-                //dane.ItemsSource = bindingSource;   
-
-
                 MySqlCommand cmd3 = new MySqlCommand(query, database.sql);            
                 MySqlDataReader ItemsAmount = cmd3.ExecuteReader();
                 int rowCount = 0;
-                //int columnCount = ItemsAmount.FieldCount;
                 while (ItemsAmount.Read())
                 {
                     rowCount++;
                 }
-                //Trace.WriteLine("Number of rows = " + rowCount + "\nNumber of columns = " + columnCount +"\n");
                 ItemsAmount.Close();
-
 
                 MySqlCommand cmd2 = new MySqlCommand(query2, database.sql);
                 MySqlDataReader dataReader2 = cmd2.ExecuteReader();
-                //dataReader.Read();
-                //while (dataReader.Read())
-                //{
-                //    Trace.WriteLine(dataReader["id_book"]);
-                //    Trace.WriteLine(dataReader["title"]);
-                //    Trace.WriteLine(dataReader["image"]);
-                //    string pubDate = dataReader["publication_date"].ToString();
-                //    pubDate = pubDate.Substring(0, pubDate.IndexOf(" "));
-                //    Trace.WriteLine(pubDate);
-                //    //Trace.WriteLine(dataReader["publication_date"]);
-                //    Trace.WriteLine(dataReader["author_id"]);
-                //    Trace.WriteLine(dataReader["genre_id"]);
-                //    Trace.WriteLine("");
-                //}
-
                 while (dataReader2.Read())
                 {
                     selectGenres.Items.Add(dataReader2["name_genre"]);
                 }
-                    
                 dataReader2.Close();
 
                 MySqlCommand cmd = new MySqlCommand(query, database.sql);
                 MySqlDataReader dataReader = cmd.ExecuteReader();
-
                 SolidColorBrush losos = new SolidColorBrush(Color.FromRgb(180, 91, 91));
                 SolidColorBrush bialy = new SolidColorBrush(Color.FromRgb(255, 255, 255));
                 SolidColorBrush siwy = new SolidColorBrush(Color.FromRgb(217, 217, 217));
@@ -266,8 +234,7 @@ namespace app
 
         //TO DO:
         //wyszukiwanie
-        //dodanue autora
-        //import pliku do apki
+        //usuwanie
         //poprawa wygladu 
         //jak nam sie chce walidaja danych
 

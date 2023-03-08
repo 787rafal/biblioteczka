@@ -14,6 +14,7 @@ using System.Windows.Shapes;
 using MySql.Data.MySqlClient;
 using System.Data;
 using System.Diagnostics;
+using System.IO;
 
 namespace app
 {
@@ -73,16 +74,6 @@ namespace app
             this.WindowState = WindowState.Minimized;
         }
 
-        //private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        //{
-        //    title.Visibility = Visibility.Hidden;
-        //}
-
-        //private void TextBox_TextChanged1(object sender, TextChangedEventArgs e)
-        //{
-        //    date.Visibility = Visibility.Hidden;
-        //}
-
         private void add_book(object sender, RoutedEventArgs e)
         {
 
@@ -94,7 +85,6 @@ namespace app
                 string tytul = SearchedText.Text;
                 string autor = selectAuthor.Text;
                 string gatunek = selectGenre.Text;
-                string path = SearchedText2.Text;
                 string date = SearchedText3.Text;
 
                 string zap = "INSERT INTO books (title, image, publication_date, author_id, genre_id) VALUES (@t, @p, @d, @a, @g)";
@@ -102,7 +92,7 @@ namespace app
                 MySqlCommand cmd = new MySqlCommand(zap, conn.sql);
 
                 cmd.Parameters.AddWithValue("@t", tytul);
-                cmd.Parameters.AddWithValue("@p", path);
+                cmd.Parameters.AddWithValue("@p", btn_img.Content);
                 cmd.Parameters.AddWithValue("@d", date);
                 cmd.Parameters.AddWithValue("@a", autor[0]);
                 cmd.Parameters.AddWithValue("@g", gatunek[0]);
@@ -122,14 +112,35 @@ namespace app
             title.Visibility = Visibility.Hidden;
         }
 
-        private void hide2(object sender, KeyEventArgs e)
-        {
-            img.Visibility = Visibility.Hidden;
-        }
-
         private void hide3(object sender, KeyEventArgs e)
         {
             date.Visibility = Visibility.Hidden;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+            Microsoft.Win32.OpenFileDialog dlg = new Microsoft.Win32.OpenFileDialog();
+
+            bool? response = dlg.ShowDialog();
+
+            if(response == true)
+            {
+                string filepath = dlg.FileName;
+                int location = filepath.LastIndexOf(@"\", StringComparison.OrdinalIgnoreCase);
+                string filename = filepath.Substring(location);
+                string final_name = "";
+                for(int i = 1; i < filename.Length; i++)
+                {
+                    final_name += filename[i];
+                }
+                if (!File.Exists("C:/Users/komputer/Desktop/git/biblioteczka/biblioteczka/app/app/" + final_name))
+                {
+                    File.Copy(filepath, "C:/Users/komputer/Desktop/git/biblioteczka/biblioteczka/app/app/" + final_name);
+                }
+                btn_img.Content = final_name;
+            }
+
         }
     }
 }

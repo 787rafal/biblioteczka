@@ -147,3 +147,5 @@ G:\STUDIA\PROGRAMOWANIE IV\biblioteczka\biblioteczka\app\app\bin\Debug\net6.0-wi
 G:\STUDIA\PROGRAMOWANIE IV\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\app.csproj.CopyComplete
 C:\Users\komputer\Desktop\git\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\addBook.g.cs
 C:\Users\komputer\Desktop\git\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\addBook.baml
+C:\Users\komputer\Desktop\git\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\addAuthor.g.cs
+C:\Users\komputer\Desktop\git\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\addAuthor.baml
