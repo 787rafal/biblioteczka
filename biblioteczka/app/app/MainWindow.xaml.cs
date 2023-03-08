@@ -186,18 +186,21 @@ namespace app
                     kafelki.Children.Add(date);
 
 
-                    //Button usun = new Button
-                    //{
-                    //    Width = 100,
-                    //    Height = 30,
-                    //    Name = "button" + dataReader["id_book"].ToString(),
-                    //    Background = siwy,
-                    //    Margin = new Thickness(690, (420 * i) - 550, 0, 0),
-                    //    Content = "DELETE BOOK",
-                    //    FontWeight = FontWeights.Bold,                 
-                    //};
-                    //usun.Click += new RoutedEventHandler(deleteRow);
-                    //kafelki.Children.Add(usun);
+                    Button usun = new Button
+                    {
+                        Width = 100,
+                        Height = 30,
+                        Name = "b" + i,
+                        Tag = dataReader["id_book"],
+                        Background = siwy,
+                        BorderBrush = null,
+                        VerticalAlignment = VerticalAlignment.Top,
+                        Margin = new Thickness(690, (213 * i) + 10, 0, 0),
+                        Content = "DELETE BOOK",
+                        FontWeight = FontWeights.Bold,
+                    };
+                    usun.Click += new RoutedEventHandler(deleteRow);
+                    kafelki.Children.Add(usun);
 
 
                 }
@@ -218,6 +221,28 @@ namespace app
         private void deleteRow(object sender, RoutedEventArgs e)
         {
 
+            Button button = (Button)e.OriginalSource;
+            string id = button.Tag.ToString();
+            
+
+            var conn = new database();
+
+            if (conn.connect_db())
+            {
+
+                string zap = "DELETE FROM books WHERE id_book = @i";
+                MySqlCommand cmd = new MySqlCommand(zap, conn.sql);
+                cmd.Parameters.AddWithValue("@i", id);
+                cmd.ExecuteNonQuery();
+                //this.loadData();
+                //this.InvalidateVisual();
+                MainWindow okno = new MainWindow();
+                okno.Show();
+                this.Close();
+                
+
+            }
+
         }
 
         private void add_book(object sender, RoutedEventArgs e)
@@ -232,9 +257,11 @@ namespace app
             autor.Show();
         }
 
+
         //TO DO:
+
         //wyszukiwanie
-        //usuwanie
+        //refresh danych po usunieciu
         //poprawa wygladu 
         //jak nam sie chce walidaja danych
 
