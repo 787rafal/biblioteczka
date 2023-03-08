@@ -457,9 +457,15 @@
             </Button>
         </Grid>
 
-        <RadioButton Content="AUTHOR" HorizontalAlignment="Left" Margin="691,73,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <RadioButton Content="TITLE" HorizontalAlignment="Left" Margin="826,73,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <Button Style="{DynamicResource RoundedButtonStyle}" x:Name="confirm" Content="CONFIRM"  HorizontalAlignment="Left" Margin="741,98,0,0" VerticalAlignment="Top" Width="150" Height="30" BorderThickness="0,0,0,0" Background="#FF232222" BorderBrush="#00707070" Foreground="White" FontWeight="Bold"/>
+        <GroupBox x:Name="radio_btn" Margin="691,77,221,493" BorderBrush="{x:Null}">
+            <StackPanel Height="32">
+                <RadioButton x:Name="status1" Content="TITLE" FontWeight="Bold" Width="75" Height="15" HorizontalAlignment="Left"/>
+                <RadioButton x:Name="status2" Content="AUTHOR" FontWeight="Bold" IsChecked="True" Width="76" Margin="0,4,0,0" Height="15"/>
+            </StackPanel>
+        </GroupBox>
+
+
+        <Button Style="{DynamicResource RoundedButtonStyle}" x:Name="confirm" Content="CONFIRM"  HorizontalAlignment="Left" Margin="791,87,0,0" VerticalAlignment="Top" Width="150" Height="30" BorderThickness="0,0,0,0" Background="#FF232222" BorderBrush="#00707070" Foreground="White" FontWeight="Bold" Click="confirm_Click"/>
 
         <ScrollViewer x:Name="scroll" Margin="0,163,0,0" Padding="0,0,0,15">
             <Grid x:Name="kafelki" Width="1000" />
