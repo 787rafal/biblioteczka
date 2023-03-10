@@ -129,10 +129,11 @@ namespace app
                     {
                         Width = 180,
                         Height = 180,
-                        Source = new BitmapImage(new Uri("C:/Users/komputer/Desktop/git/biblioteczka/biblioteczka/app/app/" + dataReader["image"])),
+                        Source = new BitmapImage(new Uri(System.IO.Directory.GetCurrentDirectory()+ dataReader["image"])),
                         Margin = new Thickness(-642, (213 * i) + 10, 0, 0),
                         VerticalAlignment = VerticalAlignment.Top,
-                        
+
+
                     };
                     kafelki.Children.Add(newImage);
 
@@ -180,13 +181,16 @@ namespace app
                     kafelki.Children.Add(genre);
 
 
+                    string pubDate = dataReader["publication_date"].ToString();
+                    pubDate = pubDate.Substring(0, pubDate.IndexOf(" "));
+
                     TextBlock date = new TextBlock
                     {
                         Width = 450,
                         Height = 20,
                         FontSize = 14,
                         Foreground = bialy,
-                        Text = dataReader["publication_date"].ToString(),
+                        Text = pubDate,
                         VerticalAlignment = VerticalAlignment.Top,
                         Margin = new Thickness(70, (213 * i) + 135, 0, 0),
                         Background = null,
@@ -360,7 +364,7 @@ namespace app
                     {
                         Width = 180,
                         Height = 180,
-                        Source = new BitmapImage(new Uri("C:/Users/komputer/Desktop/git/biblioteczka/biblioteczka/app/app/" + dataReader["image"])),
+                        Source = new BitmapImage(new Uri(System.IO.Directory.GetCurrentDirectory()+ dataReader["image"])),
                         Margin = new Thickness(-642, (213 * i) + 10, 0, 0),
                         VerticalAlignment = VerticalAlignment.Top,
 
@@ -410,6 +414,8 @@ namespace app
                     };
                     kafelki.Children.Add(genre);
 
+                    string pubDate = dataReader["publication_date"].ToString();
+                    pubDate = pubDate.Substring(0, pubDate.IndexOf(" "));
 
                     TextBlock date = new TextBlock
                     {
@@ -417,7 +423,7 @@ namespace app
                         Height = 20,
                         FontSize = 14,
                         Foreground = bialy,
-                        Text = dataReader["publication_date"].ToString(),
+                        Text = pubDate,
                         VerticalAlignment = VerticalAlignment.Top,
                         Margin = new Thickness(70, (213 * i) + 135, 0, 0),
                         Background = null,
@@ -456,9 +462,11 @@ namespace app
         //TO DO:
 
         //wyszukiwanie
-        //sciezka do plikow dynamiczna
+        //sciezka do plikow dynamiczna !!!!!!!! GOTOWE
+        //Usuniecie ksiazki, usuwa obrazek
         //poprawa wygladu 
-        //jak nam sie chce walidaja danych
+        //wybiernie daty z kalendarza
+        //walidaja danych (Dana ksiazka istnieje, dany obrazek istnieje)
 
     }
 }

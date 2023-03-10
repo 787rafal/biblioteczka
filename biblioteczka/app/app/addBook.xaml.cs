@@ -23,6 +23,7 @@ namespace app
     /// </summary>
     public partial class addBook : Window
     {
+        ImageAdd newImage = new ImageAdd();
         public addBook()
         {
             InitializeComponent();
@@ -91,13 +92,17 @@ namespace app
 
                 MySqlCommand cmd = new MySqlCommand(zap, conn.sql);
 
+                Trace.WriteLine(btn_img.Content.ToString());
+
                 cmd.Parameters.AddWithValue("@t", tytul);
-                cmd.Parameters.AddWithValue("@p", btn_img.Content);
+                cmd.Parameters.AddWithValue("@p", newImage.FileDatabaseName);
                 cmd.Parameters.AddWithValue("@d", date);
                 cmd.Parameters.AddWithValue("@a", autor[0]);
                 cmd.Parameters.AddWithValue("@g", gatunek[0]);
 
                 cmd.ExecuteNonQuery();
+
+                newImage.ImageCopy();
 
                 this.Close();
 
@@ -126,19 +131,8 @@ namespace app
 
             if(response == true)
             {
-                string filepath = dlg.FileName;
-                int location = filepath.LastIndexOf(@"\", StringComparison.OrdinalIgnoreCase);
-                string filename = filepath.Substring(location);
-                string final_name = "";
-                for(int i = 1; i < filename.Length; i++)
-                {
-                    final_name += filename[i];
-                }
-                if (!File.Exists("C:/Users/komputer/Desktop/git/biblioteczka/biblioteczka/app/app/" + final_name))
-                {
-                    File.Copy(filepath, "C:/Users/komputer/Desktop/git/biblioteczka/biblioteczka/app/app/" + final_name);
-                }
-                btn_img.Content = final_name;
+                newImage.Image(dlg.FileName);
+                btn_img.Content = newImage.FileName;
             }
 
         }
