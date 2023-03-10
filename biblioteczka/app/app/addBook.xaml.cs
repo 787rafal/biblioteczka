@@ -112,18 +112,12 @@ namespace app
 
         }
 
-        private void hide1(object sender, KeyEventArgs e)
-        {
-            title.Visibility = Visibility.Hidden;
-        }
-
-        private void hide3(object sender, KeyEventArgs e)
-        {
-            date.Visibility = Visibility.Hidden;
-        }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            SolidColorBrush szary = new SolidColorBrush(Color.FromRgb(185, 185, 185));
+
+            SolidColorBrush bialy = new SolidColorBrush(Color.FromRgb(255, 255, 255));
 
             Microsoft.Win32.OpenFileDialog dlg = new Microsoft.Win32.OpenFileDialog();
 
@@ -135,6 +129,41 @@ namespace app
                 btn_img.Content = newImage.FileName;
             }
 
+            if(btn_img.Content.ToString()  == "IMAGE...")
+            {
+                btn_img.Foreground = szary;
+            }
+            else
+            {
+                btn_img.Foreground = bialy;
+            }
+
+        }
+
+
+        private void dateChange(object sender, TextChangedEventArgs e)
+        {
+            if (!string.IsNullOrEmpty(SearchedText3.Text))
+            {
+                date.Visibility = Visibility.Hidden;
+            }
+            else
+            {
+                date.Visibility = Visibility.Visible;
+            }
+        }
+
+
+        private void titleChange(object sender, TextChangedEventArgs e)
+        {
+            if (!string.IsNullOrEmpty(SearchedText.Text))
+            {
+                title.Visibility = Visibility.Hidden;
+            }
+            else
+            {
+                title.Visibility = Visibility.Visible;
+            }
         }
     }
 }

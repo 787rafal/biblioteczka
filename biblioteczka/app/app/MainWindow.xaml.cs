@@ -458,6 +458,18 @@ namespace app
 
         }
 
+        private void searchChange(object sender, TextChangedEventArgs e)
+        {
+            if (!string.IsNullOrEmpty(SearchedText.Text))
+            {
+                SearchPlaceholder.Visibility = Visibility.Hidden;
+            }
+            else
+            {
+                SearchPlaceholder.Visibility = Visibility.Visible;
+            }
+        }
+
 
         //TO DO:
 

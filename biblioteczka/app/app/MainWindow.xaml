@@ -430,19 +430,8 @@
             <ComboBoxItem Content="GENRES" IsEnabled="False"  HorizontalAlignment="Center" RenderTransformOrigin="0,0" Width="250" Height="29" HorizontalContentAlignment="Left"/>
             <ComboBoxItem Content="GENRES" IsEnabled="False"  HorizontalAlignment="Center" RenderTransformOrigin="0,0" Width="250" Height="29" HorizontalContentAlignment="Left"/>-->
         </ComboBox>
-        <TextBox Style="{DynamicResource RoundedTextBox}" x:Name="SearchedText" HorizontalAlignment="Left" Margin="691,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" TextChanged="TextBox_TextChanged" Height="30" Padding="16,6,0,0" BorderThickness="0,0,0,0" Background="#FFD9D9D9"/>
-        <TextBlock IsHitTestVisible="False" Text="SEARCH..." VerticalAlignment="Top" HorizontalAlignment="Left" Margin="710,40,0,0" Foreground="#FF545151">
-            <TextBlock.Style>
-                <Style TargetType="{x:Type TextBlock}">
-                    <Setter Property="Visibility" Value="Collapsed"/>
-                    <Style.Triggers>
-                        <DataTrigger Binding="{Binding Text, ElementName=SearchedText}" Value="">
-                            <Setter Property="Visibility" Value="Visible"/>
-                        </DataTrigger>
-                    </Style.Triggers>
-                </Style>
-            </TextBlock.Style>
-        </TextBlock>
+        <TextBox Style="{DynamicResource RoundedTextBox}" x:Name="SearchedText" HorizontalAlignment="Left" Margin="691,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" TextChanged="searchChange" Height="30" Padding="16,6,0,0" BorderThickness="0,0,0,0" Background="#FFD9D9D9"/>
+        <TextBlock x:Name="SearchPlaceholder" IsHitTestVisible="False" Text="SEARCH..." VerticalAlignment="Top" HorizontalAlignment="Left" Margin="710,40,0,0" Foreground="#FF545151"/>
         <Rectangle HorizontalAlignment="Center" Height="25" VerticalAlignment="Top" Width="1000" Fill="#FF232222" MouseLeftButtonDown="przeciagnij"/>
         <Grid HorizontalAlignment="Left" Height="25" Margin="975,0,0,0" VerticalAlignment="Top" Width="25">
             <Button Click="close_btn" Background="#FF232222" BorderBrush="#FF232222" Style="{StaticResource vanilla_button}">
