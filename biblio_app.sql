@@ -1,11 +1,17 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
+<<<<<<< HEAD
 -- Czas generowania: 11 Mar 2023, 15:33
 -- Wersja serwera: 10.4.22-MariaDB
 -- Wersja PHP: 8.1.1
+=======
+-- Czas generowania: 10 Mar 2023, 21:52
+-- Wersja serwera: 10.4.27-MariaDB
+-- Wersja PHP: 8.1.12
+>>>>>>> 445db105cddfb445c784a853eb4a07ddf3aad836
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -31,7 +37,7 @@ CREATE TABLE `authors` (
   `id_author` int(11) NOT NULL,
   `name` varchar(20) NOT NULL,
   `last_name` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Zrzut danych tabeli `authors`
@@ -58,14 +64,18 @@ CREATE TABLE `books` (
   `publication_date` date NOT NULL,
   `author_id` int(11) NOT NULL,
   `genre_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Zrzut danych tabeli `books`
 --
 
 INSERT INTO `books` (`id_book`, `title`, `image`, `publication_date`, `author_id`, `genre_id`) VALUES
+<<<<<<< HEAD
 (1, 'Czysty kod. Podręcznik dobrego programisty', '\\images\\czystykod.jpg', '2008-08-01', 1, 5),
+=======
+(1, 'Czysty kod. Podręcznik dobrego programisty', '\\images\\czystykod.jpg', '2008-08-01', 1, 1),
+>>>>>>> 445db105cddfb445c784a853eb4a07ddf3aad836
 (2, 'Wiedźmin - Miecz przeznaczenia', '\\images\\mieczprzeznaczenia.png', '2014-09-25', 2, 2),
 (3, 'Kabalista', '\\images\\kabalista.jpg', '2023-02-08', 4, 4),
 (4, 'Fairy Tale', '\\images\\fairytale.jpg', '2009-12-10', 3, 3),
@@ -80,7 +90,7 @@ INSERT INTO `books` (`id_book`, `title`, `image`, `publication_date`, `author_id
 CREATE TABLE `genres` (
   `id_genres` int(11) NOT NULL,
   `name_genre` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Zrzut danych tabeli `genres`
@@ -131,7 +141,11 @@ ALTER TABLE `authors`
 -- AUTO_INCREMENT dla tabeli `books`
 --
 ALTER TABLE `books`
+<<<<<<< HEAD
   MODIFY `id_book` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+=======
+  MODIFY `id_book` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+>>>>>>> 445db105cddfb445c784a853eb4a07ddf3aad836
 
 --
 -- AUTO_INCREMENT dla tabeli `genres`

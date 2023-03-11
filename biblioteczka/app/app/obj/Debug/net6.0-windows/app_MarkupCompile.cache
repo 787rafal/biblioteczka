@@ -4,16 +4,20 @@
 winexe
 C#
 .cs
-C:\Users\komputer\Desktop\git\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\
+G:\STUDIA\PROGRAMOWANIE IV\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\
 app
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-C:\Users\komputer\Desktop\git\biblioteczka\biblioteczka\app\app\App.xaml
+G:\STUDIA\PROGRAMOWANIE IV\biblioteczka\biblioteczka\app\app\App.xaml
 3-876284101
 
 7-686438194
+<<<<<<< HEAD
 211-665721696
+=======
+211-711343232
+>>>>>>> 445db105cddfb445c784a853eb4a07ddf3aad836
 addAuthor.xaml;addBook.xaml;MainWindow.xaml;
 
 False

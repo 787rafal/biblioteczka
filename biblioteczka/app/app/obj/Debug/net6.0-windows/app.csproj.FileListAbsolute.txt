@@ -153,6 +153,7 @@ G:\STUDIA\PROGRAMOWANIE IV\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-wi
 G:\STUDIA\PROGRAMOWANIE IV\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\addBook.g.cs
 G:\STUDIA\PROGRAMOWANIE IV\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\addAuthor.baml
 G:\STUDIA\PROGRAMOWANIE IV\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\addBook.baml
+<<<<<<< HEAD
 C:\Users\komputer\Desktop\biblioteczka-main\biblioteczka\app\app\bin\Debug\net6.0-windows\app.exe
 C:\Users\komputer\Desktop\biblioteczka-main\biblioteczka\app\app\bin\Debug\net6.0-windows\app.deps.json
 C:\Users\komputer\Desktop\biblioteczka-main\biblioteczka\app\app\bin\Debug\net6.0-windows\app.runtimeconfig.json
@@ -192,3 +193,5 @@ C:\Users\komputer\Desktop\biblioteczka-main\biblioteczka\app\app\obj\Debug\net6.
 C:\Users\komputer\Desktop\biblioteczka-main\biblioteczka\app\app\obj\Debug\net6.0-windows\ref\app.dll
 C:\Users\komputer\Desktop\biblioteczka-main\biblioteczka\app\app\obj\Debug\net6.0-windows\app.pdb
 C:\Users\komputer\Desktop\biblioteczka-main\biblioteczka\app\app\obj\Debug\net6.0-windows\app.genruntimeconfig.cache
+=======
+>>>>>>> 445db105cddfb445c784a853eb4a07ddf3aad836
