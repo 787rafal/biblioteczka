@@ -370,14 +370,9 @@ namespace app
                     {
                         Width = 180,
                         Height = 180,
-<<<<<<< HEAD
                         Source = new BitmapImage(new Uri(System.IO.Directory.GetCurrentDirectory() + dataReader2["image"])),
-=======
-                        Source = new BitmapImage(new Uri(System.IO.Directory.GetCurrentDirectory()+ dataReader["image"])),
->>>>>>> 445db105cddfb445c784a853eb4a07ddf3aad836
                         Margin = new Thickness(-642, (213 * i) + 10, 0, 0),
                         VerticalAlignment = VerticalAlignment.Top,
-
                     };
                     kafelki.Children.Add(newImage);
 
@@ -424,11 +419,7 @@ namespace app
                     };
                     kafelki.Children.Add(genre);
 
-<<<<<<< HEAD
                     string pubDate = dataReader2["publication_date"].ToString();
-=======
-                    string pubDate = dataReader["publication_date"].ToString();
->>>>>>> 445db105cddfb445c784a853eb4a07ddf3aad836
                     pubDate = pubDate.Substring(0, pubDate.IndexOf(" "));
 
                     TextBlock date = new TextBlock
@@ -485,28 +476,19 @@ namespace app
             }
         }
 
-<<<<<<< HEAD
 
         //PRZED URUCHOMIENIEM WCZYTAC NOWA BAZE DANYCH
 
         //TO DO:
 
-        //wyszukiwanie !!!!!!! GOTOWE :)
-=======
-
-        //TO DO:
-
-        //wyszukiwanie
->>>>>>> 445db105cddfb445c784a853eb4a07ddf3aad836
+        //wyszukiwanie !!!!! GOTOWE
         //sciezka do plikow dynamiczna !!!!!!!! GOTOWE
         //Usuniecie ksiazki, usuwa obrazek
         //poprawa wygladu 
         //wybiernie daty z kalendarza
         //walidaja danych (Dana ksiazka istnieje, dany obrazek istnieje)
-<<<<<<< HEAD
         //TESTY, TESTY, TESTY XD
-=======
->>>>>>> 445db105cddfb445c784a853eb4a07ddf3aad836
+
 
     }
 }
