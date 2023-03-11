@@ -45,6 +45,9 @@ namespace app
 
             }
 
+            status1.Content = "TITLE";
+            status2.Content = "AUTHOR";
+
         }
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -129,10 +132,11 @@ namespace app
                     {
                         Width = 180,
                         Height = 180,
-                        Source = new BitmapImage(new Uri("C:/Users/komputer/Desktop/git/biblioteczka/biblioteczka/app/app/" + dataReader["image"])),
+                        Source = new BitmapImage(new Uri(System.IO.Directory.GetCurrentDirectory()+ dataReader["image"])),
                         Margin = new Thickness(-642, (213 * i) + 10, 0, 0),
                         VerticalAlignment = VerticalAlignment.Top,
-                        
+
+
                     };
                     kafelki.Children.Add(newImage);
 
@@ -180,13 +184,16 @@ namespace app
                     kafelki.Children.Add(genre);
 
 
+                    string pubDate = dataReader["publication_date"].ToString();
+                    pubDate = pubDate.Substring(0, pubDate.IndexOf(" "));
+
                     TextBlock date = new TextBlock
                     {
                         Width = 450,
                         Height = 20,
                         FontSize = 14,
                         Foreground = bialy,
-                        Text = dataReader["publication_date"].ToString(),
+                        Text = pubDate,
                         VerticalAlignment = VerticalAlignment.Top,
                         Margin = new Thickness(70, (213 * i) + 135, 0, 0),
                         Background = null,
@@ -255,12 +262,14 @@ namespace app
         {
             addBook dodaj = new addBook();
             dodaj.Show();
+            this.Hide();
         }
 
         private void newAuthor_Click(object sender, RoutedEventArgs e)
         {
             addAuthor autor = new addAuthor();
             autor.Show();
+            this.Hide();
         }
 
         private void confirm_Click(object sender, RoutedEventArgs e)
@@ -268,70 +277,71 @@ namespace app
 
             string gen = selectGenres.Text;
             string szukaj = SearchedText.Text;
-            string radio = radio_btn.Content.ToString();
+            string radio = "";
+
+            if (status1.IsChecked == true){
+                radio = "TITLE";
+            }
+            else if (status2.IsChecked == true)
+            {
+                radio = "AUTHOR";
+            }
+            else
+            {
+                radio = "";
+            }
 
             kafelki.Children.Clear();
 
-            var database = new database();
-            if (database.connect_db())
+            var database2 = new database();
+            if (database2.connect_db())
             {
                 string query = "";
 
-                if(gen == "NONE" || gen == "GENRES")
+                if (gen == "NONE" || gen == "GENRES")
                 {
-                    if (radio == "")
+                    if (szukaj == "")
                     {
                         query = "SELECT * FROM books JOIN authors ON author_id = id_author JOIN genres ON genre_id = id_genres;";
-                    }
-                    else if(radio == "AUTHOR")
-                    {
-                        query = "SELECT * FROM books JOIN authors ON author_id = id_author JOIN genres ON genre_id = id_genres;";
-                    }
-                    else if(radio == "TITLE")
-                    {
-                        query = "SELECT * FROM books JOIN authors ON author_id = id_author JOIN genres ON genre_id = id_genres;";
-                    }
-                }
-                else if (gen != "NONE" || gen != "GENRES")
-                {
-                    if (radio == "")
-                    {
-                        query = "SELECT * FROM books JOIN authors ON author_id = id_author JOIN genres ON genre_id = id_genres WHERE name_genre = @g;";
-
-
-
                     }
                     else if (radio == "AUTHOR")
                     {
-                        query = "SELECT * FROM books JOIN authors ON author_id = id_author JOIN genres ON genre_id = id_genres;";
+                        query = "SELECT * FROM books JOIN authors ON author_id = id_author JOIN genres ON genre_id = id_genres WHERE NAME LIKE '" + szukaj + "%' OR NAME LIKE '%" + szukaj + "%' OR NAME LIKE '%" + szukaj + "' OR LAST_NAME LIKE '" + szukaj + "%' OR LAST_NAME LIKE '%" + szukaj + "%' OR LAST_NAME LIKE '%" + szukaj + "';";
                     }
                     else if (radio == "TITLE")
                     {
-                        query = "SELECT * FROM books JOIN authors ON author_id = id_author JOIN genres ON genre_id = id_genres;";
+                        query = "SELECT * FROM books JOIN authors ON author_id = id_author JOIN genres ON genre_id = id_genres WHERE TITLE LIKE '" + szukaj + "%' OR TITLE LIKE '%" + szukaj + "%' OR TITLE LIKE '%" + szukaj + "';";
                     }
                 }
-               
-
-                MySqlCommand cmd3 = new MySqlCommand(query, database.sql);
-                MySqlDataReader ItemsAmount = cmd3.ExecuteReader();
-                int rowCount = 0;
-                while (ItemsAmount.Read())
+                else if (gen != "NONE" && gen != "GENRES")
                 {
-                    rowCount++;
+                    if (szukaj == "")
+                    {
+                        query = "SELECT * FROM books JOIN authors ON author_id = id_author JOIN genres ON genre_id = id_genres WHERE name_genre = '" + gen + "';";
+                    }
+                    else if (radio == "AUTHOR")
+                    {
+                        query = "SELECT * FROM books JOIN authors ON author_id = id_author JOIN genres ON genre_id = id_genres WHERE name_genre = '" + gen + "' AND NAME LIKE '" + szukaj + "%' OR NAME LIKE '%" + szukaj + "%' OR NAME LIKE '%" + szukaj + "' OR LAST_NAME LIKE '" + szukaj + "%' OR LAST_NAME LIKE '%" + szukaj + "%' OR LAST_NAME LIKE '%" + szukaj + "';";
+                    }
+                    else if (radio == "TITLE")
+                    {
+                        query = "SELECT * FROM books JOIN authors ON author_id = id_author JOIN genres ON genre_id = id_genres WHERE name_genre = '" + gen + "' AND TITLE LIKE '" + szukaj + "%' OR TITLE LIKE '%" + szukaj + "%' OR TITLE LIKE '%" + szukaj + "';";
+                    }
                 }
-                ItemsAmount.Close();
 
 
-                MySqlCommand cmd = new MySqlCommand(query, database.sql);
-                MySqlDataReader dataReader = cmd.ExecuteReader();
+                MySqlCommand cmd3 = new MySqlCommand(query, database2.sql);
+
+                int i = 0;
+
+                MySqlDataReader dataReader2 = cmd3.ExecuteReader();
                 SolidColorBrush losos = new SolidColorBrush(Color.FromRgb(180, 91, 91));
                 SolidColorBrush bialy = new SolidColorBrush(Color.FromRgb(255, 255, 255));
                 SolidColorBrush siwy = new SolidColorBrush(Color.FromRgb(217, 217, 217));
                 scroll.VerticalScrollBarVisibility = ScrollBarVisibility.Auto;
 
-                for (int i = 0; i < rowCount; i++)
+                while (dataReader2.Read())
                 {
-                    dataReader.Read();
                     Rectangle newRectangle = new Rectangle
                     {
                         Width = 850,
@@ -360,7 +370,7 @@ namespace app
                     {
                         Width = 180,
                         Height = 180,
-                        Source = new BitmapImage(new Uri("C:/Users/komputer/Desktop/git/biblioteczka/biblioteczka/app/app/" + dataReader["image"])),
+                        Source = new BitmapImage(new Uri(System.IO.Directory.GetCurrentDirectory() + dataReader2["image"])),
                         Margin = new Thickness(-642, (213 * i) + 10, 0, 0),
                         VerticalAlignment = VerticalAlignment.Top,
 
@@ -375,7 +385,7 @@ namespace app
                         FontSize = 16,
                         Foreground = bialy,
                         FontWeight = FontWeights.Bold,
-                        Text = dataReader["title"].ToString(),
+                        Text = dataReader2["title"].ToString(),
                         VerticalAlignment = VerticalAlignment.Top,
                         Margin = new Thickness(70, (213 * i) + 40, 0, 0),
                         Background = null,
@@ -389,7 +399,7 @@ namespace app
                         Height = 20,
                         FontSize = 14,
                         Foreground = bialy,
-                        Text = dataReader["name"].ToString() + " " + dataReader["last_name"].ToString(),
+                        Text = dataReader2["name"].ToString() + " " + dataReader2["last_name"].ToString(),
                         VerticalAlignment = VerticalAlignment.Top,
                         Margin = new Thickness(70, (213 * i) + 75, 0, 0),
                         Background = null,
@@ -403,13 +413,15 @@ namespace app
                         Height = 20,
                         FontSize = 14,
                         Foreground = bialy,
-                        Text = dataReader["name_genre"].ToString(),
+                        Text = dataReader2["name_genre"].ToString(),
                         VerticalAlignment = VerticalAlignment.Top,
                         Margin = new Thickness(70, (213 * i) + 105, 0, 0),
                         Background = null,
                     };
                     kafelki.Children.Add(genre);
 
+                    string pubDate = dataReader2["publication_date"].ToString();
+                    pubDate = pubDate.Substring(0, pubDate.IndexOf(" "));
 
                     TextBlock date = new TextBlock
                     {
@@ -417,7 +429,7 @@ namespace app
                         Height = 20,
                         FontSize = 14,
                         Foreground = bialy,
-                        Text = dataReader["publication_date"].ToString(),
+                        Text = pubDate,
                         VerticalAlignment = VerticalAlignment.Top,
                         Margin = new Thickness(70, (213 * i) + 135, 0, 0),
                         Background = null,
@@ -430,7 +442,7 @@ namespace app
                         Width = 100,
                         Height = 30,
                         Name = "b" + i,
-                        Tag = dataReader["id_book"],
+                        Tag = dataReader2["id_book"],
                         Background = siwy,
                         BorderBrush = null,
                         VerticalAlignment = VerticalAlignment.Top,
@@ -442,23 +454,41 @@ namespace app
                     usun.Click += new RoutedEventHandler(deleteRow);
                     kafelki.Children.Add(usun);
 
+                    i++;
 
                 }
 
-                dataReader.Close();
-                database.close_db();
+                dataReader2.Close();
+                database2.close_db();
 
             }
 
         }
 
+        private void searchChange(object sender, TextChangedEventArgs e)
+        {
+            if (!string.IsNullOrEmpty(SearchedText.Text))
+            {
+                SearchPlaceholder.Visibility = Visibility.Hidden;
+            }
+            else
+            {
+                SearchPlaceholder.Visibility = Visibility.Visible;
+            }
+        }
+
+
+        //PRZED URUCHOMIENIEM WCZYTAC NOWA BAZE DANYCH
 
         //TO DO:
 
-        //wyszukiwanie
-        //sciezka do plikow dynamiczna
+        //wyszukiwanie !!!!!!! GOTOWE :)
+        //sciezka do plikow dynamiczna !!!!!!!! GOTOWE
+        //Usuniecie ksiazki, usuwa obrazek
         //poprawa wygladu 
-        //jak nam sie chce walidaja danych
+        //wybiernie daty z kalendarza
+        //walidaja danych (Dana ksiazka istnieje, dany obrazek istnieje)
+        //TESTY, TESTY, TESTY XD
 
     }
 }

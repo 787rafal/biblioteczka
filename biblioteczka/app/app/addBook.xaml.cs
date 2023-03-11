@@ -23,6 +23,7 @@ namespace app
     /// </summary>
     public partial class addBook : Window
     {
+        ImageAdd newImage = new ImageAdd();
         public addBook()
         {
             InitializeComponent();
@@ -67,6 +68,7 @@ namespace app
         {
             this.Close();
             MainWindow._instance.loadData();
+            MainWindow._instance.Show();
         }
 
         private void min_btn(object sender, RoutedEventArgs e)
@@ -91,34 +93,34 @@ namespace app
 
                 MySqlCommand cmd = new MySqlCommand(zap, conn.sql);
 
+                Trace.WriteLine(btn_img.Content.ToString());
+
                 cmd.Parameters.AddWithValue("@t", tytul);
-                cmd.Parameters.AddWithValue("@p", btn_img.Content);
+                cmd.Parameters.AddWithValue("@p", newImage.FileDatabaseName);
                 cmd.Parameters.AddWithValue("@d", date);
                 cmd.Parameters.AddWithValue("@a", autor[0]);
                 cmd.Parameters.AddWithValue("@g", gatunek[0]);
 
                 cmd.ExecuteNonQuery();
 
+                newImage.ImageCopy();
+
                 this.Close();
 
                 MainWindow._instance.loadData();
+
+                MainWindow._instance.Show();
 
             }
 
         }
 
-        private void hide1(object sender, KeyEventArgs e)
-        {
-            title.Visibility = Visibility.Hidden;
-        }
-
-        private void hide3(object sender, KeyEventArgs e)
-        {
-            date.Visibility = Visibility.Hidden;
-        }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            SolidColorBrush szary = new SolidColorBrush(Color.FromRgb(185, 185, 185));
+
+            SolidColorBrush bialy = new SolidColorBrush(Color.FromRgb(255, 255, 255));
 
             Microsoft.Win32.OpenFileDialog dlg = new Microsoft.Win32.OpenFileDialog();
 
@@ -126,21 +128,45 @@ namespace app
 
             if(response == true)
             {
-                string filepath = dlg.FileName;
-                int location = filepath.LastIndexOf(@"\", StringComparison.OrdinalIgnoreCase);
-                string filename = filepath.Substring(location);
-                string final_name = "";
-                for(int i = 1; i < filename.Length; i++)
-                {
-                    final_name += filename[i];
-                }
-                if (!File.Exists("C:/Users/komputer/Desktop/git/biblioteczka/biblioteczka/app/app/" + final_name))
-                {
-                    File.Copy(filepath, "C:/Users/komputer/Desktop/git/biblioteczka/biblioteczka/app/app/" + final_name);
-                }
-                btn_img.Content = final_name;
+                newImage.Image(dlg.FileName);
+                btn_img.Content = newImage.FileName;
             }
 
+            if(btn_img.Content.ToString()  == "IMAGE...")
+            {
+                btn_img.Foreground = szary;
+            }
+            else
+            {
+                btn_img.Foreground = bialy;
+            }
+
+        }
+
+
+        private void dateChange(object sender, TextChangedEventArgs e)
+        {
+            if (!string.IsNullOrEmpty(SearchedText3.Text))
+            {
+                date.Visibility = Visibility.Hidden;
+            }
+            else
+            {
+                date.Visibility = Visibility.Visible;
+            }
+        }
+
+
+        private void titleChange(object sender, TextChangedEventArgs e)
+        {
+            if (!string.IsNullOrEmpty(SearchedText.Text))
+            {
+                title.Visibility = Visibility.Hidden;
+            }
+            else
+            {
+                title.Visibility = Visibility.Visible;
+            }
         }
     }
 }

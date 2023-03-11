@@ -32,6 +32,7 @@ namespace app
         {
             this.Close();
             MainWindow._instance.loadData();
+            MainWindow._instance.Show();
         }
 
         private void min_btn(object sender, RoutedEventArgs e)
@@ -39,15 +40,6 @@ namespace app
             this.WindowState = WindowState.Minimized;
         }
 
-        private void hide1(object sender, KeyEventArgs e)
-        {
-            name.Visibility = Visibility.Hidden;
-        }
-
-        private void hide2(object sender, KeyEventArgs e)
-        {
-            sname.Visibility = Visibility.Hidden;
-        }
 
         private void add_autor(object sender, RoutedEventArgs e)
         {
@@ -73,8 +65,35 @@ namespace app
 
                 MainWindow._instance.loadData();
 
+                MainWindow._instance.Show();
+
             }
 
         }
+
+        private void lastNameChange(object sender, TextChangedEventArgs e)
+        {
+            if (!string.IsNullOrEmpty(SearchedText1.Text))
+            {
+                sname.Visibility = Visibility.Hidden;
+            }
+            else
+            {
+                sname.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void firstNameChange(object sender, TextChangedEventArgs e)
+        {
+            if (!string.IsNullOrEmpty(SearchedText2.Text))
+            {
+                name.Visibility = Visibility.Hidden;
+            }
+            else
+            {
+                name.Visibility = Visibility.Visible;
+            }
+        }
+
     }
 }

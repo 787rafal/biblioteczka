@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 06 Mar 2023, 22:16
+-- Czas generowania: 11 Mar 2023, 15:33
 -- Wersja serwera: 10.4.22-MariaDB
 -- Wersja PHP: 8.1.1
 
@@ -41,7 +41,9 @@ INSERT INTO `authors` (`id_author`, `name`, `last_name`) VALUES
 (1, 'Robert C.', 'Martin'),
 (2, 'Andrzej', 'Sapkowski'),
 (3, 'Stephen', 'King'),
-(4, 'Remigiusz', 'Mróz');
+(4, 'Remigiusz', 'Mróz'),
+(5, 'Rafał', 'Bartoń'),
+(6, 'Denis', 'Czech');
 
 -- --------------------------------------------------------
 
@@ -63,10 +65,11 @@ CREATE TABLE `books` (
 --
 
 INSERT INTO `books` (`id_book`, `title`, `image`, `publication_date`, `author_id`, `genre_id`) VALUES
-(1, 'Czysty kod. Podręcznik dobrego programisty', '/images/czystykod.png', '2008-08-01', 1, 1),
-(2, 'Wiedźmin - Miecz przeznaczenia', '/images/mieczprzeznaczenia.png', '2014-09-25', 2, 2),
-(3, 'Kabalista', '/images/kabalista.png', '2023-02-08', 4, 4),
-(4, 'Fairy Tale', '/images/fairytale.png', '2009-12-10', 3, 3);
+(1, 'Czysty kod. Podręcznik dobrego programisty', '\\images\\czystykod.jpg', '2008-08-01', 1, 5),
+(2, 'Wiedźmin - Miecz przeznaczenia', '\\images\\mieczprzeznaczenia.png', '2014-09-25', 2, 2),
+(3, 'Kabalista', '\\images\\kabalista.jpg', '2023-02-08', 4, 4),
+(4, 'Fairy Tale', '\\images\\fairytale.jpg', '2009-12-10', 3, 3),
+(9, 'Behwiorysta', '\\images\\behawiorysta.jpg', '2016-10-10', 4, 4);
 
 -- --------------------------------------------------------
 
@@ -84,10 +87,11 @@ CREATE TABLE `genres` (
 --
 
 INSERT INTO `genres` (`id_genres`, `name_genre`) VALUES
-(1, 'education'),
-(2, 'fantasy'),
-(3, 'thriller'),
-(4, 'crime');
+(1, 'NONE'),
+(2, 'FANTASY'),
+(3, 'THRILLER'),
+(4, 'CRIME'),
+(5, 'EDUCATION');
 
 --
 -- Indeksy dla zrzutów tabel
@@ -121,19 +125,19 @@ ALTER TABLE `genres`
 -- AUTO_INCREMENT dla tabeli `authors`
 --
 ALTER TABLE `authors`
-  MODIFY `id_author` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_author` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT dla tabeli `books`
 --
 ALTER TABLE `books`
-  MODIFY `id_book` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_book` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT dla tabeli `genres`
 --
 ALTER TABLE `genres`
-  MODIFY `id_genres` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_genres` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Ograniczenia dla zrzutów tabel

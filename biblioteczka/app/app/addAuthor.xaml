@@ -43,8 +43,8 @@
             </Rectangle.Fill>
         </Rectangle>
         <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="ADD NEW AUTHOR" Width="500" Height="44" FontWeight="Bold" FontSize="32" TextAlignment="Center" LineHeight="223" Margin="0,68,0,338"/>
-        <TextBox  x:Name="SearchedText2" HorizontalAlignment="Center" Margin="0,170,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="310" Height="55" Padding="24,13,24,3" BorderThickness="0,0,0,0" Background="#FF1F1B1B" FontSize="20" Foreground="White" KeyDown="hide1"/>
-        <TextBox  x:Name="SearchedText1" HorizontalAlignment="Center" Margin="0,253,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="310" Height="55" Padding="24,13,24,3" BorderThickness="0,0,0,0" Background="#FF1F1B1B" FontSize="20" Foreground="White" KeyDown="hide2"/>
+        <TextBox  x:Name="SearchedText2" HorizontalAlignment="Center" Margin="0,170,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="310" Height="55" Padding="24,13,24,3" BorderThickness="0,0,0,0" Background="#FF1F1B1B" FontSize="20" Foreground="White" TextChanged="firstNameChange" />
+        <TextBox  x:Name="SearchedText1" HorizontalAlignment="Center" Margin="0,253,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="310" Height="55" Padding="24,13,24,3" BorderThickness="0,0,0,0" Background="#FF1F1B1B" FontSize="20" Foreground="White" TextChanged="lastNameChange" />
         <Button Content="ADD AUTHOR" HorizontalAlignment="Center" Margin="0,362,0,0" VerticalAlignment="Top" Width="310" Height="64" BorderBrush="#FF1F1B1B" Background="{x:Null}" FontWeight="Bold" FontSize="32" BorderThickness="4,4,4,4" Click="add_autor"/>
         <TextBlock x:Name="date" IsHitTestVisible="False" Text="PUBLICATION DATE..." VerticalAlignment="Top" HorizontalAlignment="Left" Margin="119,453,0,0" Foreground="White" FontWeight="Normal" FontSize="20" d:IsLocked="True">
             <TextBlock.Style>
@@ -58,8 +58,8 @@
                 </Style>
             </TextBlock.Style>
         </TextBlock>
-        <TextBlock x:Name="name" HorizontalAlignment="Left" Margin="118,184,0,0" TextWrapping="Wrap" Text="FIRST NAME..." VerticalAlignment="Top" Foreground="White" FontSize="20" FontWeight="Normal" Height="27"/>
-        <TextBlock x:Name="sname" HorizontalAlignment="Left" Margin="118,267,0,0" TextWrapping="Wrap" Text="LAST NAME..." VerticalAlignment="Top" Foreground="White" FontSize="20" FontWeight="Normal" KeyDown="hide2"/>
+        <TextBlock x:Name="name" IsHitTestVisible="False" HorizontalAlignment="Left" Margin="122,184,0,0" TextWrapping="Wrap" Text="FIRST NAME..." VerticalAlignment="Top" Foreground="#FFB9B9B9" FontSize="20" FontWeight="Normal" Height="27"/>
+        <TextBlock x:Name="sname" IsHitTestVisible="False" HorizontalAlignment="Left" Margin="122,267,0,0" TextWrapping="Wrap" Text="LAST NAME..." VerticalAlignment="Top" Foreground="#FFB9B9B9" FontSize="20" FontWeight="Normal" />
 
     </Grid>
 </Window>
