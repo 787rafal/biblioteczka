@@ -8,4 +8,6 @@
         poprawa wygladu !!!
         wybiernie daty z kalendarza
         walidaja danych (Dana ksiazka istnieje, dany obrazek istnieje)
+	poprawic nazwy
+	dodac (wydawnictwo, ISBN,)
         TESTY, TESTY, TESTY XD

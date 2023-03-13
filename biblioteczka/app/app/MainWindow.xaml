@@ -456,7 +456,7 @@
 
         <Button Style="{DynamicResource RoundedButtonStyle}" x:Name="confirm" Content="CONFIRM"  HorizontalAlignment="Left" Margin="791,87,0,0" VerticalAlignment="Top" Width="150" Height="30" BorderThickness="0,0,0,0" Background="#FF232222" BorderBrush="#00707070" Foreground="White" FontWeight="Bold" Click="confirm_Click"/>
 
-        <ScrollViewer x:Name="scroll" Margin="0,163,0,0" Padding="0,0,0,15">
+        <ScrollViewer x:Name="scroll" Margin="0,163,0,0" Padding="0,0,0,15" Button.Click ="deleteRow" VerticalScrollBarVisibility="Auto" >
             <Grid x:Name="kafelki" Width="1000" />
         </ScrollViewer>
 

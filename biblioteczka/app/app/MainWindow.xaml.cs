@@ -16,6 +16,7 @@ using MySql.Data.MySqlClient;
 using System.Data;
 using System.Diagnostics;
 using System.IO;
+using System.Security.Cryptography.X509Certificates;
 
 namespace app
 {
@@ -55,10 +56,6 @@ namespace app
 
         }
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
 
         private void przeciagnij(object sender, MouseButtonEventArgs e)
         {
@@ -81,151 +78,11 @@ namespace app
             var database = new database();
             if (database.connect_db())
             {
-
+                
                 string query = "SELECT * FROM books JOIN authors ON author_id = id_author JOIN genres ON genre_id = id_genres;";
 
-                MySqlCommand cmd3 = new MySqlCommand(query, database.sql);            
-                MySqlDataReader ItemsAmount = cmd3.ExecuteReader();
-                int rowCount = 0;
-                while (ItemsAmount.Read())
-                {
-                    rowCount++;
-                }
-                ItemsAmount.Close();
-                
+                ksiazki.wyswietl(query, database, kafelki);
 
-                MySqlCommand cmd = new MySqlCommand(query, database.sql);
-                MySqlDataReader dataReader = cmd.ExecuteReader();
-                SolidColorBrush losos = new SolidColorBrush(Color.FromRgb(180, 91, 91));
-                SolidColorBrush bialy = new SolidColorBrush(Color.FromRgb(255, 255, 255));
-                SolidColorBrush siwy = new SolidColorBrush(Color.FromRgb(217, 217, 217));
-                scroll.VerticalScrollBarVisibility = ScrollBarVisibility.Auto;
-
-                for (int i = 0; i < rowCount; i++)
-                {
-                    dataReader.Read();
-                    Rectangle newRectangle = new Rectangle
-                    {
-                        Width = 850,
-                        Height = 200,
-                        Fill = losos,
-                        StrokeThickness = 0,
-                        VerticalAlignment = VerticalAlignment.Top,
-                        Margin = new Thickness(0, 213 * i, 0, 0),
-                    };
-                    kafelki.Children.Add(newRectangle);
-
-
-                    Rectangle tlo = new Rectangle
-                    {
-                        Width = 180,
-                        Height = 180,
-                        Fill = bialy,
-                        StrokeThickness = 0,
-                        VerticalAlignment = VerticalAlignment.Top,
-                        Margin = new Thickness(-642, (213 * i) + 10, 0, 0),
-                    };
-                    kafelki.Children.Add(tlo);
-
-
-                    Image newImage = new Image
-                    {
-                        Width = 180,
-                        Height = 180,
-                        Source = new BitmapImage(new Uri(System.IO.Directory.GetCurrentDirectory() + dataReader["image"])),
-                        Margin = new Thickness(-642, (213 * i) + 10, 0, 0),
-                        VerticalAlignment = VerticalAlignment.Top,
-
-
-                    };
-                    kafelki.Children.Add(newImage);
-
-
-                    TextBlock title = new TextBlock
-                    {
-                        Width = 450,
-                        Height = 25,
-                        FontSize = 16,
-                        Foreground = bialy,
-                        FontWeight = FontWeights.Bold,
-                        Text = dataReader["title"].ToString(),
-                        VerticalAlignment = VerticalAlignment.Top,
-                        Margin = new Thickness(70, (213 * i) + 40, 0, 0),
-                        Background = null,
-                    };
-                    kafelki.Children.Add(title);
-
-
-                    TextBlock author = new TextBlock
-                    {
-                        Width = 450,
-                        Height = 20,
-                        FontSize = 14,
-                        Foreground = bialy,
-                        Text = dataReader["name"].ToString() + " " + dataReader["last_name"].ToString(),
-                        VerticalAlignment = VerticalAlignment.Top,
-                        Margin = new Thickness(70, (213 * i) + 75, 0, 0),
-                        Background = null,
-                    };
-                    kafelki.Children.Add(author);
-
-
-                    TextBlock genre = new TextBlock
-                    {
-                        Width = 450,
-                        Height = 20,
-                        FontSize = 14,
-                        Foreground = bialy,
-                        Text = dataReader["name_genre"].ToString(),
-                        VerticalAlignment = VerticalAlignment.Top,
-                        Margin = new Thickness(70, (213 * i) + 105, 0, 0),
-                        Background = null,
-                    };
-                    kafelki.Children.Add(genre);
-
-
-                    string pubDate = dataReader["publication_date"].ToString();
-                    pubDate = pubDate.Substring(0, pubDate.IndexOf(" "));
-
-                    TextBlock date = new TextBlock
-                    {
-                        Width = 450,
-                        Height = 20,
-                        FontSize = 14,
-                        Foreground = bialy,
-                        Text = pubDate,
-                        VerticalAlignment = VerticalAlignment.Top,
-                        Margin = new Thickness(70, (213 * i) + 135, 0, 0),
-                        Background = null,
-                    };
-                    kafelki.Children.Add(date);
-
-
-                    Button usun = new Button
-                    {
-                        Width = 100,
-                        Height = 30,
-                        Name = "b" + i,
-                        Tag = dataReader["id_book"],
-                        Background = siwy,
-                        BorderBrush = null,
-                        VerticalAlignment = VerticalAlignment.Top,
-                        Margin = new Thickness(690, (213 * i) + 10, 0, 0),
-                        Content = "DELETE BOOK",
-                        FontWeight = FontWeights.Bold,
-                        //Style = {DynamicResource RoundedButtonStyle},
-                    };
-                    //usun. = "{DynamicResource RoundedButtonStyle}";
-                    // usun.Resources[typeof(Button)].
-                    //usun.Click += new RoutedEventHandler(czyszczenie);
-                    usun.Style = (Style)FindResource("RoundedButtonStyle");
-                    usun.Click += new RoutedEventHandler(deleteRow);
-                    kafelki.Children.Add(usun);
-
-
-                }
-
-                dataReader.Close();
                 database.close_db();
    
             }
@@ -237,17 +94,12 @@ namespace app
             loadData();
         }
 
-        private void czyszczenie(object sender, RoutedEventArgs e)
+        public void deleteRow(object sender, RoutedEventArgs e)
         {
-            kafelki.Children.Clear();
-        }
-
-        private void deleteRow(object sender, RoutedEventArgs e)
-        {
-
+            Trace.WriteLine(e);
             Button button = (Button)e.OriginalSource;
             string id = button.Tag.ToString();
-            
+
 
             var conn = new database();
 
@@ -261,6 +113,7 @@ namespace app
             }
 
         }
+
 
         private void add_book(object sender, RoutedEventArgs e)
         {
@@ -295,10 +148,9 @@ namespace app
                 radio = "";
             }
 
-            kafelki.Children.Clear();
 
-            var database2 = new database();
-            if (database2.connect_db())
+            var database = new database();
+            if (database.connect_db())
             {
                 string query = "";
 
@@ -333,136 +185,9 @@ namespace app
                     }
                 }
 
+                ksiazki.wyswietl(query, database, kafelki);
 
-                MySqlCommand cmd3 = new MySqlCommand(query, database2.sql);
-
-                int i = 0;
-
-                MySqlDataReader dataReader2 = cmd3.ExecuteReader();
-                SolidColorBrush losos = new SolidColorBrush(Color.FromRgb(180, 91, 91));
-                SolidColorBrush bialy = new SolidColorBrush(Color.FromRgb(255, 255, 255));
-                SolidColorBrush siwy = new SolidColorBrush(Color.FromRgb(217, 217, 217));
-                scroll.VerticalScrollBarVisibility = ScrollBarVisibility.Auto;
-
-                while (dataReader2.Read())
-                {
-                    Rectangle newRectangle = new Rectangle
-                    {
-                        Width = 850,
-                        Height = 200,
-                        Fill = losos,
-                        StrokeThickness = 0,
-                        VerticalAlignment = VerticalAlignment.Top,
-                        Margin = new Thickness(0, 213 * i, 0, 0),
-                    };
-                    kafelki.Children.Add(newRectangle);
-
-
-                    Rectangle tlo = new Rectangle
-                    {
-                        Width = 180,
-                        Height = 180,
-                        Fill = bialy,
-                        StrokeThickness = 0,
-                        VerticalAlignment = VerticalAlignment.Top,
-                        Margin = new Thickness(-642, (213 * i) + 10, 0, 0),
-                    };
-                    kafelki.Children.Add(tlo);
-
-
-                    Image newImage = new Image
-                    {
-                        Width = 180,
-                        Height = 180,
-                        Source = new BitmapImage(new Uri(System.IO.Directory.GetCurrentDirectory() + dataReader2["image"])),
-                        Margin = new Thickness(-642, (213 * i) + 10, 0, 0),
-                        VerticalAlignment = VerticalAlignment.Top,
-                    };
-                    kafelki.Children.Add(newImage);
-
-
-                    TextBlock title = new TextBlock
-                    {
-                        Width = 450,
-                        Height = 25,
-                        FontSize = 16,
-                        Foreground = bialy,
-                        FontWeight = FontWeights.Bold,
-                        Text = dataReader2["title"].ToString(),
-                        VerticalAlignment = VerticalAlignment.Top,
-                        Margin = new Thickness(70, (213 * i) + 40, 0, 0),
-                        Background = null,
-                    };
-                    kafelki.Children.Add(title);
-
-
-                    TextBlock author = new TextBlock
-                    {
-                        Width = 450,
-                        Height = 20,
-                        FontSize = 14,
-                        Foreground = bialy,
-                        Text = dataReader2["name"].ToString() + " " + dataReader2["last_name"].ToString(),
-                        VerticalAlignment = VerticalAlignment.Top,
-                        Margin = new Thickness(70, (213 * i) + 75, 0, 0),
-                        Background = null,
-                    };
-                    kafelki.Children.Add(author);
-
-
-                    TextBlock genre = new TextBlock
-                    {
-                        Width = 450,
-                        Height = 20,
-                        FontSize = 14,
-                        Foreground = bialy,
-                        Text = dataReader2["name_genre"].ToString(),
-                        VerticalAlignment = VerticalAlignment.Top,
-                        Margin = new Thickness(70, (213 * i) + 105, 0, 0),
-                        Background = null,
-                    };
-                    kafelki.Children.Add(genre);
-
-                    string pubDate = dataReader2["publication_date"].ToString();
-                    pubDate = pubDate.Substring(0, pubDate.IndexOf(" "));
-
-                    TextBlock date = new TextBlock
-                    {
-                        Width = 450,
-                        Height = 20,
-                        FontSize = 14,
-                        Foreground = bialy,
-                        Text = pubDate,
-                        VerticalAlignment = VerticalAlignment.Top,
-                        Margin = new Thickness(70, (213 * i) + 135, 0, 0),
-                        Background = null,
-                    };
-                    kafelki.Children.Add(date);
-
-
-                    Button usun = new Button
-                    {
-                        Width = 100,
-                        Height = 30,
-                        Name = "b" + i,
-                        Tag = dataReader2["id_book"],
-                        Background = siwy,
-                        BorderBrush = null,
-                        VerticalAlignment = VerticalAlignment.Top,
-                        Margin = new Thickness(690, (213 * i) + 10, 0, 0),
-                        Content = "DELETE BOOK",
-                        FontWeight = FontWeights.Bold,
-                    };
-                    usun.Click += new RoutedEventHandler(czyszczenie);
-                    usun.Click += new RoutedEventHandler(deleteRow);
-                    kafelki.Children.Add(usun);
-
-                    i++;
-
-                }
-
-                dataReader2.Close();
-                database2.close_db();
+                database.close_db();
 
             }
 

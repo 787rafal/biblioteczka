@@ -8,7 +8,7 @@ using MySql.Data.MySqlClient;
 
 namespace app
 {
-    internal class database
+    public class database
     {
 
         public static string conn = "server=127.0.0.1; user=root; database=biblio_app; password=";
