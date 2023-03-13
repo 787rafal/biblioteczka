@@ -145,9 +145,9 @@ namespace app
                     VerticalAlignment = VerticalAlignment.Top,
                     Margin = new Thickness(690, (213 * i) + 10, 0, 0),
                     Content = "DELETE BOOK",
-                    FontWeight = FontWeights.Bold,
+                    FontWeight = FontWeights.Normal,
                 };
-                //usun.Style = (Style)FindResource("RoundedButtonStyle");
+                
                 kafelki.Children.Add(usun);
 
                 i++;

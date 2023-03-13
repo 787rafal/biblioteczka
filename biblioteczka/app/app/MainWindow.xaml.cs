@@ -27,9 +27,11 @@ namespace app
         public MainWindow()
         {
 
+
             _instance = this;
             InitializeComponent();
             Loaded += load;
+
 
             var database = new database();
             if (database.connect_db())
@@ -96,7 +98,6 @@ namespace app
 
         public void deleteRow(object sender, RoutedEventArgs e)
         {
-            Trace.WriteLine(e);
             Button button = (Button)e.OriginalSource;
             string id = button.Tag.ToString();
 
@@ -109,8 +110,9 @@ namespace app
                 MySqlCommand cmd = new MySqlCommand(zap, conn.sql);
                 cmd.Parameters.AddWithValue("@i", id);
                 cmd.ExecuteNonQuery();
-                this.loadData();
             }
+            conn.close_db();
+            szukaj();
 
         }
 
@@ -131,12 +133,30 @@ namespace app
 
         private void confirm_Click(object sender, RoutedEventArgs e)
         {
+            szukaj();
+        }
+
+        private void searchChange(object sender, TextChangedEventArgs e)
+        {
+            if (!string.IsNullOrEmpty(SearchedText.Text))
+            {
+                SearchPlaceholder.Visibility = Visibility.Hidden;
+            }
+            else
+            {
+                SearchPlaceholder.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void szukaj()
+        {
 
             string gen = selectGenres.Text;
             string szukaj = SearchedText.Text;
             string radio = "";
 
-            if (status1.IsChecked == true){
+            if (status1.IsChecked == true)
+            {
                 radio = "TITLE";
             }
             else if (status2.IsChecked == true)
@@ -191,18 +211,6 @@ namespace app
 
             }
 
-        }
-
-        private void searchChange(object sender, TextChangedEventArgs e)
-        {
-            if (!string.IsNullOrEmpty(SearchedText.Text))
-            {
-                SearchPlaceholder.Visibility = Visibility.Hidden;
-            }
-            else
-            {
-                SearchPlaceholder.Visibility = Visibility.Visible;
-            }
         }
 
 

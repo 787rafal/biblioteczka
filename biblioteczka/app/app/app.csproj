@@ -8,9 +8,6 @@
 	<UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
 
-  <ItemGroup>
-    <None Remove="czystykod.jpg" />
-  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="MySql.Data" Version="8.0.32" />
@@ -18,7 +15,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="czystykod.jpg" />
-  </ItemGroup>
+    <Resource Include="Fonts\SpaceGrotesk-Bold.ttf" />
+    <Resource Include="Fonts\SpaceGrotesk-Light.ttf" />
+    <Resource Include="Fonts\SpaceGrotesk-Medium.ttf" />
+    <Resource Include="Fonts\SpaceGrotesk-Regular.ttf" />
+    <Resource Include="Fonts\SpaceGrotesk-SemiBold.ttf" />
+ </ItemGroup>
+
 
 </Project>
