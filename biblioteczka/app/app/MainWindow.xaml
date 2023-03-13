@@ -448,7 +448,7 @@
 
         <GroupBox x:Name="radio_btn" Margin="691,77,221,493" BorderBrush="{x:Null}">
             <StackPanel x:Name="panel" Height="32">
-                <RadioButton x:Name="status1" Content="TITLE" FontWeight="Bold" Width="75" Height="15" HorizontalAlignment="Left" AutomationProperties.Name="TITLE"/>
+                <RadioButton x:Name="status1" Content="TITLE" FontWeight="Bold" Width="75" Height="15" HorizontalAlignment="Left" AutomationProperties.Name="TITLE" IsChecked="True"/>
                 <RadioButton x:Name="status2" Content="AUTHOR" FontWeight="Bold" Width="76" Margin="0,4,0,0" Height="15" AutomationProperties.Name="AUTHOR"/>
             </StackPanel>
         </GroupBox>

@@ -298,7 +298,7 @@ namespace app
             {
                 string query = "";
 
-                if (gen == "NONE" || gen == "GENRES")
+                if (gen == "None" || gen == "GENRES")
                 {
                     if (szukaj == "")
                     {
@@ -313,7 +313,7 @@ namespace app
                         query = "SELECT * FROM books JOIN authors ON author_id = id_author JOIN genres ON genre_id = id_genres WHERE TITLE LIKE '" + szukaj + "%' OR TITLE LIKE '%" + szukaj + "%' OR TITLE LIKE '%" + szukaj + "';";
                     }
                 }
-                else if (gen != "NONE" && gen != "GENRES")
+                else if (gen != "None" && gen != "GENRES")
                 {
                     if (szukaj == "")
                     {
