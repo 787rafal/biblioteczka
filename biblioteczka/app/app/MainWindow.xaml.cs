@@ -53,11 +53,6 @@ namespace app
 
         }
 
-        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
-
 
         private void przeciagnij(object sender, MouseButtonEventArgs e)
         {
@@ -84,6 +79,7 @@ namespace app
                 string query = "SELECT * FROM books JOIN authors ON author_id = id_author JOIN genres ON genre_id = id_genres;";
 
                 ksiazki.wyswietl(query, database, kafelki);
+
 
                 database.close_db();
    

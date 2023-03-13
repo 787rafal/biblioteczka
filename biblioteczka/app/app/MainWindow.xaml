@@ -424,14 +424,14 @@
         </Rectangle>
         <Button Style="{DynamicResource RoundedButtonStyle}" x:Name="newBook" Content="ADD NEW BOOK"  HorizontalAlignment="Left" Margin="48,48,0,0" VerticalAlignment="Top" Width="250" Height="30" BorderThickness="0,0,0,0" Background="#FFD9D9D9" BorderBrush="#00707070" Click="add_book"/>
         <Button Style="{DynamicResource RoundedButtonStyle}" x:Name="newAuthor" Content="ADD NEW AUTHOR"  HorizontalAlignment="Left" Margin="48,98,0,0" VerticalAlignment="Top" Width="250" Height="30" BorderThickness="0,0,0,0" Background="#FFD9D9D9" BorderBrush="#00707070" Click="newAuthor_Click"/>
-        <ComboBox Style="{DynamicResource RoundedSelectStyle}" x:Name="selectGenres" HorizontalAlignment="Left" Margin="387,33,0,0" VerticalAlignment="Top" Width="250" Height="30" SelectionChanged="ComboBox_SelectionChanged" Background="#FFD9D9D9" BorderThickness="0,0,0,0" ScrollViewer.VerticalScrollBarVisibility="Disabled" ScrollViewer.HorizontalScrollBarVisibility="Disabled" MaxDropDownHeight="500" BorderBrush="#00ACACAC">
+        <ComboBox Style="{DynamicResource RoundedSelectStyle}" x:Name="selectGenres" HorizontalAlignment="Left" Margin="387,33,0,0" VerticalAlignment="Top" Width="250" Height="30" Background="#FFD9D9D9" BorderThickness="0,0,0,0" ScrollViewer.VerticalScrollBarVisibility="Disabled" ScrollViewer.HorizontalScrollBarVisibility="Disabled" MaxDropDownHeight="500" BorderBrush="#00ACACAC">
             <ComboBoxItem Content="GENRES" IsEnabled="False" IsSelected="True" HorizontalAlignment="Center" RenderTransformOrigin="0,0" Width="250" Height="30" HorizontalContentAlignment="Center" Background="#FFD9D9D9"/>
             <!--<ComboBoxItem Content="GENRES" IsEnabled="False"  HorizontalAlignment="Center" RenderTransformOrigin="0,0" Width="250" Height="29" HorizontalContentAlignment="Left"/>
             <ComboBoxItem Content="GENRES" IsEnabled="False"  HorizontalAlignment="Center" RenderTransformOrigin="0,0" Width="250" Height="29" HorizontalContentAlignment="Left"/>
             <ComboBoxItem Content="GENRES" IsEnabled="False"  HorizontalAlignment="Center" RenderTransformOrigin="0,0" Width="250" Height="29" HorizontalContentAlignment="Left"/>-->
         </ComboBox>
         <TextBox Style="{DynamicResource RoundedTextBox}" x:Name="SearchedText" HorizontalAlignment="Left" Margin="691,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" TextChanged="searchChange" Height="30" Padding="16,6,0,0" BorderThickness="0,0,0,0" Background="#FFD9D9D9"/>
-        <TextBlock x:Name="SearchPlaceholder" IsHitTestVisible="False" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="710,40,0,0" Foreground="#FF545151" FontFamily="{DynamicResource SpaceGrotesk}"><Run Text="SEARCH"/><Run Text="..."/></TextBlock>
+        <TextBlock x:Name="SearchPlaceholder" IsHitTestVisible="False" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="710,40,0,0" Foreground="#FF545151"><Run Text="SEARCH"/><Run Text="..."/></TextBlock>
         <Rectangle HorizontalAlignment="Center" Height="25" VerticalAlignment="Top" Width="1000" Fill="#FF232222" MouseLeftButtonDown="przeciagnij"/>
         <Grid HorizontalAlignment="Left" Height="25" Margin="975,0,0,0" VerticalAlignment="Top" Width="25">
             <Button Click="close_btn" Background="#FF232222" BorderBrush="#FF232222" Style="{StaticResource vanilla_button}">
@@ -457,6 +457,10 @@
         <Button Style="{DynamicResource RoundedButtonStyle}" x:Name="confirm" Content="CONFIRM"  HorizontalAlignment="Left" Margin="791,87,0,0" VerticalAlignment="Top" Width="150" Height="30" BorderThickness="0,0,0,0" Background="#FF232222" BorderBrush="#00707070" Foreground="White" Click="confirm_Click"/>
 
         <ScrollViewer x:Name="scroll" Margin="0,163,0,0" Padding="0,0,0,15" Button.Click ="deleteRow" VerticalScrollBarVisibility="Auto" >
+            <ScrollViewer.Resources>
+                
+                
+            </ScrollViewer.Resources>
             <Grid x:Name="kafelki" Width="1000" />
         </ScrollViewer>
 

@@ -130,6 +130,7 @@ namespace app
                     VerticalAlignment = VerticalAlignment.Top,
                     Margin = new Thickness(70, (213 * i) + 135, 0, 0),
                     Background = null,
+                    //Style = TargetType
                 };
                 kafelki.Children.Add(date);
 

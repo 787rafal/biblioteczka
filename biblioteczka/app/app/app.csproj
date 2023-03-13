@@ -14,13 +14,6 @@
     <PackageReference Include="NuGet.Frameworks" Version="6.5.0" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Resource Include="Fonts\SpaceGrotesk-Bold.ttf" />
-    <Resource Include="Fonts\SpaceGrotesk-Light.ttf" />
-    <Resource Include="Fonts\SpaceGrotesk-Medium.ttf" />
-    <Resource Include="Fonts\SpaceGrotesk-Regular.ttf" />
-    <Resource Include="Fonts\SpaceGrotesk-SemiBold.ttf" />
- </ItemGroup>
 
 
 </Project>
