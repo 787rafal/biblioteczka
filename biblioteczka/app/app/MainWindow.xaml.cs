@@ -100,7 +100,7 @@ namespace app
                 SolidColorBrush bialy = new SolidColorBrush(Color.FromRgb(255, 255, 255));
                 SolidColorBrush siwy = new SolidColorBrush(Color.FromRgb(217, 217, 217));
                 scroll.VerticalScrollBarVisibility = ScrollBarVisibility.Auto;
-                
+
                 for (int i = 0; i < rowCount; i++)
                 {
                     dataReader.Read();
@@ -132,7 +132,7 @@ namespace app
                     {
                         Width = 180,
                         Height = 180,
-                        Source = new BitmapImage(new Uri(System.IO.Directory.GetCurrentDirectory()+ dataReader["image"])),
+                        Source = new BitmapImage(new Uri(System.IO.Directory.GetCurrentDirectory() + dataReader["image"])),
                         Margin = new Thickness(-642, (213 * i) + 10, 0, 0),
                         VerticalAlignment = VerticalAlignment.Top,
 
@@ -151,7 +151,7 @@ namespace app
                         Text = dataReader["title"].ToString(),
                         VerticalAlignment = VerticalAlignment.Top,
                         Margin = new Thickness(70, (213 * i) + 40, 0, 0),
-                        Background = null,                      
+                        Background = null,
                     };
                     kafelki.Children.Add(title);
 
@@ -213,8 +213,12 @@ namespace app
                         Margin = new Thickness(690, (213 * i) + 10, 0, 0),
                         Content = "DELETE BOOK",
                         FontWeight = FontWeights.Bold,
+                        //Style = {DynamicResource RoundedButtonStyle},
                     };
-                    usun.Click += new RoutedEventHandler(czyszczenie);
+                    //usun. = "{DynamicResource RoundedButtonStyle}";
+                    // usun.Resources[typeof(Button)].
+                    //usun.Click += new RoutedEventHandler(czyszczenie);
+                    usun.Style = (Style)FindResource("RoundedButtonStyle");
                     usun.Click += new RoutedEventHandler(deleteRow);
                     kafelki.Children.Add(usun);
 

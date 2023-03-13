@@ -1,200 +1,8 @@
-E:\SHARE\Biblioteczka\biblioteczka\app\app\bin\Debug\net6.0-windows\app.exe
-E:\SHARE\Biblioteczka\biblioteczka\app\app\bin\Debug\net6.0-windows\app.deps.json
-E:\SHARE\Biblioteczka\biblioteczka\app\app\bin\Debug\net6.0-windows\app.runtimeconfig.json
-E:\SHARE\Biblioteczka\biblioteczka\app\app\bin\Debug\net6.0-windows\app.dll
-E:\SHARE\Biblioteczka\biblioteczka\app\app\bin\Debug\net6.0-windows\app.pdb
-E:\SHARE\Biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\app.csproj.AssemblyReference.cache
-E:\SHARE\Biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\MainWindow.g.cs
-E:\SHARE\Biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\App.g.cs
-E:\SHARE\Biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\app_MarkupCompile.cache
-E:\SHARE\Biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\app_MarkupCompile.lref
-E:\SHARE\Biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\MainWindow.baml
-E:\SHARE\Biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\app.g.resources
-E:\SHARE\Biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\app.GeneratedMSBuildEditorConfig.editorconfig
-E:\SHARE\Biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\app.AssemblyInfoInputs.cache
-E:\SHARE\Biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\app.AssemblyInfo.cs
-E:\SHARE\Biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\app.csproj.CoreCompileInputs.cache
-E:\SHARE\Biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\app.dll
-E:\SHARE\Biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\refint\app.dll
-E:\SHARE\Biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\app.pdb
-E:\SHARE\Biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\app.genruntimeconfig.cache
-E:\SHARE\Biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\ref\app.dll
 C:\Users\Rafał\Desktop\studia\Biblioteczka\biblioteczka\app\app\bin\Debug\net6.0-windows\app.exe
 C:\Users\Rafał\Desktop\studia\Biblioteczka\biblioteczka\app\app\bin\Debug\net6.0-windows\app.deps.json
 C:\Users\Rafał\Desktop\studia\Biblioteczka\biblioteczka\app\app\bin\Debug\net6.0-windows\app.runtimeconfig.json
 C:\Users\Rafał\Desktop\studia\Biblioteczka\biblioteczka\app\app\bin\Debug\net6.0-windows\app.dll
 C:\Users\Rafał\Desktop\studia\Biblioteczka\biblioteczka\app\app\bin\Debug\net6.0-windows\app.pdb
-C:\Users\Rafał\Desktop\studia\Biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\app.csproj.AssemblyReference.cache
-C:\Users\Rafał\Desktop\studia\Biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\MainWindow.g.cs
-C:\Users\Rafał\Desktop\studia\Biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\App.g.cs
-C:\Users\Rafał\Desktop\studia\Biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\app_MarkupCompile.cache
-C:\Users\Rafał\Desktop\studia\Biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\app_MarkupCompile.lref
-C:\Users\Rafał\Desktop\studia\Biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\MainWindow.baml
-C:\Users\Rafał\Desktop\studia\Biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\app.g.resources
-C:\Users\Rafał\Desktop\studia\Biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\app.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Rafał\Desktop\studia\Biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\app.AssemblyInfoInputs.cache
-C:\Users\Rafał\Desktop\studia\Biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\app.AssemblyInfo.cs
-C:\Users\Rafał\Desktop\studia\Biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\app.csproj.CoreCompileInputs.cache
-C:\Users\Rafał\Desktop\studia\Biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\app.dll
-C:\Users\Rafał\Desktop\studia\Biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\refint\app.dll
-C:\Users\Rafał\Desktop\studia\Biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\app.pdb
-C:\Users\Rafał\Desktop\studia\Biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\app.genruntimeconfig.cache
-C:\Users\Rafał\Desktop\studia\Biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\ref\app.dll
-G:\STUDIA\PROGRAMOWANIE IV\biblioteczka\biblioteczka\app\app\bin\Debug\net6.0-windows\app.exe
-G:\STUDIA\PROGRAMOWANIE IV\biblioteczka\biblioteczka\app\app\bin\Debug\net6.0-windows\app.deps.json
-G:\STUDIA\PROGRAMOWANIE IV\biblioteczka\biblioteczka\app\app\bin\Debug\net6.0-windows\app.runtimeconfig.json
-G:\STUDIA\PROGRAMOWANIE IV\biblioteczka\biblioteczka\app\app\bin\Debug\net6.0-windows\app.dll
-G:\STUDIA\PROGRAMOWANIE IV\biblioteczka\biblioteczka\app\app\bin\Debug\net6.0-windows\app.pdb
-G:\STUDIA\PROGRAMOWANIE IV\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\app.csproj.AssemblyReference.cache
-G:\STUDIA\PROGRAMOWANIE IV\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\MainWindow.g.cs
-G:\STUDIA\PROGRAMOWANIE IV\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\App.g.cs
-G:\STUDIA\PROGRAMOWANIE IV\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\app_MarkupCompile.cache
-G:\STUDIA\PROGRAMOWANIE IV\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\app_MarkupCompile.lref
-G:\STUDIA\PROGRAMOWANIE IV\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\MainWindow.baml
-G:\STUDIA\PROGRAMOWANIE IV\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\app.g.resources
-G:\STUDIA\PROGRAMOWANIE IV\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\app.GeneratedMSBuildEditorConfig.editorconfig
-G:\STUDIA\PROGRAMOWANIE IV\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\app.AssemblyInfoInputs.cache
-G:\STUDIA\PROGRAMOWANIE IV\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\app.AssemblyInfo.cs
-G:\STUDIA\PROGRAMOWANIE IV\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\app.csproj.CoreCompileInputs.cache
-G:\STUDIA\PROGRAMOWANIE IV\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\app.dll
-G:\STUDIA\PROGRAMOWANIE IV\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\refint\app.dll
-G:\STUDIA\PROGRAMOWANIE IV\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\app.pdb
-G:\STUDIA\PROGRAMOWANIE IV\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\app.genruntimeconfig.cache
-G:\STUDIA\PROGRAMOWANIE IV\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\ref\app.dll
-C:\Users\komputer\Desktop\git\biblioteczka\biblioteczka\app\app\bin\Debug\net6.0-windows\app.exe
-C:\Users\komputer\Desktop\git\biblioteczka\biblioteczka\app\app\bin\Debug\net6.0-windows\app.deps.json
-C:\Users\komputer\Desktop\git\biblioteczka\biblioteczka\app\app\bin\Debug\net6.0-windows\app.runtimeconfig.json
-C:\Users\komputer\Desktop\git\biblioteczka\biblioteczka\app\app\bin\Debug\net6.0-windows\app.dll
-C:\Users\komputer\Desktop\git\biblioteczka\biblioteczka\app\app\bin\Debug\net6.0-windows\ref\app.dll
-C:\Users\komputer\Desktop\git\biblioteczka\biblioteczka\app\app\bin\Debug\net6.0-windows\app.pdb
-C:\Users\komputer\Desktop\git\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\app.csproj.AssemblyReference.cache
-C:\Users\komputer\Desktop\git\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\MainWindow.g.cs
-C:\Users\komputer\Desktop\git\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\App.g.cs
-C:\Users\komputer\Desktop\git\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\app_MarkupCompile.cache
-C:\Users\komputer\Desktop\git\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\app_MarkupCompile.lref
-C:\Users\komputer\Desktop\git\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\MainWindow.baml
-C:\Users\komputer\Desktop\git\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\app.g.resources
-C:\Users\komputer\Desktop\git\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\app.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\komputer\Desktop\git\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\app.AssemblyInfoInputs.cache
-C:\Users\komputer\Desktop\git\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\app.AssemblyInfo.cs
-C:\Users\komputer\Desktop\git\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\app.csproj.CoreCompileInputs.cache
-C:\Users\komputer\Desktop\git\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\app.dll
-C:\Users\komputer\Desktop\git\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\ref\app.dll
-C:\Users\komputer\Desktop\git\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\app.pdb
-C:\Users\komputer\Desktop\git\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\app.genruntimeconfig.cache
-C:\Users\komputer\Desktop\git\biblioteczka\biblioteczka\app\app\bin\Debug\net6.0-windows\Google.Protobuf.dll
-C:\Users\komputer\Desktop\git\biblioteczka\biblioteczka\app\app\bin\Debug\net6.0-windows\K4os.Compression.LZ4.dll
-C:\Users\komputer\Desktop\git\biblioteczka\biblioteczka\app\app\bin\Debug\net6.0-windows\K4os.Compression.LZ4.Streams.dll
-C:\Users\komputer\Desktop\git\biblioteczka\biblioteczka\app\app\bin\Debug\net6.0-windows\K4os.Hash.xxHash.dll
-C:\Users\komputer\Desktop\git\biblioteczka\biblioteczka\app\app\bin\Debug\net6.0-windows\MySql.Data.dll
-C:\Users\komputer\Desktop\git\biblioteczka\biblioteczka\app\app\bin\Debug\net6.0-windows\ZstdNet.dll
-C:\Users\komputer\Desktop\git\biblioteczka\biblioteczka\app\app\bin\Debug\net6.0-windows\comerr64.dll
-C:\Users\komputer\Desktop\git\biblioteczka\biblioteczka\app\app\bin\Debug\net6.0-windows\gssapi64.dll
-C:\Users\komputer\Desktop\git\biblioteczka\biblioteczka\app\app\bin\Debug\net6.0-windows\k5sprt64.dll
-C:\Users\komputer\Desktop\git\biblioteczka\biblioteczka\app\app\bin\Debug\net6.0-windows\krb5_64.dll
-C:\Users\komputer\Desktop\git\biblioteczka\biblioteczka\app\app\bin\Debug\net6.0-windows\krbcc64.dll
-C:\Users\komputer\Desktop\git\biblioteczka\biblioteczka\app\app\bin\Debug\net6.0-windows\NuGet.Frameworks.dll
-C:\Users\komputer\Desktop\git\biblioteczka\biblioteczka\app\app\bin\Debug\net6.0-windows\BouncyCastle.Crypto.dll
-C:\Users\komputer\Desktop\git\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\app.csproj.CopyComplete
-D:\Pulpit\git\biblioteczka\biblioteczka\app\app\bin\Debug\net6.0-windows\app.exe
-D:\Pulpit\git\biblioteczka\biblioteczka\app\app\bin\Debug\net6.0-windows\app.deps.json
-D:\Pulpit\git\biblioteczka\biblioteczka\app\app\bin\Debug\net6.0-windows\app.runtimeconfig.json
-D:\Pulpit\git\biblioteczka\biblioteczka\app\app\bin\Debug\net6.0-windows\app.dll
-D:\Pulpit\git\biblioteczka\biblioteczka\app\app\bin\Debug\net6.0-windows\app.pdb
-D:\Pulpit\git\biblioteczka\biblioteczka\app\app\bin\Debug\net6.0-windows\Google.Protobuf.dll
-D:\Pulpit\git\biblioteczka\biblioteczka\app\app\bin\Debug\net6.0-windows\K4os.Compression.LZ4.dll
-D:\Pulpit\git\biblioteczka\biblioteczka\app\app\bin\Debug\net6.0-windows\K4os.Compression.LZ4.Streams.dll
-D:\Pulpit\git\biblioteczka\biblioteczka\app\app\bin\Debug\net6.0-windows\K4os.Hash.xxHash.dll
-D:\Pulpit\git\biblioteczka\biblioteczka\app\app\bin\Debug\net6.0-windows\MySql.Data.dll
-D:\Pulpit\git\biblioteczka\biblioteczka\app\app\bin\Debug\net6.0-windows\ZstdNet.dll
-D:\Pulpit\git\biblioteczka\biblioteczka\app\app\bin\Debug\net6.0-windows\comerr64.dll
-D:\Pulpit\git\biblioteczka\biblioteczka\app\app\bin\Debug\net6.0-windows\gssapi64.dll
-D:\Pulpit\git\biblioteczka\biblioteczka\app\app\bin\Debug\net6.0-windows\k5sprt64.dll
-D:\Pulpit\git\biblioteczka\biblioteczka\app\app\bin\Debug\net6.0-windows\krb5_64.dll
-D:\Pulpit\git\biblioteczka\biblioteczka\app\app\bin\Debug\net6.0-windows\krbcc64.dll
-D:\Pulpit\git\biblioteczka\biblioteczka\app\app\bin\Debug\net6.0-windows\NuGet.Frameworks.dll
-D:\Pulpit\git\biblioteczka\biblioteczka\app\app\bin\Debug\net6.0-windows\BouncyCastle.Crypto.dll
-D:\Pulpit\git\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\app.csproj.AssemblyReference.cache
-D:\Pulpit\git\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\MainWindow.g.cs
-D:\Pulpit\git\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\App.g.cs
-D:\Pulpit\git\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\app_MarkupCompile.cache
-D:\Pulpit\git\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\app_MarkupCompile.lref
-D:\Pulpit\git\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\MainWindow.baml
-D:\Pulpit\git\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\app.g.resources
-D:\Pulpit\git\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\app.GeneratedMSBuildEditorConfig.editorconfig
-D:\Pulpit\git\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\app.AssemblyInfoInputs.cache
-D:\Pulpit\git\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\app.AssemblyInfo.cs
-D:\Pulpit\git\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\app.csproj.CoreCompileInputs.cache
-D:\Pulpit\git\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\app.csproj.CopyComplete
-D:\Pulpit\git\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\app.dll
-D:\Pulpit\git\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\refint\app.dll
-D:\Pulpit\git\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\app.pdb
-D:\Pulpit\git\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\app.genruntimeconfig.cache
-D:\Pulpit\git\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\ref\app.dll
-G:\STUDIA\PROGRAMOWANIE IV\biblioteczka\biblioteczka\app\app\bin\Debug\net6.0-windows\Google.Protobuf.dll
-G:\STUDIA\PROGRAMOWANIE IV\biblioteczka\biblioteczka\app\app\bin\Debug\net6.0-windows\K4os.Compression.LZ4.dll
-G:\STUDIA\PROGRAMOWANIE IV\biblioteczka\biblioteczka\app\app\bin\Debug\net6.0-windows\K4os.Compression.LZ4.Streams.dll
-G:\STUDIA\PROGRAMOWANIE IV\biblioteczka\biblioteczka\app\app\bin\Debug\net6.0-windows\K4os.Hash.xxHash.dll
-G:\STUDIA\PROGRAMOWANIE IV\biblioteczka\biblioteczka\app\app\bin\Debug\net6.0-windows\MySql.Data.dll
-G:\STUDIA\PROGRAMOWANIE IV\biblioteczka\biblioteczka\app\app\bin\Debug\net6.0-windows\ZstdNet.dll
-G:\STUDIA\PROGRAMOWANIE IV\biblioteczka\biblioteczka\app\app\bin\Debug\net6.0-windows\comerr64.dll
-G:\STUDIA\PROGRAMOWANIE IV\biblioteczka\biblioteczka\app\app\bin\Debug\net6.0-windows\gssapi64.dll
-G:\STUDIA\PROGRAMOWANIE IV\biblioteczka\biblioteczka\app\app\bin\Debug\net6.0-windows\k5sprt64.dll
-G:\STUDIA\PROGRAMOWANIE IV\biblioteczka\biblioteczka\app\app\bin\Debug\net6.0-windows\krb5_64.dll
-G:\STUDIA\PROGRAMOWANIE IV\biblioteczka\biblioteczka\app\app\bin\Debug\net6.0-windows\krbcc64.dll
-G:\STUDIA\PROGRAMOWANIE IV\biblioteczka\biblioteczka\app\app\bin\Debug\net6.0-windows\NuGet.Frameworks.dll
-G:\STUDIA\PROGRAMOWANIE IV\biblioteczka\biblioteczka\app\app\bin\Debug\net6.0-windows\BouncyCastle.Crypto.dll
-G:\STUDIA\PROGRAMOWANIE IV\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\app.csproj.CopyComplete
-C:\Users\komputer\Desktop\git\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\addBook.g.cs
-C:\Users\komputer\Desktop\git\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\addBook.baml
-C:\Users\komputer\Desktop\git\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\addAuthor.g.cs
-C:\Users\komputer\Desktop\git\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\addAuthor.baml
-G:\STUDIA\PROGRAMOWANIE IV\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\addAuthor.g.cs
-G:\STUDIA\PROGRAMOWANIE IV\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\addBook.g.cs
-G:\STUDIA\PROGRAMOWANIE IV\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\addAuthor.baml
-G:\STUDIA\PROGRAMOWANIE IV\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\addBook.baml
-<<<<<<< HEAD
-C:\Users\komputer\Desktop\biblioteczka-main\biblioteczka\app\app\bin\Debug\net6.0-windows\app.exe
-C:\Users\komputer\Desktop\biblioteczka-main\biblioteczka\app\app\bin\Debug\net6.0-windows\app.deps.json
-C:\Users\komputer\Desktop\biblioteczka-main\biblioteczka\app\app\bin\Debug\net6.0-windows\app.runtimeconfig.json
-C:\Users\komputer\Desktop\biblioteczka-main\biblioteczka\app\app\bin\Debug\net6.0-windows\app.dll
-C:\Users\komputer\Desktop\biblioteczka-main\biblioteczka\app\app\bin\Debug\net6.0-windows\ref\app.dll
-C:\Users\komputer\Desktop\biblioteczka-main\biblioteczka\app\app\bin\Debug\net6.0-windows\app.pdb
-C:\Users\komputer\Desktop\biblioteczka-main\biblioteczka\app\app\bin\Debug\net6.0-windows\Google.Protobuf.dll
-C:\Users\komputer\Desktop\biblioteczka-main\biblioteczka\app\app\bin\Debug\net6.0-windows\K4os.Compression.LZ4.dll
-C:\Users\komputer\Desktop\biblioteczka-main\biblioteczka\app\app\bin\Debug\net6.0-windows\K4os.Compression.LZ4.Streams.dll
-C:\Users\komputer\Desktop\biblioteczka-main\biblioteczka\app\app\bin\Debug\net6.0-windows\K4os.Hash.xxHash.dll
-C:\Users\komputer\Desktop\biblioteczka-main\biblioteczka\app\app\bin\Debug\net6.0-windows\MySql.Data.dll
-C:\Users\komputer\Desktop\biblioteczka-main\biblioteczka\app\app\bin\Debug\net6.0-windows\ZstdNet.dll
-C:\Users\komputer\Desktop\biblioteczka-main\biblioteczka\app\app\bin\Debug\net6.0-windows\comerr64.dll
-C:\Users\komputer\Desktop\biblioteczka-main\biblioteczka\app\app\bin\Debug\net6.0-windows\gssapi64.dll
-C:\Users\komputer\Desktop\biblioteczka-main\biblioteczka\app\app\bin\Debug\net6.0-windows\k5sprt64.dll
-C:\Users\komputer\Desktop\biblioteczka-main\biblioteczka\app\app\bin\Debug\net6.0-windows\krb5_64.dll
-C:\Users\komputer\Desktop\biblioteczka-main\biblioteczka\app\app\bin\Debug\net6.0-windows\krbcc64.dll
-C:\Users\komputer\Desktop\biblioteczka-main\biblioteczka\app\app\bin\Debug\net6.0-windows\NuGet.Frameworks.dll
-C:\Users\komputer\Desktop\biblioteczka-main\biblioteczka\app\app\bin\Debug\net6.0-windows\BouncyCastle.Crypto.dll
-C:\Users\komputer\Desktop\biblioteczka-main\biblioteczka\app\app\obj\Debug\net6.0-windows\app.csproj.AssemblyReference.cache
-C:\Users\komputer\Desktop\biblioteczka-main\biblioteczka\app\app\obj\Debug\net6.0-windows\addAuthor.g.cs
-C:\Users\komputer\Desktop\biblioteczka-main\biblioteczka\app\app\obj\Debug\net6.0-windows\addBook.g.cs
-C:\Users\komputer\Desktop\biblioteczka-main\biblioteczka\app\app\obj\Debug\net6.0-windows\MainWindow.g.cs
-C:\Users\komputer\Desktop\biblioteczka-main\biblioteczka\app\app\obj\Debug\net6.0-windows\App.g.cs
-C:\Users\komputer\Desktop\biblioteczka-main\biblioteczka\app\app\obj\Debug\net6.0-windows\app_MarkupCompile.cache
-C:\Users\komputer\Desktop\biblioteczka-main\biblioteczka\app\app\obj\Debug\net6.0-windows\app_MarkupCompile.lref
-C:\Users\komputer\Desktop\biblioteczka-main\biblioteczka\app\app\obj\Debug\net6.0-windows\addAuthor.baml
-C:\Users\komputer\Desktop\biblioteczka-main\biblioteczka\app\app\obj\Debug\net6.0-windows\addBook.baml
-C:\Users\komputer\Desktop\biblioteczka-main\biblioteczka\app\app\obj\Debug\net6.0-windows\MainWindow.baml
-C:\Users\komputer\Desktop\biblioteczka-main\biblioteczka\app\app\obj\Debug\net6.0-windows\app.g.resources
-C:\Users\komputer\Desktop\biblioteczka-main\biblioteczka\app\app\obj\Debug\net6.0-windows\app.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\komputer\Desktop\biblioteczka-main\biblioteczka\app\app\obj\Debug\net6.0-windows\app.AssemblyInfoInputs.cache
-C:\Users\komputer\Desktop\biblioteczka-main\biblioteczka\app\app\obj\Debug\net6.0-windows\app.AssemblyInfo.cs
-C:\Users\komputer\Desktop\biblioteczka-main\biblioteczka\app\app\obj\Debug\net6.0-windows\app.csproj.CoreCompileInputs.cache
-C:\Users\komputer\Desktop\biblioteczka-main\biblioteczka\app\app\obj\Debug\net6.0-windows\app.csproj.CopyComplete
-C:\Users\komputer\Desktop\biblioteczka-main\biblioteczka\app\app\obj\Debug\net6.0-windows\app.dll
-C:\Users\komputer\Desktop\biblioteczka-main\biblioteczka\app\app\obj\Debug\net6.0-windows\ref\app.dll
-C:\Users\komputer\Desktop\biblioteczka-main\biblioteczka\app\app\obj\Debug\net6.0-windows\app.pdb
-C:\Users\komputer\Desktop\biblioteczka-main\biblioteczka\app\app\obj\Debug\net6.0-windows\app.genruntimeconfig.cache
-=======
->>>>>>> 445db105cddfb445c784a853eb4a07ddf3aad836
 C:\Users\Rafał\Desktop\studia\Biblioteczka\biblioteczka\app\app\bin\Debug\net6.0-windows\Google.Protobuf.dll
 C:\Users\Rafał\Desktop\studia\Biblioteczka\biblioteczka\app\app\bin\Debug\net6.0-windows\K4os.Compression.LZ4.dll
 C:\Users\Rafał\Desktop\studia\Biblioteczka\biblioteczka\app\app\bin\Debug\net6.0-windows\K4os.Compression.LZ4.Streams.dll
@@ -208,8 +16,24 @@ C:\Users\Rafał\Desktop\studia\Biblioteczka\biblioteczka\app\app\bin\Debug\net6.
 C:\Users\Rafał\Desktop\studia\Biblioteczka\biblioteczka\app\app\bin\Debug\net6.0-windows\krbcc64.dll
 C:\Users\Rafał\Desktop\studia\Biblioteczka\biblioteczka\app\app\bin\Debug\net6.0-windows\NuGet.Frameworks.dll
 C:\Users\Rafał\Desktop\studia\Biblioteczka\biblioteczka\app\app\bin\Debug\net6.0-windows\BouncyCastle.Crypto.dll
+C:\Users\Rafał\Desktop\studia\Biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\app.csproj.AssemblyReference.cache
 C:\Users\Rafał\Desktop\studia\Biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\addAuthor.g.cs
 C:\Users\Rafał\Desktop\studia\Biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\addBook.g.cs
+C:\Users\Rafał\Desktop\studia\Biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\MainWindow.g.cs
+C:\Users\Rafał\Desktop\studia\Biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\Rafał\Desktop\studia\Biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\app_MarkupCompile.cache
+C:\Users\Rafał\Desktop\studia\Biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\app_MarkupCompile.lref
 C:\Users\Rafał\Desktop\studia\Biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\addAuthor.baml
 C:\Users\Rafał\Desktop\studia\Biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\addBook.baml
+C:\Users\Rafał\Desktop\studia\Biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\MainWindow.baml
+C:\Users\Rafał\Desktop\studia\Biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\app.g.resources
+C:\Users\Rafał\Desktop\studia\Biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\app.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Rafał\Desktop\studia\Biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\app.AssemblyInfoInputs.cache
+C:\Users\Rafał\Desktop\studia\Biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\app.AssemblyInfo.cs
+C:\Users\Rafał\Desktop\studia\Biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\app.csproj.CoreCompileInputs.cache
 C:\Users\Rafał\Desktop\studia\Biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\app.csproj.CopyComplete
+C:\Users\Rafał\Desktop\studia\Biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\app.dll
+C:\Users\Rafał\Desktop\studia\Biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\refint\app.dll
+C:\Users\Rafał\Desktop\studia\Biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\app.pdb
+C:\Users\Rafał\Desktop\studia\Biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\app.genruntimeconfig.cache
+C:\Users\Rafał\Desktop\studia\Biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\ref\app.dll
