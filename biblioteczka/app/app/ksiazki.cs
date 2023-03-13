@@ -149,11 +149,16 @@ namespace app
                     FontWeight = FontWeights.Normal,
                 };
                 
+
+                
+
                 kafelki.Children.Add(usun);
 
                 i++;
             }
             dataReader.Close();
+
+            MainWindow._instance.buttonRadius();
 
         }
 

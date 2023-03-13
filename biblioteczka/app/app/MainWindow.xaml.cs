@@ -74,12 +74,10 @@ namespace app
 
             var database = new database();
             if (database.connect_db())
-            {
-                
+            {                
                 string query = "SELECT * FROM books JOIN authors ON author_id = id_author JOIN genres ON genre_id = id_genres;";
 
                 ksiazki.wyswietl(query, database, kafelki);
-
 
                 database.close_db();
    
@@ -210,8 +208,18 @@ namespace app
         }
 
 
+        public void buttonRadius()
+        {
+            Panel mainContainer = (Panel)this.scroll.Content;
+            UIElementCollection element = mainContainer.Children;
+            List<DependencyObject> lstElement = element.Cast<DependencyObject>().ToList();
+            Button[] btns = lstElement.OfType<Button>().ToArray();
 
-
+            foreach (Button btn in btns)
+            {
+                btn.Style = (Style)FindResource("RoundedButtonStyle");
+            }
+        }
 
     }
 }
