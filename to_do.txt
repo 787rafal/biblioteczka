@@ -2,11 +2,11 @@
 
         //TO DO:
 
+	dodac (wydawnictwo, ISBN,)
 	Dynamiczne wyszukiwanie
 	Reset wyszukiwania
         Usuniecie ksiazki, usuwa obrazek
         poprawa wygladu !!!
         wybiernie daty z kalendarza
-        walidaja danych (Dana ksiazka istnieje, dany obrazek istnieje)
-	dodac (wydawnictwo, ISBN,)
+        walidaja danych (Dana ksiazka istnieje, dany obrazek istnieje, data z przyszlosci, ISBN nie moze sie powtarzac, ITP)
         TESTY, TESTY, TESTY XD

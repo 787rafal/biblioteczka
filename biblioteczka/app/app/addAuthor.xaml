@@ -79,7 +79,7 @@
 
     </Window.Resources>
 
-    <Grid>
+    <Grid Background="#FFD9D9D9">
         <Rectangle HorizontalAlignment="Center" Height="25" VerticalAlignment="Top" Width="500" Fill="#FF232222" MouseLeftButtonDown="przeciagnij"/>
         <TextBlock HorizontalAlignment="Left" Margin="10,5,0,0" TextWrapping="Wrap" Text="LibraryAPP" VerticalAlignment="Top" Width="124" Foreground="White"/>
         <Button Style="{StaticResource vanilla_button}"  Margin="450,0,25,425" Background="#FF232222" BorderBrush="#FF232222" RenderTransformOrigin="0.5,0.5" Click="min_btn">
