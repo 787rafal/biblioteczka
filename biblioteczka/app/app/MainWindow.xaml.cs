@@ -477,17 +477,7 @@ namespace app
         }
 
 
-        //PRZED URUCHOMIENIEM WCZYTAC NOWA BAZE DANYCH
 
-        //TO DO:
-
-        //wyszukiwanie !!!!! GOTOWE
-        //sciezka do plikow dynamiczna !!!!!!!! GOTOWE
-        //Usuniecie ksiazki, usuwa obrazek
-        //poprawa wygladu 
-        //wybiernie daty z kalendarza
-        //walidaja danych (Dana ksiazka istnieje, dany obrazek istnieje)
-        //TESTY, TESTY, TESTY XD
 
 
     }
