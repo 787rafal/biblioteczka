@@ -84,7 +84,7 @@ namespace app
                     FontWeight = FontWeights.Bold,
                     Text = dataReader["title"].ToString(),
                     VerticalAlignment = VerticalAlignment.Top,
-                    Margin = new Thickness(70, (213 * i) + 40, 0, 0),
+                    Margin = new Thickness(70, (213 * i) + 20, 0, 0),
                     Background = null,
                 };
                 kafelki.Children.Add(title);
@@ -98,10 +98,25 @@ namespace app
                     Foreground = bialy,
                     Text = dataReader["name"].ToString() + " " + dataReader["last_name"].ToString(),
                     VerticalAlignment = VerticalAlignment.Top,
-                    Margin = new Thickness(70, (213 * i) + 75, 0, 0),
+                    Margin = new Thickness(70, (213 * i) + 55, 0, 0),
                     Background = null,
                 };
                 kafelki.Children.Add(author);
+
+
+                TextBlock wydawnictwo = new TextBlock
+                {
+                    Width = 450,
+                    Height = 20,
+                    FontSize = 14,
+                    Foreground = bialy,
+                    Text = dataReader["publication_house"].ToString(),
+                    VerticalAlignment = VerticalAlignment.Top,
+                    Margin = new Thickness(70, (213 * i) + 80, 0, 0),
+                    Background = null,
+                };
+                kafelki.Children.Add(wydawnictwo);
+
 
                 TextBlock genre = new TextBlock
                 {
@@ -118,7 +133,7 @@ namespace app
 
 
                 string pubDate = dataReader["publication_date"].ToString();
-                pubDate = pubDate.Substring(0, pubDate.IndexOf(" "));
+                //pubDate = pubDate.Substring(0, pubDate.IndexOf(" "));
 
                 TextBlock date = new TextBlock
                 {
@@ -128,11 +143,25 @@ namespace app
                     Foreground = bialy,
                     Text = pubDate,
                     VerticalAlignment = VerticalAlignment.Top,
-                    Margin = new Thickness(70, (213 * i) + 135, 0, 0),
+                    Margin = new Thickness(70, (213 * i) + 130, 0, 0),
                     Background = null,
                     //Style = TargetType
                 };
                 kafelki.Children.Add(date);
+
+
+                TextBlock isbnCode = new TextBlock
+                {
+                    Width = 450,
+                    Height = 20,
+                    FontSize = 14,
+                    Foreground = bialy,
+                    Text = dataReader["isbn"].ToString(),
+                    VerticalAlignment = VerticalAlignment.Top,
+                    Margin = new Thickness(70, (213 * i) + 155, 0, 0),
+                    Background = null,
+                };
+                kafelki.Children.Add(isbnCode);
 
 
                 System.Windows.Controls.Button usun = new System.Windows.Controls.Button

@@ -2,7 +2,7 @@
 
         //TO DO:
 
-	dodac (wydawnictwo, ISBN,)
+	dodac (wydawnictwo, ISBN,) || DONE
 	Dynamiczne wyszukiwanie
 	Reset wyszukiwania
         Usuniecie ksiazki, usuwa obrazek

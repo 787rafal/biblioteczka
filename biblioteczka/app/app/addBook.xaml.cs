@@ -88,8 +88,10 @@ namespace app
                 string autor = selectAuthor.Text;
                 string gatunek = selectGenre.Text;
                 string date = SearchedText3.Text;
+                string isbn = search_ISBN.Text;
+                string house = search_HOUSE.Text;
 
-                string zap = "INSERT INTO books (title, image, publication_date, author_id, genre_id) VALUES (@t, @p, @d, @a, @g)";
+                string zap = "INSERT INTO books (title, image, publication_date, isbn, publication_house, author_id, genre_id) VALUES (@t, @p, @d, @i, @h, @a, @g)";
 
                 MySqlCommand cmd = new MySqlCommand(zap, conn.sql);
 
@@ -98,6 +100,8 @@ namespace app
                 cmd.Parameters.AddWithValue("@t", tytul);
                 cmd.Parameters.AddWithValue("@p", newImage.FileDatabaseName);
                 cmd.Parameters.AddWithValue("@d", date);
+                cmd.Parameters.AddWithValue("@i", isbn);
+                cmd.Parameters.AddWithValue("@h", house);
                 cmd.Parameters.AddWithValue("@a", autor[0]);
                 cmd.Parameters.AddWithValue("@g", gatunek[0]);
 
@@ -166,6 +170,30 @@ namespace app
             else
             {
                 title.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void isbnChange(object sender, TextChangedEventArgs e)
+        {
+            if (!string.IsNullOrEmpty(search_ISBN.Text))
+            {
+                isbnPH.Visibility = Visibility.Hidden;
+            }
+            else
+            {
+                isbnPH.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void houseChange(object sender, TextChangedEventArgs e)
+        {
+            if (!string.IsNullOrEmpty(search_HOUSE.Text))
+            {
+                housePH.Visibility = Visibility.Hidden;
+            }
+            else
+            {
+                housePH.Visibility = Visibility.Visible;
             }
         }
     }
