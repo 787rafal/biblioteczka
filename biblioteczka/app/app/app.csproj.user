@@ -13,12 +13,18 @@
     <Compile Update="addBook.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="kalendarz.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="addAuthor.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="addBook.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="kalendarz.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">

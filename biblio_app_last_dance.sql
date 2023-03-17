@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 14 Mar 2023, 01:26
+-- Czas generowania: 17 Mar 2023, 01:28
 -- Wersja serwera: 10.4.22-MariaDB
 -- Wersja PHP: 8.1.1
 
@@ -71,8 +71,7 @@ INSERT INTO `books` (`id_book`, `title`, `image`, `publication_date`, `isbn`, `p
 (2, 'Wiedźmin - Miecz przeznaczenia', '\\images\\mieczprzeznaczenia.png', '2014-09-25', '9788496173729', 'SuperNowa', 2, 2),
 (3, 'Kabalista', '\\images\\kabalista.jpg', '2023-02-08', '9788382805222', 'Filia', 4, 4),
 (4, 'Fairy Tale', '\\images\\fairytale.jpg', '2009-12-10', '9788401027710', 'Hodder And Stoughton', 3, 3),
-(9, 'Behwiorysta', '\\images\\behawiorysta.jpg', '2016-10-10', '9788379348615', 'Filia', 4, 4),
-(12, 'za górami za lasami', '\\images\\abc.jpg', '2020-20-02', '7283928374910', 'WPR', 5, 2);
+(9, 'Behwiorysta', '\\images\\behawiorysta.jpg', '2016-10-10', '9788379348615', 'Filia', 4, 4);
 
 -- --------------------------------------------------------
 
@@ -94,7 +93,16 @@ INSERT INTO `genres` (`id_genres`, `name_genre`) VALUES
 (2, 'Fantasy'),
 (3, 'Thriller'),
 (4, 'Crime'),
-(5, 'Education');
+(5, 'Education'),
+(6, 'Action'),
+(7, 'Detective'),
+(8, 'Novel'),
+(9, 'Historical'),
+(10, 'Horror'),
+(11, 'Romance'),
+(12, 'Short Stories'),
+(13, 'Biographie'),
+(14, 'Cooking');
 
 --
 -- Indeksy dla zrzutów tabel
@@ -134,13 +142,13 @@ ALTER TABLE `authors`
 -- AUTO_INCREMENT dla tabeli `books`
 --
 ALTER TABLE `books`
-  MODIFY `id_book` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id_book` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT dla tabeli `genres`
 --
 ALTER TABLE `genres`
-  MODIFY `id_genres` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_genres` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- Ograniczenia dla zrzutów tabel

@@ -94,10 +94,7 @@ namespace app
         {
             Button button = (Button)e.OriginalSource;
             string id = button.Tag.ToString();
-
-
             var conn = new database();
-
             if (conn.connect_db())
             {
                 string zap = "DELETE FROM books WHERE id_book = @i";
@@ -107,6 +104,18 @@ namespace app
             }
             conn.close_db();
             szukaj();
+
+            //var conn2 = new database();
+            //if (conn2.connect_db())
+            //{
+            //    string zap2 = "SELECT * FROM books WHERE id_book = @i";
+            //    MySqlCommand cmd2 = new MySqlCommand(zap2, conn2.sql);
+            //    cmd2.Parameters.AddWithValue("@i", id);
+            //    MySqlDataReader dataReader = cmd2.ExecuteReader();
+            //    dataReader.Read();
+            //    File.Delete(System.IO.Directory.GetCurrentDirectory() + dataReader["image"]);
+            //    dataReader.Close();
+            //}
 
         }
 
@@ -168,7 +177,7 @@ namespace app
             {
                 string query = "";
 
-                if (gen == "None" || gen == "GENRES")
+                if (gen == "None" || gen == "GENRES:")
                 {
                     if (szukaj == "")
                     {

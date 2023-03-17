@@ -23,10 +23,14 @@ namespace app
     /// </summary>
     public partial class addBook : Window
     {
+
         ImageAdd newImage = new ImageAdd();
+        public static addBook _instance2;
         public addBook()
         {
             InitializeComponent();
+
+            _instance2 = this;
 
             var database = new database();
             if (database.connect_db())
@@ -38,8 +42,11 @@ namespace app
                 MySqlCommand cmd2 = new MySqlCommand(query2, database.sql);
                 MySqlDataReader reader = cmd.ExecuteReader();
 
+                bool test1 = true;
+                bool test2 = true;
+
                 while (reader.Read())
-                {
+                {                
                     selectAuthor.Items.Add(reader["id_author"] + ". " + reader["name"] + " " + reader["last_name"]);
                 }
 
@@ -87,15 +94,13 @@ namespace app
                 string tytul = SearchedText.Text;
                 string autor = selectAuthor.Text;
                 string gatunek = selectGenre.Text;
-                string date = SearchedText3.Text;
+                string date = pub_date.Content.ToString();
                 string isbn = search_ISBN.Text;
                 string house = search_HOUSE.Text;
 
                 string zap = "INSERT INTO books (title, image, publication_date, isbn, publication_house, author_id, genre_id) VALUES (@t, @p, @d, @i, @h, @a, @g)";
 
                 MySqlCommand cmd = new MySqlCommand(zap, conn.sql);
-
-                Trace.WriteLine(btn_img.Content.ToString());
 
                 cmd.Parameters.AddWithValue("@t", tytul);
                 cmd.Parameters.AddWithValue("@p", newImage.FileDatabaseName);
@@ -142,24 +147,10 @@ namespace app
             }
             else
             {
-                btn_img.Foreground = bialy;
+                btn_img.Foreground = szary;
             }
 
         }
-
-
-        private void dateChange(object sender, TextChangedEventArgs e)
-        {
-            if (!string.IsNullOrEmpty(SearchedText3.Text))
-            {
-                date.Visibility = Visibility.Hidden;
-            }
-            else
-            {
-                date.Visibility = Visibility.Visible;
-            }
-        }
-
 
         private void titleChange(object sender, TextChangedEventArgs e)
         {
@@ -195,6 +186,12 @@ namespace app
             {
                 housePH.Visibility = Visibility.Visible;
             }
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            kalendarz kal = new kalendarz();
+            kal.Show();         
         }
     }
 }

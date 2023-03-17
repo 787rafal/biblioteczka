@@ -3,10 +3,12 @@
         //TO DO:
 
 	dodac (wydawnictwo, ISBN,) || DONE
+	poprawa wygladu || DONE (NIE TRZEBA SIĘ WSTYDZIĆ)
+	wybiernie daty z kalendarza || DONE
+
+	walidaja danych (Dana ksiazka istnieje, dany obrazek istnieje, data z przyszlosci, ISBN nie moze sie powtarzac, ITP)
 	Dynamiczne wyszukiwanie
 	Reset wyszukiwania
-        Usuniecie ksiazki, usuwa obrazek
-        poprawa wygladu !!!
-        wybiernie daty z kalendarza
-        walidaja danych (Dana ksiazka istnieje, dany obrazek istnieje, data z przyszlosci, ISBN nie moze sie powtarzac, ITP)
+        Usuniecie ksiazki, usuwa obrazek || nie wiem czy to dobry pomysl
+
         TESTY, TESTY, TESTY XD
