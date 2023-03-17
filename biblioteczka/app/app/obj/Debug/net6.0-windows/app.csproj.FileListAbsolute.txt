@@ -119,3 +119,7 @@ C:\Users\komputer\Desktop\git\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0
 C:\Users\komputer\Desktop\git\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\kalendarz.baml
 C:\Users\komputer\Desktop\git\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\error.g.cs
 C:\Users\komputer\Desktop\git\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\error.baml
+G:\STUDIA\PROGRAMOWANIE IV\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\error.g.cs
+G:\STUDIA\PROGRAMOWANIE IV\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\kalendarz.g.cs
+G:\STUDIA\PROGRAMOWANIE IV\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\error.baml
+G:\STUDIA\PROGRAMOWANIE IV\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\kalendarz.baml
