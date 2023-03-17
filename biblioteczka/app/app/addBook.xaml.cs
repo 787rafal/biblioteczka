@@ -76,6 +76,7 @@ namespace app
             this.Close();
             MainWindow._instance.loadData();
             MainWindow._instance.Show();
+            _instance2 = null;  
         }
 
         private void min_btn(object sender, RoutedEventArgs e)
@@ -86,40 +87,51 @@ namespace app
         private void add_book(object sender, RoutedEventArgs e)
         {
 
-            var conn = new database();
+            if ((SearchedText.Text.ToString() != "") && (selectAuthor.Text.ToString() != "AUTHORS:") && (selectGenre.Text.ToString() != "GENRES:") && (pub_date.Content.ToString() != "") && (search_ISBN.Text.ToString() != "") && (search_HOUSE.Text.ToString() != "")) {
 
-            if (conn.connect_db())
+                var conn = new database();
+
+                if (conn.connect_db())
+                {
+
+                    string tytul = SearchedText.Text;
+                    string autor = selectAuthor.Text;
+                    string gatunek = selectGenre.Text;
+                    string date = pub_date.Content.ToString();
+                    string isbn = search_ISBN.Text;
+                    string house = search_HOUSE.Text;
+
+                    string zap = "INSERT INTO books (title, image, publication_date, isbn, publication_house, author_id, genre_id) VALUES (@t, @p, @d, @i, @h, @a, @g)";
+
+                    MySqlCommand cmd = new MySqlCommand(zap, conn.sql);
+
+                    cmd.Parameters.AddWithValue("@t", tytul);
+                    cmd.Parameters.AddWithValue("@p", newImage.FileDatabaseName);
+                    cmd.Parameters.AddWithValue("@d", date);
+                    cmd.Parameters.AddWithValue("@i", isbn);
+                    cmd.Parameters.AddWithValue("@h", house);
+                    cmd.Parameters.AddWithValue("@a", autor[0]);
+                    cmd.Parameters.AddWithValue("@g", gatunek[0]);
+
+                    cmd.ExecuteNonQuery();
+
+                    newImage.ImageCopy();
+
+                    this.Close();
+
+                    MainWindow._instance.loadData();
+
+                    MainWindow._instance.Show();
+
+                    _instance2 = null;
+
+                }
+            
+            }else
             {
-
-                string tytul = SearchedText.Text;
-                string autor = selectAuthor.Text;
-                string gatunek = selectGenre.Text;
-                string date = pub_date.Content.ToString();
-                string isbn = search_ISBN.Text;
-                string house = search_HOUSE.Text;
-
-                string zap = "INSERT INTO books (title, image, publication_date, isbn, publication_house, author_id, genre_id) VALUES (@t, @p, @d, @i, @h, @a, @g)";
-
-                MySqlCommand cmd = new MySqlCommand(zap, conn.sql);
-
-                cmd.Parameters.AddWithValue("@t", tytul);
-                cmd.Parameters.AddWithValue("@p", newImage.FileDatabaseName);
-                cmd.Parameters.AddWithValue("@d", date);
-                cmd.Parameters.AddWithValue("@i", isbn);
-                cmd.Parameters.AddWithValue("@h", house);
-                cmd.Parameters.AddWithValue("@a", autor[0]);
-                cmd.Parameters.AddWithValue("@g", gatunek[0]);
-
-                cmd.ExecuteNonQuery();
-
-                newImage.ImageCopy();
-
-                this.Close();
-
-                MainWindow._instance.loadData();
-
-                MainWindow._instance.Show();
-
+                error blad = new error();
+                blad.Show();
+                this.Hide();
             }
 
         }
@@ -162,6 +174,15 @@ namespace app
             {
                 title.Visibility = Visibility.Visible;
             }
+
+            if (SearchedText.Text.Length > 50)
+            {
+                error blad = new error();
+                blad.Show();
+                this.Hide();
+                SearchedText.Text = "";
+            }
+
         }
 
         private void isbnChange(object sender, TextChangedEventArgs e)
@@ -174,6 +195,26 @@ namespace app
             {
                 isbnPH.Visibility = Visibility.Visible;
             }
+
+            foreach(char c in search_ISBN.Text)
+            {
+                if (!char.IsDigit(c))
+                {
+                    error blad = new error();
+                    blad.Show();
+                    this.Hide();
+                    search_ISBN.Text = "";
+                }
+            }
+
+            if(search_ISBN.Text.Length > 13)
+            {
+                error blad = new error();
+                blad.Show();
+                this.Hide();
+                search_ISBN.Text = "";
+            }
+
         }
 
         private void houseChange(object sender, TextChangedEventArgs e)
@@ -186,6 +227,26 @@ namespace app
             {
                 housePH.Visibility = Visibility.Visible;
             }
+
+            foreach (char c in search_HOUSE.Text)
+            {
+                if (!char.IsLetter(c) && !char.IsWhiteSpace(c))
+                {
+                    error blad = new error();
+                    blad.Show();
+                    this.Hide();
+                    search_HOUSE.Text = "";
+                }
+            }
+
+            if(search_HOUSE.Text.Length > 50)
+            {
+                error blad = new error();
+                blad.Show();
+                this.Hide();
+                search_HOUSE.Text = "";
+            }
+
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)

@@ -136,6 +136,10 @@ namespace app
 
         private void confirm_Click(object sender, RoutedEventArgs e)
         {
+            selectGenres.SelectedIndex = 0;
+            SearchedText.Text = "";
+            status1.IsChecked = true;
+            status2.IsChecked = false;
             szukaj();
         }
 
@@ -149,6 +153,9 @@ namespace app
             {
                 SearchPlaceholder.Visibility = Visibility.Visible;
             }
+
+            szukaj();
+
         }
 
         private void szukaj()
@@ -230,5 +237,14 @@ namespace app
             }
         }
 
+        private void dynamicSearch(object sender, EventArgs e)
+        {
+            szukaj();
+        }
+
+        private void dynamicSearch(object sender, RoutedEventArgs e)
+        {
+            szukaj();
+        }
     }
 }

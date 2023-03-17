@@ -3,12 +3,12 @@
         //TO DO:
 
 	dodac (wydawnictwo, ISBN,) || DONE
-	poprawa wygladu || DONE (NIE TRZEBA SIĘ WSTYDZIĆ)
+	poprawa wygladu || DONE
 	wybiernie daty z kalendarza || DONE
+	Dynamiczne wyszukiwanie || DONE
+	Reset wyszukiwania || DONE
 
-	walidaja danych (Dana ksiazka istnieje, dany obrazek istnieje, data z przyszlosci, ISBN nie moze sie powtarzac, ITP)
-	Dynamiczne wyszukiwanie
-	Reset wyszukiwania
-        Usuniecie ksiazki, usuwa obrazek || nie wiem czy to dobry pomysl
+	walidaja danych || wstępna zrobilem czy sa puste pola, dlugosci itd || (Dana ksiazka istnieje, dany obrazek istnieje, data z przyszlosci, ISBN nie moze sie powtarzac, ITP
 
-        TESTY, TESTY, TESTY XD
+	Usuniecie ksiazki, usuwa obrazek || nie wiem czy to dobry pomysl, mozesz miec dwie ksiazki z obrazkiem o tej samej nazwie wtedy jak usuniesz jedna ksiazke usunie sie tez obraze i ta druga ksiazka zostanie bez obrazka ^_^
+	scrollbary xd        

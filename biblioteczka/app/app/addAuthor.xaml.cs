@@ -18,9 +18,13 @@ namespace app
   
     public partial class addAuthor : Window
     {
+
+        public static addAuthor _instance3;
+
         public addAuthor()
         {
             InitializeComponent();
+            _instance3 = this;
         }
 
         private void przeciagnij(object sender, MouseButtonEventArgs e)
@@ -33,6 +37,7 @@ namespace app
             this.Close();
             MainWindow._instance.loadData();
             MainWindow._instance.Show();
+            _instance3 = null;
         }
 
         private void min_btn(object sender, RoutedEventArgs e)
@@ -44,29 +49,41 @@ namespace app
         private void add_autor(object sender, RoutedEventArgs e)
         {
 
-            var conn = new database();
+            if ((SearchedText1.Text.ToString() != "") && (SearchedText2.Text.ToString() != "")) {
 
-            if (conn.connect_db())
+                var conn = new database();
+
+                if (conn.connect_db())
+                {
+
+                    string imie = SearchedText2.Text;
+                    string nazwisko = SearchedText1.Text;
+
+                    string zap = "INSERT INTO authors (name, last_name) VALUES (@i, @l)";
+
+                    MySqlCommand cmd = new MySqlCommand(zap, conn.sql);
+
+                    cmd.Parameters.AddWithValue("@i", imie);
+                    cmd.Parameters.AddWithValue("@l", nazwisko);
+
+                    cmd.ExecuteNonQuery();
+
+                    this.Close();
+
+                    MainWindow._instance.loadData();
+
+                    MainWindow._instance.Show();
+
+                    _instance3 = null;
+
+                }
+
+            }
+            else
             {
-
-                string imie = SearchedText2.Text;
-                string nazwisko = SearchedText1.Text;
-
-                string zap = "INSERT INTO authors (name, last_name) VALUES (@i, @l)";
-
-                MySqlCommand cmd = new MySqlCommand(zap, conn.sql);
-
-                cmd.Parameters.AddWithValue("@i", imie);
-                cmd.Parameters.AddWithValue("@l", nazwisko);
-
-                cmd.ExecuteNonQuery();
-
-                this.Close();
-
-                MainWindow._instance.loadData();
-
-                MainWindow._instance.Show();
-
+                error blad = new error();
+                blad.Show();
+                this.Hide();
             }
 
         }
@@ -81,6 +98,26 @@ namespace app
             {
                 sname.Visibility = Visibility.Visible;
             }
+
+            foreach (char c in SearchedText1.Text)
+            {
+                if (!char.IsLetter(c) && !char.IsWhiteSpace(c))
+                {
+                    error blad = new error();
+                    blad.Show();
+                    this.Hide();
+                    SearchedText1.Text = "";
+                }
+            }
+
+            if (SearchedText1.Text.Length > 50)
+            {
+                error blad = new error();
+                blad.Show();
+                this.Hide();
+                SearchedText1.Text = "";
+            }
+
         }
 
         private void firstNameChange(object sender, TextChangedEventArgs e)
@@ -93,6 +130,26 @@ namespace app
             {
                 name.Visibility = Visibility.Visible;
             }
+
+            foreach (char c in SearchedText2.Text)
+            {
+                if (!char.IsLetter(c) && !char.IsWhiteSpace(c))
+                {
+                    error blad = new error();
+                    blad.Show();
+                    this.Hide();
+                    SearchedText2.Text = "";
+                }
+            }
+
+            if (SearchedText2.Text.Length > 50)
+            {
+                error blad = new error();
+                blad.Show();
+                this.Hide();
+                SearchedText2.Text = "";
+            }
+
         }
 
     }

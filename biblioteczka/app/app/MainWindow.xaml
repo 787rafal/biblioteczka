@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
         xmlns:local="clr-namespace:app"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
@@ -521,7 +522,7 @@
         </Rectangle>
         <Button Style="{DynamicResource RoundedButtonStyle}" x:Name="newBook" Content="ADD NEW BOOK"  HorizontalAlignment="Left" Margin="48,48,0,0" VerticalAlignment="Top" Width="250" Height="30" BorderThickness="0,0,0,0" Background="#FFD9D9D9" BorderBrush="#00707070" Click="add_book"/>
         <Button Style="{DynamicResource RoundedButtonStyle}" x:Name="newAuthor" Content="ADD NEW AUTHOR"  HorizontalAlignment="Left" Margin="48,98,0,0" VerticalAlignment="Top" Width="250" Height="30" BorderThickness="0,0,0,0" Background="#FFD9D9D9" BorderBrush="#00707070" Click="newAuthor_Click"/>
-        <ComboBox ItemContainerStyle="{DynamicResource ComboBoxItemContainerStyle1}" Style="{DynamicResource RoundedSelectStyle}" x:Name="selectGenres" HorizontalAlignment="Left" Margin="394,33,0,0" VerticalAlignment="Top" Width="250" Height="30" BorderThickness="0,0,0,0" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Disabled" MaxDropDownHeight="100" BorderBrush="#00ACACAC" IsSynchronizedWithCurrentItem="True" ScrollViewer.CanContentScroll="False" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Padding="15,7,5,3">
+        <ComboBox ItemContainerStyle="{DynamicResource ComboBoxItemContainerStyle1}" Style="{DynamicResource RoundedSelectStyle}" x:Name="selectGenres" HorizontalAlignment="Left" Margin="394,33,0,0" VerticalAlignment="Top" Width="250" Height="30" BorderThickness="0,0,0,0" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Disabled" MaxDropDownHeight="100" BorderBrush="#00ACACAC" IsSynchronizedWithCurrentItem="True" ScrollViewer.CanContentScroll="False" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Padding="15,7,5,3" DropDownClosed="dynamicSearch">
             <ComboBoxItem Content="GENRES:" IsEnabled="True" IsSelected="True" HorizontalAlignment="Left" RenderTransformOrigin="0,0" Width="232" Height="20" HorizontalContentAlignment="Left" Background="#FFD9D9D9" VerticalAlignment="Stretch" Padding="3,1,4,1"/>
         </ComboBox>
         <TextBox Style="{DynamicResource RoundedTextBox}" x:Name="SearchedText" HorizontalAlignment="Left" Margin="691,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" TextChanged="searchChange" Height="30" Padding="16,6,0,0" BorderThickness="0,0,0,0" Background="#FFD9D9D9"/>
@@ -540,15 +541,10 @@
             </Button>
         </Grid>
 
-        <!--<GroupBox x:Name="radio_btn" Margin="691,77,221,493" BorderBrush="{x:Null}">
-            <StackPanel x:Name="panel" Height="32">-->
-        <RadioButton x:Name="status1" Content="TITLE" Width="75" Height="15" HorizontalAlignment="Left" AutomationProperties.Name="TITLE" IsChecked="True" Margin="720,75,0,530"/>
-        <RadioButton x:Name="status2" Content="AUTHOR" Width="76" Margin="832,75,92,530" Height="15" AutomationProperties.Name="AUTHOR"/>
-        <!--</StackPanel>
-        </GroupBox>-->
+        <RadioButton x:Name="status1" Content="TITLE" Width="75" Height="15" HorizontalAlignment="Left" AutomationProperties.Name="TITLE" IsChecked="True" Margin="720,75,0,530" Click="dynamicSearch"/>
+        <RadioButton x:Name="status2" Content="AUTHOR" Width="76" Margin="832,75,92,530" Height="15" AutomationProperties.Name="AUTHOR" Click="dynamicSearch"/>
 
-
-        <Button Style="{DynamicResource RoundedButtonStyle}" x:Name="confirm" Content="CONFIRM"  HorizontalAlignment="Left" Margin="741,106,0,0" VerticalAlignment="Top" Width="150" Height="30" BorderThickness="0,0,0,0" Background="#FF232222" BorderBrush="#00707070" Foreground="White" Click="confirm_Click"/>
+        <Button Style="{DynamicResource RoundedButtonStyle}" x:Name="confirm" Content="CLEAR"  HorizontalAlignment="Left" Margin="596,108,0,0" VerticalAlignment="Top" Width="150" Height="30" BorderThickness="0,0,0,0" Background="#FF232222" BorderBrush="#00707070" Foreground="White" Click="confirm_Click"/>
 
         <ScrollViewer x:Name="scroll" Margin="0,163,0,0" Padding="0,0,0,15" VerticalScrollBarVisibility="Auto" >
             <Grid x:Name="kafelki" Width="1000" Button.Click ="deleteRow"/>

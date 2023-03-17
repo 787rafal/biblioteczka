@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\komputer\Desktop\git\biblioteczka\biblioteczka\app\app\App.xaml
-41350880595
+5-1964786978
 
-111511189411
+121145430865
 211-665721696
-addAuthor.xaml;addBook.xaml;kalendarz.xaml;MainWindow.xaml;
+addAuthor.xaml;addBook.xaml;error.xaml;kalendarz.xaml;MainWindow.xaml;
 
-True
+False
 
