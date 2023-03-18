@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:app"
         mc:Ignorable="d"
         xmlns:theme="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero2" ResizeMode="NoResize" WindowStyle="None"
-        Title="kalendarz" Height="270" Width="200" WindowStartupLocation="CenterScreen">
+        Title="kalendarz" Height="270" Width="200" WindowStartupLocation="CenterScreen" Deactivated="Window_Deactivated" Closed="Window_Closed">
 
     <Window.Resources>
 
@@ -42,14 +42,11 @@
 
     <Grid>
         <Calendar x:Name="cal" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top"/>
-        <Button Content="SAVE" HorizontalAlignment="Left" Margin="10,203,0,0" VerticalAlignment="Top" Width="179" Height="55" Click="zapisz" BorderBrush="{x:Null}" Foreground="#FFB9B9B9" Background="#FF1F1B1B" FontSize="20" Padding="-25,1,1,1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
-        <Rectangle HorizontalAlignment="Center" Height="25" VerticalAlignment="Top" Width="200" Fill="#FF232222" MouseLeftButtonDown="przeciagnij2" />
+        <Button Content="SAVE" HorizontalAlignment="Left" Margin="10,203,0,0" VerticalAlignment="Top" Width="179" Height="55" Click="zapisz" BorderBrush="{x:Null}" Foreground="#FFB9B9B9" Background="#FF1F1B1B" FontSize="20" Padding="-25,1,1,1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Cursor="Hand"/>
+        <Rectangle HorizontalAlignment="Center" Height="25" VerticalAlignment="Top" Width="200" Fill="#FF232222" />
         <Label Content="LibraryAPP" HorizontalAlignment="Left" Margin="0,-1,0,0" VerticalAlignment="Top" Foreground="White"/>
-        <Button Background="#FF232222" Style="{StaticResource vanilla_button}" BorderBrush="#FF232222" Click="mini" Margin="150,0,25,245">
-            <Ellipse Height="15" Width="15" Fill="Yellow"/>
-        </Button>
         <Button Click="close" Style="{StaticResource vanilla_button}" Background="#FF232222" BorderBrush="#FF232222" Margin="175,0,0,245">
-            <Ellipse Height="15" Width="15" Fill="Red"/>
+            <Ellipse Height="15" Width="15" Fill="Red" Cursor="Hand"/>
         </Button>
 
     </Grid>

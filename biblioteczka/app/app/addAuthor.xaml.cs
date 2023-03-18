@@ -152,5 +152,12 @@ namespace app
 
         }
 
+        private void Window_Closed(object sender, EventArgs e)
+        {
+            this.Close();
+            MainWindow._instance.loadData();
+            MainWindow._instance.Show();
+            _instance3 = null;
+        }
     }
 }

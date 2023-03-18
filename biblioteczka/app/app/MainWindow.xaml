@@ -520,9 +520,9 @@
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Button Style="{DynamicResource RoundedButtonStyle}" x:Name="newBook" Content="ADD NEW BOOK"  HorizontalAlignment="Left" Margin="48,48,0,0" VerticalAlignment="Top" Width="250" Height="30" BorderThickness="0,0,0,0" Background="#FFD9D9D9" BorderBrush="#00707070" Click="add_book"/>
-        <Button Style="{DynamicResource RoundedButtonStyle}" x:Name="newAuthor" Content="ADD NEW AUTHOR"  HorizontalAlignment="Left" Margin="48,98,0,0" VerticalAlignment="Top" Width="250" Height="30" BorderThickness="0,0,0,0" Background="#FFD9D9D9" BorderBrush="#00707070" Click="newAuthor_Click"/>
-        <ComboBox ItemContainerStyle="{DynamicResource ComboBoxItemContainerStyle1}" Style="{DynamicResource RoundedSelectStyle}" x:Name="selectGenres" HorizontalAlignment="Left" Margin="394,33,0,0" VerticalAlignment="Top" Width="250" Height="30" BorderThickness="0,0,0,0" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Disabled" MaxDropDownHeight="100" BorderBrush="#00ACACAC" IsSynchronizedWithCurrentItem="True" ScrollViewer.CanContentScroll="False" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Padding="15,7,5,3" DropDownClosed="dynamicSearch">
+        <Button Style="{DynamicResource RoundedButtonStyle}" x:Name="newBook" Content="ADD NEW BOOK"  HorizontalAlignment="Left" Margin="48,48,0,0" VerticalAlignment="Top" Width="250" Height="30" BorderThickness="0,0,0,0" Background="#FFD9D9D9" BorderBrush="#00707070" Click="add_book" Cursor="Hand"/>
+        <Button Style="{DynamicResource RoundedButtonStyle}" x:Name="newAuthor" Content="ADD NEW AUTHOR"  HorizontalAlignment="Left" Margin="48,98,0,0" VerticalAlignment="Top" Width="250" Height="30" BorderThickness="0,0,0,0" Background="#FFD9D9D9" BorderBrush="#00707070" Click="newAuthor_Click" Cursor="Hand"/>
+        <ComboBox ItemContainerStyle="{DynamicResource ComboBoxItemContainerStyle1}" Style="{DynamicResource RoundedSelectStyle}" x:Name="selectGenres" HorizontalAlignment="Left" Margin="394,33,0,0" VerticalAlignment="Top" Width="250" Height="30" BorderThickness="0,0,0,0" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Disabled" MaxDropDownHeight="100" BorderBrush="#00ACACAC" IsSynchronizedWithCurrentItem="True" ScrollViewer.CanContentScroll="False" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Padding="15,7,5,3" DropDownClosed="dynamicSearch" Cursor="Hand">
             <ComboBoxItem Content="GENRES:" IsEnabled="True" IsSelected="True" HorizontalAlignment="Left" RenderTransformOrigin="0,0" Width="232" Height="20" HorizontalContentAlignment="Left" Background="#FFD9D9D9" VerticalAlignment="Stretch" Padding="3,1,4,1"/>
         </ComboBox>
         <TextBox Style="{DynamicResource RoundedTextBox}" x:Name="SearchedText" HorizontalAlignment="Left" Margin="691,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" TextChanged="searchChange" Height="30" Padding="16,6,0,0" BorderThickness="0,0,0,0" Background="#FFD9D9D9"/>
@@ -537,14 +537,14 @@
         <Grid HorizontalAlignment="Left" Height="23" Margin="950,2,0,0" VerticalAlignment="Top" Width="25">
 
             <Button Background="#FF232222" BorderBrush="#FF232222" Style="{StaticResource vanilla_button}" Click="min_btn" Margin="0,-2,0,0">
-                <Ellipse Height="15" Width="15" Fill="Yellow"/>
+                <Ellipse Height="15" Width="15" Fill="Yellow" Cursor="Hand"/>
             </Button>
         </Grid>
 
-        <RadioButton x:Name="status1" Content="TITLE" Width="75" Height="15" HorizontalAlignment="Left" AutomationProperties.Name="TITLE" IsChecked="True" Margin="720,75,0,530" Click="dynamicSearch"/>
-        <RadioButton x:Name="status2" Content="AUTHOR" Width="76" Margin="832,75,92,530" Height="15" AutomationProperties.Name="AUTHOR" Click="dynamicSearch"/>
+        <RadioButton x:Name="status1" Content="TITLE" Width="75" Height="15" HorizontalAlignment="Left" AutomationProperties.Name="TITLE" IsChecked="True" Margin="720,75,0,530" Click="dynamicSearch" Cursor="Hand"/>
+        <RadioButton x:Name="status2" Content="AUTHOR" Width="76" Margin="832,75,92,530" Height="15" AutomationProperties.Name="AUTHOR" Click="dynamicSearch" Cursor="Hand"/>
 
-        <Button Style="{DynamicResource RoundedButtonStyle}" x:Name="confirm" Content="CLEAR"  HorizontalAlignment="Left" Margin="596,108,0,0" VerticalAlignment="Top" Width="150" Height="30" BorderThickness="0,0,0,0" Background="#FF232222" BorderBrush="#00707070" Foreground="White" Click="confirm_Click"/>
+        <Button Style="{DynamicResource RoundedButtonStyle}" x:Name="confirm" Content="CLEAR"  HorizontalAlignment="Left" Margin="596,108,0,0" VerticalAlignment="Top" Width="150" Height="30" BorderThickness="0,0,0,0" Background="#FF232222" BorderBrush="#00707070" Foreground="White" Click="confirm_Click" Cursor="Hand"/>
 
         <ScrollViewer x:Name="scroll" Margin="0,163,0,0" Padding="0,0,0,15" VerticalScrollBarVisibility="Auto" >
             <Grid x:Name="kafelki" Width="1000" Button.Click ="deleteRow"/>

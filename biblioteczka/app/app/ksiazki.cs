@@ -176,6 +176,7 @@ namespace app
                     Margin = new Thickness(690, (213 * i) + 10, 0, 0),
                     Content = "DELETE BOOK",
                     FontWeight = FontWeights.Normal,
+                    Cursor = System.Windows.Input.Cursors.Hand,
                 };
                 
 

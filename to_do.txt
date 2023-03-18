@@ -4,11 +4,16 @@
 
 	dodac (wydawnictwo, ISBN,) || DONE
 	poprawa wygladu || DONE
-	wybiernie daty z kalendarza || DONE
+	wybiernie daty z kalendarza || DONE ||
 	Dynamiczne wyszukiwanie || DONE
 	Reset wyszukiwania || DONE
 
 	walidaja danych || wstępna zrobilem czy sa puste pola, dlugosci itd || (Dana ksiazka istnieje, dany obrazek istnieje, data z przyszlosci, ISBN nie moze sie powtarzac, ITP
 
 	Usuniecie ksiazki, usuwa obrazek || nie wiem czy to dobry pomysl, mozesz miec dwie ksiazki z obrazkiem o tej samej nazwie wtedy jak usuniesz jedna ksiazke usunie sie tez obraze i ta druga ksiazka zostanie bez obrazka ^_^
-	scrollbary xd        
+	|| Dlatego chce zrobic walidacje przy dodawaniu obrazka aby nazwa danego jpg nie powtarzala sie wiec nie bedzie takiej sytuacji
+
+	Przerobiłem troche wybieranie daty, bo wczesniej mogles otworzyc sobie 10000 takich okienek i tak dalej a teraz mozesz tylko jedno i nie mozna go przesuwac
+
+
+	scrollbary xd 

@@ -24,6 +24,7 @@ namespace app
     public partial class addBook : Window
     {
 
+        public bool kalendarz_active = false;
         ImageAdd newImage = new ImageAdd();
         public static addBook _instance2;
         public addBook()
@@ -41,9 +42,6 @@ namespace app
                 MySqlCommand cmd = new MySqlCommand(query, database.sql);
                 MySqlCommand cmd2 = new MySqlCommand(query2, database.sql);
                 MySqlDataReader reader = cmd.ExecuteReader();
-
-                bool test1 = true;
-                bool test2 = true;
 
                 while (reader.Read())
                 {                
@@ -137,7 +135,7 @@ namespace app
         }
 
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Image_Button_Click(object sender, RoutedEventArgs e)
         {
             SolidColorBrush szary = new SolidColorBrush(Color.FromRgb(185, 185, 185));
 
@@ -249,10 +247,26 @@ namespace app
 
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        
+        
+        private void Date_Button_Click(object sender, RoutedEventArgs e)
         {
-            kalendarz kal = new kalendarz();
-            kal.Show();         
+
+            if (!kalendarz_active)
+            {
+                kalendarz kal = new kalendarz();
+                kal.Show();
+                kalendarz_active = true;
+                this.IsEnabled = false;
+            }        
+        }
+
+        private void Window_Closed(object sender, EventArgs e)
+        {
+            this.Close();
+            MainWindow._instance.loadData();
+            MainWindow._instance.Show();
+            _instance2 = null;
         }
     }
 }

@@ -24,18 +24,11 @@ namespace app
             InitializeComponent();
         }
 
-        private void mini(object sender, RoutedEventArgs e)
-        {
-            this.WindowState = WindowState.Minimized;
-        }
-
-        private void przeciagnij2(object sender, MouseButtonEventArgs e)
-        {
-            this.DragMove();
-        }
 
         private void close(object sender, RoutedEventArgs e)
         {
+            addBook._instance2.kalendarz_active = false;
+            addBook._instance2.IsEnabled = true;
             this.Close();
         }
 
@@ -51,8 +44,25 @@ namespace app
                 date = cal.SelectedDate.Value.Date.ToString("dd/MM/yyyy");
             }
             addBook._instance2.pub_date.Content = date;
+            addBook._instance2.kalendarz_active = false;
+            addBook._instance2.IsEnabled = true;
             this.Close();
 
+        }
+
+        private void Window_Deactivated(object sender, EventArgs e)
+        {
+            //addBook._instance2.Topmost = true;
+            Window window = (Window)sender;
+            window.Topmost = true;
+            
+        }
+
+        private void Window_Closed(object sender, EventArgs e)
+        {
+            this.Close();
+            addBook._instance2.kalendarz_active = false;
+            addBook._instance2.IsEnabled = true;
         }
     }
 }
