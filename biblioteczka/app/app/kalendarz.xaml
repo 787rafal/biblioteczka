@@ -10,17 +10,6 @@
 
     <Window.Resources>
 
-        <Style TargetType="{x:Type Button}" x:Key="vanilla_button">
-            <Setter Property="Cursor" Value="Hand"/>
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type Button}">
-                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"></ContentPresenter>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
-
         <Style TargetType="{x:Type Button}">
             <Setter Property="Background" Value="#FF1F1B1B"/>
             <Setter Property="Template">

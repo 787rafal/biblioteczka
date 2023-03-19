@@ -33,7 +33,22 @@
     <Page Update="kalendarz.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="style\ComboBoxItemContainerStyle1.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="style\RoundedButtonStyle.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="style\RoundedSelectStyle.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="style\RoundedTextBox.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="style\vanilla_button.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

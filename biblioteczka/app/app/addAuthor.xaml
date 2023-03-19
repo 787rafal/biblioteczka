@@ -10,17 +10,8 @@
         Title="addAuthor" Height="450" Width="500" Closed="Window_Closed">
 
     <Window.Resources>
-
-        <Style TargetType="{x:Type Button}" x:Key="vanilla_button">
-            <Setter Property="Cursor" Value="Hand"/>
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type Button}">
-                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"></ContentPresenter>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
+        
+        
         <Style x:Key="FocusVisual">
             <Setter Property="Control.Template">
                 <Setter.Value>
@@ -30,6 +21,8 @@
                 </Setter.Value>
             </Setter>
         </Style>
+        
+        
         <SolidColorBrush x:Key="Button.Static.Background" Color="#FFDDDDDD"/>
         <SolidColorBrush x:Key="Button.Static.Border" Color="#FF707070"/>
         <SolidColorBrush x:Key="Button.MouseOver.Background" Color="#FFBDBDBD"/>
@@ -39,6 +32,8 @@
         <SolidColorBrush x:Key="Button.Disabled.Background" Color="#FFCCCCCC"/>
         <SolidColorBrush x:Key="Button.Disabled.Border" Color="#FFADB2B5"/>
         <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#FF838383"/>
+        
+        
         <Style x:Key="RoundedButtonStyle" TargetType="{x:Type Button}">
             <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
             <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
@@ -80,14 +75,21 @@
     </Window.Resources>
 
     <Grid Background="#FFD9D9D9">
+        
         <Rectangle HorizontalAlignment="Center" Height="25" VerticalAlignment="Top" Width="500" Fill="#FF232222" MouseLeftButtonDown="przeciagnij"/>
+        
         <TextBlock HorizontalAlignment="Left" Margin="10,5,0,0" TextWrapping="Wrap" Text="LibraryAPP" VerticalAlignment="Top" Width="124" Foreground="White"/>
+        
         <Button Style="{StaticResource vanilla_button}"  Margin="450,0,25,425" Background="#FF232222" BorderBrush="#FF232222" RenderTransformOrigin="0.5,0.5" Click="min_btn">
             <Ellipse Height="15" Fill="Yellow" Width="15" Cursor="Hand"/>
         </Button>
+        
         <Button Style="{StaticResource vanilla_button}"  Margin="475,0,0,425" Background="#FF232222" BorderBrush="#FF232222" RenderTransformOrigin="0.5,0.5" Click="close_btn">
             <Ellipse Height="15" Fill="Red" Width="15" Cursor="Hand"/>
         </Button>
+        
+        
+        
         <Rectangle HorizontalAlignment="Center" Height="223" VerticalAlignment="Top" Width="500" RenderTransformOrigin="0.48,0.49" Margin="0,25,0,0">
             <Rectangle.Fill>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -97,24 +99,17 @@
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
+        
         <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="ADD NEW AUTHOR" Width="500" Height="44" FontSize="32" TextAlignment="Center" LineHeight="223" Margin="0,68,0,338" FontWeight="Bold"/>
+        
         <TextBox  x:Name="SearchedText2" HorizontalAlignment="Center" Margin="0,170,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="310" Height="55" Padding="24,13,24,3" BorderThickness="0,0,0,0" Background="#FF1F1B1B" FontSize="20" Foreground="#FFB9B9B9" TextChanged="firstNameChange" />
-        <TextBox  x:Name="SearchedText1" HorizontalAlignment="Center" Margin="0,253,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="310" Height="55" Padding="24,13,24,3" BorderThickness="0,0,0,0" Background="#FF1F1B1B" FontSize="20" Foreground="#FFB9B9B9" TextChanged="lastNameChange" />
-        <Button Style="{DynamicResource RoundedButtonStyle}" Content="ADD AUTHOR" HorizontalAlignment="Center" Margin="0,362,0,0" VerticalAlignment="Top" Width="310" Height="64" BorderBrush="#FF1F1B1B" Background="{x:Null}" FontSize="32" BorderThickness="4,4,4,4" Click="add_autor"/>
-        <TextBlock x:Name="date" IsHitTestVisible="False" Text="PUBLICATION DATE..." VerticalAlignment="Top" HorizontalAlignment="Left" Margin="119,453,0,0" Foreground="White" FontWeight="Normal" FontSize="20" d:IsLocked="True">
-            <TextBlock.Style>
-                <Style TargetType="{x:Type TextBlock}">
-                    <Setter Property="Visibility" Value="Collapsed"/>
-                    <Style.Triggers>
-                        <DataTrigger Binding="{Binding Text, ElementName=SearchedText}" Value="">
-                            <Setter Property="Visibility" Value="Visible"/>
-                        </DataTrigger>
-                    </Style.Triggers>
-                </Style>
-            </TextBlock.Style>
-        </TextBlock>
         <TextBlock x:Name="name" IsHitTestVisible="False" HorizontalAlignment="Left" Margin="122,184,0,0" TextWrapping="Wrap" Text="FIRST NAME..." VerticalAlignment="Top" Foreground="#FFB9B9B9" FontSize="20" FontWeight="Normal" Height="27"/>
+        
+        <TextBox  x:Name="SearchedText1" HorizontalAlignment="Center" Margin="0,253,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="310" Height="55" Padding="24,13,24,3" BorderThickness="0,0,0,0" Background="#FF1F1B1B" FontSize="20" Foreground="#FFB9B9B9" TextChanged="lastNameChange" />
         <TextBlock x:Name="sname" IsHitTestVisible="False" HorizontalAlignment="Left" Margin="122,267,0,0" TextWrapping="Wrap" Text="LAST NAME..." VerticalAlignment="Top" Foreground="#FFB9B9B9" FontSize="20" FontWeight="Normal" />
+
+        <Button Style="{DynamicResource RoundedButtonStyle}" Content="ADD AUTHOR" HorizontalAlignment="Center" Margin="0,362,0,0" VerticalAlignment="Top" Width="310" Height="64" BorderBrush="#FF1F1B1B" Background="{x:Null}" FontSize="32" BorderThickness="4,4,4,4" Click="add_autor"/>
+
 
     </Grid>
 </Window>

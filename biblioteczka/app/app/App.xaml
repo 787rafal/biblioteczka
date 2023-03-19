@@ -3,4 +3,16 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:app"
              StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="style/RoundedButtonStyle.xaml"/>
+                <ResourceDictionary Source="style/vanilla_button.xaml"/>
+                <ResourceDictionary Source="style/RoundedSelectStyle.xaml"/>
+                <ResourceDictionary Source="style/RoundedTextBox.xaml"/>
+                <ResourceDictionary Source="style/ComboBoxItemContainerStyle1.xaml"/>
+                
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
 </Application>
