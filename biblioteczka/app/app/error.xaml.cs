@@ -22,6 +22,24 @@ namespace app
         public error()
         {
             InitializeComponent();
+            zamiana.TextAlignment = TextAlignment.Center;
+            zamiana2.TextAlignment = TextAlignment.Center;
+
+            
+            zamiana.Text = "INVALID DATA";
+            zamiana2.Text = "TRY ONE MORE TIME!";
+
+            if(MainWindow._instance.value == 1)
+            {
+                zamiana.Text = "FILE EXIST";
+                zamiana2.Text = "CHANGE NAME!";
+            }
+            else if (MainWindow._instance.value == 2)
+            {
+                zamiana.Text = "AUTHOR EXISTS!";
+                zamiana2.Text = "";
+            }
+
         }
 
         private void drag(object sender, MouseButtonEventArgs e)
@@ -40,7 +58,10 @@ namespace app
             {
                 addAuthor._instance3.Show();
             }
-            //addAuthor._instance3.Show();
+            if(kalendarz._instance4 != null)
+            {
+                kalendarz._instance4.Show();
+            }
         }
     }
 }

@@ -24,6 +24,7 @@ namespace app
     public partial class MainWindow : Window
     {
         public static MainWindow _instance;
+        public int value { get; set; }
         public MainWindow()
         {
 
@@ -31,6 +32,7 @@ namespace app
             _instance = this;
             InitializeComponent();
             Loaded += load;
+            this.value = 0;
 
 
             var database = new database();

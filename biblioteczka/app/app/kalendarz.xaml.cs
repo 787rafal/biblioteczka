@@ -19,8 +19,11 @@ namespace app
     /// </summary>
     public partial class kalendarz : Window
     {
+
+        public static kalendarz _instance4;
         public kalendarz()
         {
+            _instance4 = this;
             InitializeComponent();
         }
 
@@ -34,19 +37,32 @@ namespace app
 
         private void zapisz(object sender, RoutedEventArgs e)
         {
-            var date = "";
-            if (cal.SelectedDate == null)
+
+            string date1 = cal.SelectedDate.ToString();
+            string date2 = DateTime.Now.ToString("dd/MM/yyyy");
+
+            if (DateTime.Parse(date1) > DateTime.Parse(date2))
             {
-                date = DateTime.Now.ToString("dd/MM/yyyy");
+                error blad = new error();
+                blad.Show();
+                this.Hide();
             }
             else
             {
-                date = cal.SelectedDate.Value.Date.ToString("dd/MM/yyyy");
+                var date = "";
+                if (cal.SelectedDate == null)
+                {
+                    date = DateTime.Now.ToString("dd/MM/yyyy");
+                }
+                else
+                {
+                    date = cal.SelectedDate.Value.Date.ToString("dd/MM/yyyy");
+                }
+                addBook._instance2.pub_date.Content = date;
+                addBook._instance2.kalendarz_active = false;
+                addBook._instance2.IsEnabled = true;
+                this.Close();
             }
-            addBook._instance2.pub_date.Content = date;
-            addBook._instance2.kalendarz_active = false;
-            addBook._instance2.IsEnabled = true;
-            this.Close();
 
         }
 

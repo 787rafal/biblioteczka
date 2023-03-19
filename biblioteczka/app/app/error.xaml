@@ -33,8 +33,8 @@
     <Grid Background="#FFD9D9D9">
         <Rectangle HorizontalAlignment="Center" Height="25" VerticalAlignment="Top" Width="275" Fill="#FF232222" MouseLeftButtonDown="drag"/>
         <TextBlock HorizontalAlignment="Left" Margin="10,5,0,0" TextWrapping="Wrap" Text="LibraryAPP" VerticalAlignment="Top" Width="124" Foreground="White"/>
-        <TextBlock HorizontalAlignment="Center" Margin="0,62,0,0" TextWrapping="Wrap" Text="INVALID DATA" VerticalAlignment="Top" FontSize="20" Width="138" FontWeight="Bold"/>
-        <TextBlock HorizontalAlignment="Center" Margin="0,94,0,0" TextWrapping="Wrap" Text="TRY ONE MORE TIME!" VerticalAlignment="Top" FontSize="16" Width="168" FontWeight="Bold"/>
+        <TextBlock x:Name="zamiana" HorizontalAlignment="Center" Margin="0,62,0,0" TextWrapping="Wrap" Text="INVALID DATA" VerticalAlignment="Top" FontSize="20" Width="256" FontWeight="Bold"/>
+        <TextBlock x:Name="zamiana2" HorizontalAlignment="Center" Margin="0,94,0,0" TextWrapping="Wrap" Text="TRY ONE MORE TIME!" VerticalAlignment="Top" FontSize="16" Width="256" FontWeight="Bold"/>
         <Button Content="OK" HorizontalAlignment="Center" Margin="0,146,0,0" VerticalAlignment="Top" Width="100" Height="30" BorderBrush="{x:Null}" Background="#FF1F1B1B" Foreground="#FFB9B9B9" Click="Button_Click" FontWeight="Bold"/>
 
     </Grid>

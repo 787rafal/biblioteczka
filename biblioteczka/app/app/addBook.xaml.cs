@@ -27,6 +27,7 @@ namespace app
         public bool kalendarz_active = false;
         ImageAdd newImage = new ImageAdd();
         public static addBook _instance2;
+
         public addBook()
         {
             InitializeComponent();
@@ -85,7 +86,7 @@ namespace app
         private void add_book(object sender, RoutedEventArgs e)
         {
 
-            if ((SearchedText.Text.ToString() != "") && (selectAuthor.Text.ToString() != "AUTHORS:") && (selectGenre.Text.ToString() != "GENRES:") && (pub_date.Content.ToString() != "") && (search_ISBN.Text.ToString() != "") && (search_HOUSE.Text.ToString() != "")) {
+            if ((SearchedText.Text.ToString() != "") && (selectAuthor.Text.ToString() != "AUTHORS:") && (selectGenre.Text.ToString() != "GENRES:") && (pub_date.Content.ToString() != "PUBLICATION DATE...") && (search_ISBN.Text.ToString() != "") && (search_HOUSE.Text.ToString() != "") && (btn_img.Content != "IMAGE...") && (search_ISBN.Text.Length == 10 || search_ISBN.Text.Length == 13)) {
 
                 var conn = new database();
 
@@ -112,15 +113,10 @@ namespace app
                     cmd.Parameters.AddWithValue("@g", gatunek[0]);
 
                     cmd.ExecuteNonQuery();
-
                     newImage.ImageCopy();
-
                     this.Close();
-
                     MainWindow._instance.loadData();
-
                     MainWindow._instance.Show();
-
                     _instance2 = null;
 
                 }
@@ -138,11 +134,9 @@ namespace app
         private void Image_Button_Click(object sender, RoutedEventArgs e)
         {
             SolidColorBrush szary = new SolidColorBrush(Color.FromRgb(185, 185, 185));
-
             SolidColorBrush bialy = new SolidColorBrush(Color.FromRgb(255, 255, 255));
 
             Microsoft.Win32.OpenFileDialog dlg = new Microsoft.Win32.OpenFileDialog();
-
             bool? response = dlg.ShowDialog();
 
             if(response == true)
@@ -151,14 +145,34 @@ namespace app
                 btn_img.Content = newImage.FileName;
             }
 
-            if(btn_img.Content.ToString()  == "IMAGE...")
+            if (response == true)
             {
-                btn_img.Foreground = szary;
+
+                var connect = new database();
+                if (connect.connect_db())
+                {
+
+                    string qry = @"SELECT * FROM books WHERE image LIKE '%" + btn_img.Content.ToString() + "'";
+                    MySqlCommand cmd = new MySqlCommand(qry, connect.sql);
+                    MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                    DataSet ds1 = new DataSet();
+                    da.Fill(ds1);
+                    int i = ds1.Tables[0].Rows.Count;
+
+                    if (i > 0)
+                    {
+                        btn_img.Content = "IMAGE...";
+                        MainWindow._instance.value = 1;
+                        error blad = new error();
+                        blad.Show();
+                        this.Hide();
+                    }
+
+                }
+
             }
-            else
-            {
-                btn_img.Foreground = szary;
-            }
+
+            MainWindow._instance.value = 0;
 
         }
 
@@ -217,6 +231,7 @@ namespace app
 
         private void houseChange(object sender, TextChangedEventArgs e)
         {
+
             if (!string.IsNullOrEmpty(search_HOUSE.Text))
             {
                 housePH.Visibility = Visibility.Hidden;
@@ -246,8 +261,6 @@ namespace app
             }
 
         }
-
-        
         
         private void Date_Button_Click(object sender, RoutedEventArgs e)
         {
@@ -258,7 +271,8 @@ namespace app
                 kal.Show();
                 kalendarz_active = true;
                 this.IsEnabled = false;
-            }        
+            }
+
         }
 
         private void Window_Closed(object sender, EventArgs e)

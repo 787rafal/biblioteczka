@@ -12,6 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using MySql.Data.MySqlClient;
+using System.Data;
+using System.Diagnostics;
+using System.IO;
 
 namespace app
 {
@@ -20,7 +23,6 @@ namespace app
     {
 
         public static addAuthor _instance3;
-
         public addAuthor()
         {
             InitializeComponent();
@@ -52,29 +54,31 @@ namespace app
             if ((SearchedText1.Text.ToString() != "") && (SearchedText2.Text.ToString() != "")) {
 
                 var conn = new database();
-
                 if (conn.connect_db())
                 {
 
-                    string imie = SearchedText2.Text;
-                    string nazwisko = SearchedText1.Text;
+                    
+                    
+                        string imie = SearchedText2.Text;
+                        string nazwisko = SearchedText1.Text;
 
-                    string zap = "INSERT INTO authors (name, last_name) VALUES (@i, @l)";
+                        string zap = "INSERT INTO authors (name, last_name) VALUES (@i, @l)";
 
-                    MySqlCommand cmd = new MySqlCommand(zap, conn.sql);
+                        MySqlCommand cmd = new MySqlCommand(zap, conn.sql);
 
-                    cmd.Parameters.AddWithValue("@i", imie);
-                    cmd.Parameters.AddWithValue("@l", nazwisko);
+                        cmd.Parameters.AddWithValue("@i", imie);
+                        cmd.Parameters.AddWithValue("@l", nazwisko);
 
-                    cmd.ExecuteNonQuery();
+                        cmd.ExecuteNonQuery();
 
-                    this.Close();
+                        this.Close();
 
-                    MainWindow._instance.loadData();
+                        MainWindow._instance.loadData();
 
-                    MainWindow._instance.Show();
+                        MainWindow._instance.Show();
 
-                    _instance3 = null;
+                        _instance3 = null;
+ 
 
                 }
 
