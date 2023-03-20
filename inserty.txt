@@ -1,0 +1,42 @@
+			    ID			NAZWA				SCIEZKA		     DATA	   ISBN	     HOUSE   A   G
+INSERT INTO BOOKS VALUES (6, 'Harry Potter - Kamień filozoficzny', '\images\harrykamien.jpg', '26.06.1997', '9780439362139', 'Znak', 5, 2);
+INSERT INTO BOOKS VALUES (7, 'Harry Potter - Komnata tajemnic', '\images\harrykomnata.jpg', '13.09.2000', '9780439064873', 'Znak', 5, 2);
+INSERT INTO BOOKS VALUES (8, 'Harry Potter - Więzień Azkabanu', '\images\harrywiezien.jpg', '31.01.2001', '9788380082151', 'Znak', 5, 2);
+INSERT INTO BOOKS VALUES (9, 'Harry Potter - Czara ognia', '\images\harryczara.jpg', '29.09.2001', '9788380082380', 'Znak', 5, 2);
+INSERT INTO BOOKS VALUES (10, 'Harry Potter - Zakon feniksa', '\images\harryzakon.jpg', '31.01.2004', '9788382651836', 'Znak', 5, 2);
+INSERT INTO BOOKS VALUES (11, 'Harry Potter - Książe półkrwi', '\images\harryksiaze.jpg', '28.01.2006', '9788380082427', 'Znak', 5, 2);
+INSERT INTO BOOKS VALUES (12, 'Harry Potter - Insygnia śmierci', '\images\harryinsygnia.jpg', '21.07.2007', '9788380082458', 'Znak', 5, 2);
+INSERT INTO BOOKS VALUES (13, 'Władca Pierścieni - Bractwo pierścienia', '\images\wladcatom1.jpg', '01.01.1954', '9788381168151', 'Zysk i S-ka', 6, 2);
+INSERT INTO BOOKS VALUES (14, 'Władca Pierścieni - Dwie wieże', '\images\wladcatom2.jpg', '30.10.2017', '9788382022254', 'Zysk i S-ka', 6, 2);
+INSERT INTO BOOKS VALUES (15, 'Władca Pierścieni - Powrót króla', '\images\wladcatom3.jpg', '15.11.2017', '9788382024906', 'Zysk i S-ka', 6, 2);
+INSERT INTO BOOKS VALUES (16, 'Pamiętnik', '\images\pamietnik.jpg', '01.10.1996', '9788371572081', 'Da Capo', 7, 11);
+INSERT INTO BOOKS VALUES (17, 'Jesienna miłość', '\images\jesiennam.jpg', '01.10.1999', '9788381255929', 'Albatros', 7, 11);
+INSERT INTO BOOKS VALUES (18, 'Dla ciebie wszystko', '\images\dlaciebie.jpg', '14.09.2010', '9788378855200', 'Albatros', 7, 11);
+INSERT INTO BOOKS VALUES (19, 'Kod Leonarda da Vinci', '\images\leo.jpg', '18.03.2003', '9788366512474', 'Sonia Draga', 8, 7);
+INSERT INTO BOOKS VALUES (20, 'Anioły i demony', '\images\aniolki.jpg', '18.05.2000', '9788366512429', 'Sonia Draga', 8, 4);
+INSERT INTO BOOKS VALUES (21, 'Inferno', '\images\inferno.jpg', '14.05.2013', '9788379991518', 'Sonia Draga', 8, 4);
+INSERT INTO BOOKS VALUES (22, 'Przygody Sherlocka Holmesa', '\images\holmesa.jpg', '14.10.1892', '9788374371391', 'Algo', 9, 7);
+INSERT INTO BOOKS VALUES (23, 'Pies Baskerville’ów', '\images\pies.jpg', '25.03.1902', '9788375441369', 'Algo', 9, 8);
+INSERT INTO BOOKS VALUES (24, 'Oddasz fartucha', '\images\fartuch.jpg', '24.11.2021', '9788324079933', 'Znak horyzont', 10, 14);
+INSERT INTO BOOKS VALUES (25, 'The Plantagenets', '\images\theking.jpg', '10.05.2012', '9780007213948', 'Gardners', 11, 13);
+INSERT INTO BOOKS VALUES (26, 'Essex Dogs', '\images\dogs.jpg', '15.09.2022', '9780593653784', 'Head Of Zeus', 11, 9);
+INSERT INTO BOOKS VALUES (27, 'The Templars', '\images\templars.jpg', '07.09.2017', '9780143108962', 'Head Of Zeus', 11, 9);
+INSERT INTO BOOKS VALUES (28, 'Powers and Thrones', '\images\powers.jpg', '02.09.2021', '9781789543544', 'Head Of Zeus', 11, 9);
+INSERT INTO BOOKS VALUES (29, 'Poziom śmierci', '\images\poziom.jpg', '17.03.1997', '9788382158168', 'Albatros', 12, 6);
+INSERT INTO BOOKS VALUES (30, 'Wróg bez twarzy', '\images\twarz.jpg', '15.04.1999', '9788367338523', 'Albatros', 12, 6);
+INSERT INTO BOOKS VALUES (31, 'Mike Tyson. Moja prawda', '\images\mike.jpg', '19.11.2014', '9788379242818', 'SQN', 13, 13);
+INSERT INTO BOOKS VALUES (32, 'Imiennik', '\images\imie.jpg', '19.09.2003', '‎8374695870', 'Prószyński i S-ka', 14, 8);
+INSERT INTO BOOKS VALUES (33, 'Tłumacz chorób', '\images\tlumacz.jpg', '13.12.1999', '‎8324001921', 'Albatros', 14, 8);
+INSERT INTO BOOKS VALUES (34, 'Unaccustomed Earth', '\images\earth.jpg', '19.04.2008', '9780747596592', 'Albatros', 14, 8);
+
+
+
+
+
+
+
+
+
+
+
+

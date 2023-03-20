@@ -63,7 +63,7 @@ namespace app {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/app;component/kalendarz.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/app;V1.0.0.0;component/kalendarz.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\kalendarz.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
