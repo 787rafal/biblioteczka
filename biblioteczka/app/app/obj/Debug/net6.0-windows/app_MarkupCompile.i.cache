@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-G:\STUDIA\PROGRAMOWANIE IV\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\
+C:\Users\komputer\Desktop\git\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\
 app
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-G:\STUDIA\PROGRAMOWANIE IV\biblioteczka\biblioteczka\app\app\App.xaml
+C:\Users\komputer\Desktop\git\biblioteczka\biblioteczka\app\app\App.xaml
 16-1899261740
 
 121145430865
-211-711343232
+211-665721696
 addAuthor.xaml;addBook.xaml;error.xaml;kalendarz.xaml;MainWindow.xaml;scroll\editableScrollbar.xaml;style\ComboBoxItemContainerStyle1.xaml;style\RoundedButtonStyle.xaml;style\RoundedSelectStyle.xaml;style\RoundedTextBox.xaml;style\vanilla_button.xaml;style_addBook\addBook_ComboBoxItemContainerStyle1.xaml;style_addBook\addBook_RoundedSelectStyle.xaml;style_addBook\buttonAddBook.xaml;style_addBook\imageButton.xaml;style_addBook\publicationDateButton.xaml;
 
 True

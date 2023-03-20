@@ -151,3 +151,9 @@ G:\STUDIA\PROGRAMOWANIE IV\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-wi
 G:\STUDIA\PROGRAMOWANIE IV\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\style_addBook\addBook_RoundedSelectStyle.baml
 G:\STUDIA\PROGRAMOWANIE IV\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\style_addBook\imageButton.baml
 G:\STUDIA\PROGRAMOWANIE IV\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\scroll\editableScrollbar.baml
+C:\Users\komputer\Desktop\git\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\scroll\editableScrollbar.baml
+C:\Users\komputer\Desktop\git\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\style_addBook\addBook_ComboBoxItemContainerStyle1.baml
+C:\Users\komputer\Desktop\git\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\style_addBook\addBook_RoundedSelectStyle.baml
+C:\Users\komputer\Desktop\git\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\style_addBook\buttonAddBook.baml
+C:\Users\komputer\Desktop\git\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\style_addBook\imageButton.baml
+C:\Users\komputer\Desktop\git\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\style_addBook\publicationDateButton.baml
