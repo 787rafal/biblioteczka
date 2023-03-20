@@ -45,8 +45,13 @@ namespace app
                 MySqlDataReader reader = cmd.ExecuteReader();
 
                 while (reader.Read())
-                {                
-                    selectAuthor.Items.Add(reader["id_author"] + ". " + reader["name"] + " " + reader["last_name"]);
+                {
+                    ComboBoxItem item = new ComboBoxItem();
+                    item.Content = reader["name"] + " " + reader["last_name"];
+                    item.Tag = reader["id_author"];
+                    selectAuthor.Items.Add(item);
+
+
                 }
 
                 reader.Close();
@@ -54,7 +59,10 @@ namespace app
 
                 while (reader2.Read())
                 {
-                    selectGenre.Items.Add(reader2["id_genres"] + ". " + reader2["name_genre"]);
+                    ComboBoxItem item = new ComboBoxItem();
+                    item.Content = reader2["name_genre"];
+                    item.Tag = reader2["id_genres"];
+                    selectGenre.Items.Add(item);
                 }
 
             }
@@ -94,8 +102,8 @@ namespace app
                 {
 
                     string tytul = SearchedText.Text;
-                    string autor = selectAuthor.Text;
-                    string gatunek = selectGenre.Text;
+                    string autor = ((ComboBoxItem)selectAuthor.SelectedItem).Tag.ToString();
+                    string gatunek = ((ComboBoxItem)selectGenre.SelectedItem).Tag.ToString();
                     string date = pub_date.Content.ToString();
                     string isbn = search_ISBN.Text;
                     string house = search_HOUSE.Text;
@@ -109,8 +117,8 @@ namespace app
                     cmd.Parameters.AddWithValue("@d", date);
                     cmd.Parameters.AddWithValue("@i", isbn);
                     cmd.Parameters.AddWithValue("@h", house);
-                    cmd.Parameters.AddWithValue("@a", autor[0]);
-                    cmd.Parameters.AddWithValue("@g", gatunek[0]);
+                    cmd.Parameters.AddWithValue("@a", autor);
+                    cmd.Parameters.AddWithValue("@g", gatunek);
 
                     cmd.ExecuteNonQuery();
                     newImage.ImageCopy();
@@ -148,7 +156,6 @@ namespace app
                 {
 
                     string qry = @"SELECT * FROM books WHERE image LIKE '%\" + btn_img.Content.ToString() + "'";
-                    Trace.WriteLine(qry);
                     MySqlCommand cmd = new MySqlCommand(qry, connect.sql);
                     MySqlDataAdapter da = new MySqlDataAdapter(cmd);
                     DataSet ds1 = new DataSet();
