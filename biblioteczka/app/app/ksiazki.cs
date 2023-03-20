@@ -64,11 +64,18 @@ namespace app
                 kafelki.Children.Add(tlo);
 
 
+                BitmapImage image = new BitmapImage();
+                image.BeginInit();
+                image.CacheOption = BitmapCacheOption.OnLoad;
+                image.UriSource = new Uri(System.IO.Directory.GetCurrentDirectory() + dataReader["image"]);
+                image.EndInit();
+
+
                 Image newImage = new Image
                 {
                     Width = 180,
                     Height = 180,
-                    Source = new BitmapImage(new Uri(System.IO.Directory.GetCurrentDirectory() + dataReader["image"])),
+                    Source = image,
                     Margin = new Thickness(-642, (213 * i) + 10, 0, 0),
                     VerticalAlignment = VerticalAlignment.Top,
                 };

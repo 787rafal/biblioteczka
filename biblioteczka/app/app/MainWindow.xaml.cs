@@ -97,6 +97,25 @@ namespace app
         {
             Button button = (Button)e.OriginalSource;
             string id = button.Tag.ToString();
+            string file = "";
+
+            var conn2 = new database();
+            if (conn2.connect_db())
+            {
+                string zap2 = "SELECT * FROM books WHERE id_book = @i";
+                
+                MySqlCommand cmd2 = new MySqlCommand(zap2, conn2.sql);
+                cmd2.Parameters.AddWithValue("@i", id);
+                MySqlDataReader dataReader = cmd2.ExecuteReader();
+                while (dataReader.Read())
+                {
+                    file = dataReader["image"].ToString();
+                }
+                
+                dataReader.Close();
+            }
+            conn2.close_db();
+
             var conn = new database();
             if (conn.connect_db())
             {
@@ -107,18 +126,9 @@ namespace app
             }
             conn.close_db();
             szukaj();
+            File.Delete(System.IO.Directory.GetCurrentDirectory() + file);
 
-            //var conn2 = new database();
-            //if (conn2.connect_db())
-            //{
-            //    string zap2 = "SELECT * FROM books WHERE id_book = @i";
-            //    MySqlCommand cmd2 = new MySqlCommand(zap2, conn2.sql);
-            //    cmd2.Parameters.AddWithValue("@i", id);
-            //    MySqlDataReader dataReader = cmd2.ExecuteReader();
-            //    dataReader.Read();
-            //    File.Delete(System.IO.Directory.GetCurrentDirectory() + dataReader["image"]);
-            //    dataReader.Close();
-            //}
+
 
         }
 
@@ -210,11 +220,11 @@ namespace app
                     }
                     else if (radio == "AUTHOR")
                     {
-                        query = "SELECT * FROM books JOIN authors ON author_id = id_author JOIN genres ON genre_id = id_genres WHERE name_genre = '" + gen + "' AND NAME LIKE '" + szukaj + "%' OR NAME LIKE '%" + szukaj + "%' OR NAME LIKE '%" + szukaj + "' OR LAST_NAME LIKE '" + szukaj + "%' OR LAST_NAME LIKE '%" + szukaj + "%' OR LAST_NAME LIKE '%" + szukaj + "';";
+                        query = "SELECT * FROM books JOIN authors ON author_id = id_author JOIN genres ON genre_id = id_genres WHERE name_genre = '" + gen + "' AND (NAME LIKE '" + szukaj + "%' OR NAME LIKE '%" + szukaj + "%' OR NAME LIKE '%" + szukaj + "' OR LAST_NAME LIKE '" + szukaj + "%' OR LAST_NAME LIKE '%" + szukaj + "%' OR LAST_NAME LIKE '%" + szukaj + "');";
                     }
                     else if (radio == "TITLE")
                     {
-                        query = "SELECT * FROM books JOIN authors ON author_id = id_author JOIN genres ON genre_id = id_genres WHERE name_genre = '" + gen + "' AND TITLE LIKE '" + szukaj + "%' OR TITLE LIKE '%" + szukaj + "%' OR TITLE LIKE '%" + szukaj + "';";
+                        query = "SELECT * FROM books JOIN authors ON author_id = id_author JOIN genres ON genre_id = id_genres WHERE name_genre = '" + gen + "' AND (TITLE LIKE '" + szukaj + "%' OR TITLE LIKE '%" + szukaj + "%' OR TITLE LIKE '%" + szukaj + "');";
                     }
                 }
 

@@ -57,7 +57,7 @@
             <RadioButton x:Name="status2" Content="AUTHOR" Width="76" Margin="832,75,92,530" Height="15" AutomationProperties.Name="AUTHOR" Click="dynamicSearch" Cursor="Hand"/>
 
             <!--Clear Button-->
-            <Button Style="{DynamicResource RoundedButtonStyle}" x:Name="confirm" Content="CLEAR"  HorizontalAlignment="Left" Margin="596,108,0,0" VerticalAlignment="Top" Width="150" Height="30" BorderThickness="0,0,0,0" Background="#FF232222" BorderBrush="#00707070" Foreground="White" Click="confirm_Click" Cursor=""/>
+            <Button Style="{DynamicResource RoundedButtonStyle}" x:Name="confirm" Content="CLEAR"  HorizontalAlignment="Left" Margin="596,108,0,0" VerticalAlignment="Top" Width="150" Height="30" BorderThickness="0,0,0,0" Background="#FF232222" BorderBrush="#00707070" Foreground="White" Click="confirm_Click" Cursor="Hand"/>
 
 
 
