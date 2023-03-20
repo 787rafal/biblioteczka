@@ -36,6 +36,9 @@
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="scroll\editableScrollbar.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="style_addBook\addBook_ComboBoxItemContainerStyle1.xaml">
       <SubType>Designer</SubType>
     </Page>
