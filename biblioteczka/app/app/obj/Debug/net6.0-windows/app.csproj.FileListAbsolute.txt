@@ -124,11 +124,6 @@ G:\STUDIA\PROGRAMOWANIE IV\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-wi
 G:\STUDIA\PROGRAMOWANIE IV\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\error.baml
 G:\STUDIA\PROGRAMOWANIE IV\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\kalendarz.baml
 G:\STUDIA\PROGRAMOWANIE IV\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\App.baml
-G:\STUDIA\PROGRAMOWANIE IV\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\style\RoundedButtonStyle.baml
-G:\STUDIA\PROGRAMOWANIE IV\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\style\vanilla_button.baml
-G:\STUDIA\PROGRAMOWANIE IV\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\style\RoundedSelectStyle.baml
-G:\STUDIA\PROGRAMOWANIE IV\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\style\RoundedTextBox.baml
-G:\STUDIA\PROGRAMOWANIE IV\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\style\ComboBoxItemContainerStyle1.baml
 C:\Users\komputer\Desktop\git\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\style\ComboBoxItemContainerStyle1.baml
 C:\Users\komputer\Desktop\git\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\style\RoundedButtonStyle.baml
 C:\Users\komputer\Desktop\git\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\style\RoundedSelectStyle.baml
@@ -145,3 +140,13 @@ C:\Users\Rafał\Desktop\studia\Biblioteczka\biblioteczka\app\app\obj\Debug\net6.
 C:\Users\Rafał\Desktop\studia\Biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\App.baml
 C:\Users\Rafał\Desktop\studia\Biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\error.baml
 C:\Users\Rafał\Desktop\studia\Biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\kalendarz.baml
+G:\STUDIA\PROGRAMOWANIE IV\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\style_addBook\addBook_ComboBoxItemContainerStyle1.baml
+G:\STUDIA\PROGRAMOWANIE IV\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\style_addBook\buttonAddBook.baml
+G:\STUDIA\PROGRAMOWANIE IV\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\style\ComboBoxItemContainerStyle1.baml
+G:\STUDIA\PROGRAMOWANIE IV\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\style\RoundedButtonStyle.baml
+G:\STUDIA\PROGRAMOWANIE IV\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\style\RoundedSelectStyle.baml
+G:\STUDIA\PROGRAMOWANIE IV\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\style\RoundedTextBox.baml
+G:\STUDIA\PROGRAMOWANIE IV\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\style\vanilla_button.baml
+G:\STUDIA\PROGRAMOWANIE IV\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\style_addBook\publicationDateButton.baml
+G:\STUDIA\PROGRAMOWANIE IV\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\style_addBook\addBook_RoundedSelectStyle.baml
+G:\STUDIA\PROGRAMOWANIE IV\biblioteczka\biblioteczka\app\app\obj\Debug\net6.0-windows\style_addBook\imageButton.baml

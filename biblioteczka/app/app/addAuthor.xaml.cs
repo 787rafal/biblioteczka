@@ -60,10 +60,8 @@ namespace app
                 if (conn.connect_db())
                 {
                     string qry = @"SELECT * FROM authors WHERE name = '" + imie + "' AND last_name = '" + nazwisko + "'";
-                    //Trace.WriteLine(qry);
                     MySqlCommand cmd_check = new MySqlCommand(qry, conn.sql);
                     MySqlDataReader dataReader = cmd_check.ExecuteReader();
-                    //Trace.WriteLine(dataReader.HasRows);
                     if (dataReader.HasRows)
                     {
                         MainWindow._instance.error = 2;

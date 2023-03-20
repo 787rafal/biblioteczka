@@ -11,7 +11,14 @@
                 <ResourceDictionary Source="style/RoundedSelectStyle.xaml"/>
                 <ResourceDictionary Source="style/RoundedTextBox.xaml"/>
                 <ResourceDictionary Source="style/ComboBoxItemContainerStyle1.xaml"/>
+
+                <ResourceDictionary Source="style_addBook/addBook_ComboBoxItemContainerStyle1.xaml"/>
+                <ResourceDictionary Source="style_addBook/buttonaddBook.xaml"/>
+                <ResourceDictionary Source="style_addBook/publicationDateButton.xaml"/>
+                <ResourceDictionary Source="style_addBook/addBook_RoundedSelectStyle.xaml"/>
+                <ResourceDictionary Source="style_addBook/imageButton.xaml"/>
                 
+
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

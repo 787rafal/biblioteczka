@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -42,7 +43,8 @@ namespace app
             string date1 = cal.SelectedDate.ToString();
             string date2 = DateTime.Now.ToString("dd/MM/yyyy");
 
-            if (DateTime.Parse(date1) > DateTime.Parse(date2))
+
+            if ( (!String.IsNullOrEmpty(date1)) && (DateTime.Parse(date1) > DateTime.Parse(date2)))
             {
                 error blad = new error();
                 blad.Show();
@@ -70,7 +72,6 @@ namespace app
 
         private void Window_Deactivated(object sender, EventArgs e)
         {
-            //addBook._instance2.Topmost = true;
             Window window = (Window)sender;
             window.Topmost = true;
             
