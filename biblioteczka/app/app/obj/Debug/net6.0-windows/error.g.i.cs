@@ -71,7 +71,7 @@ namespace app {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/app;V1.0.0.0;component/error.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/app;component/error.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\error.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
