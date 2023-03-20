@@ -119,7 +119,7 @@ namespace app
 
             foreach (char c in SearchedText1.Text)
             {
-                if (!char.IsLetter(c) && !char.IsWhiteSpace(c))
+                if (!(char.IsLetter(c) || c=='.') && !char.IsWhiteSpace(c))
                 {
                     error blad = new error();
                     blad.Show();
@@ -151,7 +151,7 @@ namespace app
 
             foreach (char c in SearchedText2.Text)
             {
-                if (!char.IsLetter(c) && !char.IsWhiteSpace(c))
+                if (!(char.IsLetter(c) || c=='.') && !char.IsWhiteSpace(c))
                 {
                     error blad = new error();
                     blad.Show();
