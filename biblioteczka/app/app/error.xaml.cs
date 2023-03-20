@@ -29,12 +29,12 @@ namespace app
             zamiana.Text = "INVALID DATA";
             zamiana2.Text = "TRY ONE MORE TIME!";
 
-            if(MainWindow._instance.value == 1)
+            if(MainWindow._instance.error == 1)
             {
                 zamiana.Text = "FILE EXIST";
                 zamiana2.Text = "CHANGE NAME!";
             }
-            else if (MainWindow._instance.value == 2)
+            else if (MainWindow._instance.error == 2)
             {
                 zamiana.Text = "AUTHOR EXISTS!";
                 zamiana2.Text = "";

@@ -51,17 +51,30 @@ namespace app
         private void add_autor(object sender, RoutedEventArgs e)
         {
 
-            if ((SearchedText1.Text.ToString() != "") && (SearchedText2.Text.ToString() != "")) {
-
+            if ((SearchedText1.Text.ToString() != "") && (SearchedText2.Text.ToString() != "")) 
+            {
+                string imie = SearchedText2.Text;
+                string nazwisko = SearchedText1.Text;
                 var conn = new database();
+
                 if (conn.connect_db())
                 {
-
-                    
-                    
-                        string imie = SearchedText2.Text;
-                        string nazwisko = SearchedText1.Text;
-
+                    string qry = @"SELECT * FROM authors WHERE name = '" + imie + "' AND last_name = '" + nazwisko + "'";
+                    //Trace.WriteLine(qry);
+                    MySqlCommand cmd_check = new MySqlCommand(qry, conn.sql);
+                    MySqlDataReader dataReader = cmd_check.ExecuteReader();
+                    //Trace.WriteLine(dataReader.HasRows);
+                    if (dataReader.HasRows)
+                    {
+                        MainWindow._instance.error = 2;
+                        error blad = new error();
+                        blad.Show();
+                        this.Hide();
+                        dataReader.Close();
+                    }
+                    else
+                    {
+                        dataReader.Close();
                         string zap = "INSERT INTO authors (name, last_name) VALUES (@i, @l)";
 
                         MySqlCommand cmd = new MySqlCommand(zap, conn.sql);
@@ -78,6 +91,9 @@ namespace app
                         MainWindow._instance.Show();
 
                         _instance3 = null;
+                    }
+
+                        
  
 
                 }

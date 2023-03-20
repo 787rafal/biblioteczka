@@ -33,6 +33,7 @@ namespace app
             addBook._instance2.kalendarz_active = false;
             addBook._instance2.IsEnabled = true;
             this.Close();
+            _instance4 = null;
         }
 
         private void zapisz(object sender, RoutedEventArgs e)
@@ -62,6 +63,7 @@ namespace app
                 addBook._instance2.kalendarz_active = false;
                 addBook._instance2.IsEnabled = true;
                 this.Close();
+                _instance4 = null;
             }
 
         }
@@ -77,6 +79,7 @@ namespace app
         private void Window_Closed(object sender, EventArgs e)
         {
             this.Close();
+            _instance4 = null;
             addBook._instance2.kalendarz_active = false;
             addBook._instance2.IsEnabled = true;
         }

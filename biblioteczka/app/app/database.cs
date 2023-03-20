@@ -11,7 +11,7 @@ namespace app
     public class database
     {
 
-        public static string conn = "server=127.0.0.1; user=root; database=biblio_app; password=";
+        public static string conn = "server=127.0.0.1; user=root; database=biblio_app; password=;CharSet=utf8;";
         public MySqlConnection sql = new MySqlConnection(conn);
 
         public bool connect_db()

@@ -143,16 +143,12 @@ namespace app
             {
                 newImage.Image(dlg.FileName);
                 btn_img.Content = newImage.FileName;
-            }
-
-            if (response == true)
-            {
-
                 var connect = new database();
                 if (connect.connect_db())
                 {
 
-                    string qry = @"SELECT * FROM books WHERE image LIKE '%" + btn_img.Content.ToString() + "'";
+                    string qry = @"SELECT * FROM books WHERE image LIKE '%\" + btn_img.Content.ToString() + "'";
+                    Trace.WriteLine(qry);
                     MySqlCommand cmd = new MySqlCommand(qry, connect.sql);
                     MySqlDataAdapter da = new MySqlDataAdapter(cmd);
                     DataSet ds1 = new DataSet();
@@ -162,7 +158,7 @@ namespace app
                     if (i > 0)
                     {
                         btn_img.Content = "IMAGE...";
-                        MainWindow._instance.value = 1;
+                        MainWindow._instance.error = 1;
                         error blad = new error();
                         blad.Show();
                         this.Hide();
@@ -172,7 +168,7 @@ namespace app
 
             }
 
-            MainWindow._instance.value = 0;
+            MainWindow._instance.error = 0;
 
         }
 
