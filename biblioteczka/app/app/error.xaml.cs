@@ -39,6 +39,11 @@ namespace app
                 zamiana.Text = "AUTHOR EXISTS!";
                 zamiana2.Text = "";
             }
+            else if (MainWindow._instance.error == 3)
+            {
+                zamiana.Text = "BAD FILE EXTENSION!";
+                zamiana2.Text = "Only .JPG or .PNG";
+            }
 
         }
 

@@ -27,7 +27,7 @@
                 <ControlTemplate TargetType="{x:Type Thumb}">
                     <Grid x:Name="Grid">
                         <Border BorderThickness="1" CornerRadius="4" BorderBrush="#3D3D3D"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,5,0,5">
-                            <Rectangle x:Name="Rectangle1"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="auto"  Height="Auto" Fill="#3D3D3D" />
+                            <Rectangle x:Name="Rectangle1"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="auto"  Height="auto" Fill="#3D3D3D" />
                         </Border>
 
                     </Grid>

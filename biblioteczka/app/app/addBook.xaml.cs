@@ -149,29 +149,44 @@ namespace app
 
             if(response == true)
             {
-                newImage.Image(dlg.FileName);
-                btn_img.Content = newImage.FileName;
-                var connect = new database();
-                if (connect.connect_db())
+                FileInfo fi = new FileInfo(dlg.FileName);
+                if(fi.Extension.ToLower() == ".jpg" || fi.Extension.ToLower() == ".png")
                 {
-
-                    string qry = @"SELECT * FROM books WHERE image LIKE '%\" + btn_img.Content.ToString() + "'";
-                    MySqlCommand cmd = new MySqlCommand(qry, connect.sql);
-                    MySqlDataAdapter da = new MySqlDataAdapter(cmd);
-                    DataSet ds1 = new DataSet();
-                    da.Fill(ds1);
-                    int i = ds1.Tables[0].Rows.Count;
-
-                    if (i > 0)
+                    newImage.Image(dlg.FileName);                
+                    btn_img.Content = newImage.FileName;
+                    var connect = new database();
+                    if (connect.connect_db())
                     {
-                        btn_img.Content = "IMAGE...";
-                        MainWindow._instance.error = 1;
-                        error blad = new error();
-                        blad.Show();
-                        this.Hide();
-                    }
 
+                        string qry = @"SELECT * FROM books WHERE image LIKE '%\" + btn_img.Content.ToString() + "'";
+                        MySqlCommand cmd = new MySqlCommand(qry, connect.sql);
+                        MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                        DataSet ds1 = new DataSet();
+                        da.Fill(ds1);
+                        int i = ds1.Tables[0].Rows.Count;
+
+                        if (i > 0)
+                        {
+                            btn_img.Content = "IMAGE...";
+                            MainWindow._instance.error = 1;
+                            error blad = new error();
+                            blad.Show();
+                            this.Hide();
+                        }
+
+                    }
                 }
+                else
+                {
+                    btn_img.Content = "IMAGE...";
+                    MainWindow._instance.error = 3;
+                    error blad = new error();
+                    blad.Show();
+                    this.Hide();
+                }
+
+
+                
 
             }
 
@@ -246,7 +261,7 @@ namespace app
 
             foreach (char c in search_HOUSE.Text)
             {
-                if (!char.IsLetter(c) && !char.IsWhiteSpace(c))
+                if (!(char.IsLetter(c) || c == '-') && !char.IsWhiteSpace(c))
                 {
                     error blad = new error();
                     blad.Show();

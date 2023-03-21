@@ -205,7 +205,7 @@ namespace app
                     }
                     else if (radio == "AUTHOR")
                     {
-                        query = "SELECT * FROM books JOIN authors ON author_id = id_author JOIN genres ON genre_id = id_genres WHERE NAME LIKE '" + szukaj + "%' OR NAME LIKE '%" + szukaj + "%' OR NAME LIKE '%" + szukaj + "' OR LAST_NAME LIKE '" + szukaj + "%' OR LAST_NAME LIKE '%" + szukaj + "%' OR LAST_NAME LIKE '%" + szukaj + "';";
+                        query = "SELECT * FROM books JOIN authors ON author_id = id_author JOIN genres ON genre_id = id_genres WHERE concat(name,' ',last_name) LIKE '%"+ szukaj +"%';";
                     }
                     else if (radio == "TITLE")
                     {
@@ -220,7 +220,7 @@ namespace app
                     }
                     else if (radio == "AUTHOR")
                     {
-                        query = "SELECT * FROM books JOIN authors ON author_id = id_author JOIN genres ON genre_id = id_genres WHERE name_genre = '" + gen + "' AND (NAME LIKE '" + szukaj + "%' OR NAME LIKE '%" + szukaj + "%' OR NAME LIKE '%" + szukaj + "' OR LAST_NAME LIKE '" + szukaj + "%' OR LAST_NAME LIKE '%" + szukaj + "%' OR LAST_NAME LIKE '%" + szukaj + "');";
+                        query = "SELECT * FROM books JOIN authors ON author_id = id_author JOIN genres ON genre_id = id_genres WHERE name_genre = '" + gen + "' AND concat(name,' ',last_name) LIKE '%"+ szukaj +"%';";
                     }
                     else if (radio == "TITLE")
                     {
