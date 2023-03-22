@@ -90,6 +90,8 @@
         <Button Style="{StaticResource vanilla_button}"  Margin="475,0,0,425" Background="#FF232222" BorderBrush="#FF232222" RenderTransformOrigin="0.5,0.5" Click="close_btn">
             <Ellipse Height="15" Fill="Red" Width="15" Cursor="Hand"/>
         </Button>
+        <TextBlock TextAlignment="Center" HorizontalAlignment="Left" Margin="450,3,0,0" TextWrapping="Wrap" Text="_" VerticalAlignment="Top" Width="25" Height="18" IsHitTestVisible="False" FontWeight="Bold"/>
+        <TextBlock TextAlignment="Center" HorizontalAlignment="Left" Margin="475,3,0,0" TextWrapping="Wrap" Text="x" VerticalAlignment="Top" Width="25" Height="18" IsHitTestVisible="False" FontWeight="Bold"/>
         
 
 

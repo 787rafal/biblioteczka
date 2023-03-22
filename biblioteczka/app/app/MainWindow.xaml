@@ -16,7 +16,7 @@
         <Rectangle HorizontalAlignment="Center" Height="25" VerticalAlignment="Top" Width="1000" Fill="#FF232222" MouseLeftButtonDown="przeciagnij"/>
         <Label Content="LibraryAPP" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Foreground="White"/>
         <Grid HorizontalAlignment="Left" Height="25" Margin="975,0,0,0" VerticalAlignment="Top" Width="25">
-            <Button Click="close_btn" Background="#FF232222" BorderBrush="#FF232222" Style="{StaticResource vanilla_button}">
+            <Button Click="close_btn" Background="#FF232222" BorderBrush="#FF232222" Style="{StaticResource vanilla_button}" Cursor="Hand">
                 <Ellipse Height="15" Width="15" Fill="Red"/>
             </Button>
         </Grid>
@@ -26,9 +26,9 @@
                 <Ellipse Height="15" Width="15" Fill="Yellow" Cursor="Hand"/>
             </Button>
         </Grid>
-        
-        
-        
+
+
+
 
         <!--Menu-->
         <Rectangle HorizontalAlignment="Center" Height="223" VerticalAlignment="Top" Width="1000" RenderTransformOrigin="0.48,0.49" Margin="0,25,0,0">
@@ -40,24 +40,24 @@
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        
-            <!--Buttony dodania-->
-            <Button Style="{DynamicResource RoundedButtonStyle}" x:Name="newBook" Content="ADD NEW BOOK"  HorizontalAlignment="Left" Margin="48,48,0,0" VerticalAlignment="Top" Width="250" Height="30" BorderThickness="0,0,0,0" Background="#FFD9D9D9" BorderBrush="#00707070" Click="add_book" Cursor="Hand"/>
-            <Button Style="{DynamicResource RoundedButtonStyle}" x:Name="newAuthor" Content="ADD NEW AUTHOR"  HorizontalAlignment="Left" Margin="48,98,0,0" VerticalAlignment="Top" Width="250" Height="30" BorderThickness="0,0,0,0" Background="#FFD9D9D9" BorderBrush="#00707070" Click="newAuthor_Click" Cursor="Hand"/>
 
-            <!--Select Genre-->
+        <!--Buttony dodania-->
+        <Button Style="{DynamicResource RoundedButtonStyle}" x:Name="newBook" Content="ADD NEW BOOK"  HorizontalAlignment="Left" Margin="48,48,0,0" VerticalAlignment="Top" Width="250" Height="30" BorderThickness="0,0,0,0" Background="#FFD9D9D9" BorderBrush="#00707070" Click="add_book" Cursor="Hand"/>
+        <Button Style="{DynamicResource RoundedButtonStyle}" x:Name="newAuthor" Content="ADD NEW AUTHOR"  HorizontalAlignment="Left" Margin="48,98,0,0" VerticalAlignment="Top" Width="250" Height="30" BorderThickness="0,0,0,0" Background="#FFD9D9D9" BorderBrush="#00707070" Click="newAuthor_Click" Cursor="Hand"/>
+
+        <!--Select Genre-->
         <ComboBox ItemContainerStyle="{DynamicResource ComboBoxItemContainerStyle1}" Style="{DynamicResource RoundedSelectStyle}" x:Name="selectGenres" HorizontalAlignment="Left" Margin="394,33,0,0" VerticalAlignment="Top" Width="250" Height="30" BorderThickness="0,0,0,0" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Disabled" MaxDropDownHeight="100" BorderBrush="#00ACACAC" IsSynchronizedWithCurrentItem="True" ScrollViewer.CanContentScroll="False" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Padding="15,7,5,3" DropDownClosed="dynamicSearch" Cursor="Hand">
             <ComboBoxItem Content="GENRES:" IsEnabled="False" IsSelected="True" HorizontalAlignment="Left" RenderTransformOrigin="0,0" Width="232" Height="20" HorizontalContentAlignment="Left" Background="#FFD9D9D9" VerticalAlignment="Stretch" Padding="3,1,4,1"/>
-            </ComboBox>
+        </ComboBox>
 
-            <!--Searched Text-->
-            <TextBox Style="{DynamicResource RoundedTextBox}" x:Name="SearchedText" HorizontalAlignment="Left" Margin="691,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" TextChanged="searchChange" Height="30" Padding="16,6,0,0" BorderThickness="0,0,0,0" Background="#FFD9D9D9"/>
-            <TextBlock x:Name="SearchPlaceholder" IsHitTestVisible="False" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="710,40,0,0" Foreground="#FF545151"><Run Text="SEARCH"/><Run Text="..."/></TextBlock>
-            <RadioButton x:Name="status1" Content="TITLE" Width="75" Height="15" HorizontalAlignment="Left" AutomationProperties.Name="TITLE" IsChecked="True" Margin="720,75,0,530" Click="dynamicSearch" Cursor="Hand"/>
-            <RadioButton x:Name="status2" Content="AUTHOR" Width="76" Margin="832,75,92,530" Height="15" AutomationProperties.Name="AUTHOR" Click="dynamicSearch" Cursor="Hand"/>
+        <!--Searched Text-->
+        <TextBox Style="{DynamicResource RoundedTextBox}" x:Name="SearchedText" HorizontalAlignment="Left" Margin="691,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" TextChanged="searchChange" Height="30" Padding="16,6,0,0" BorderThickness="0,0,0,0" Background="#FFD9D9D9"/>
+        <TextBlock x:Name="SearchPlaceholder" IsHitTestVisible="False" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="710,40,0,0" Foreground="#FF545151"><Run Text="SEARCH"/><Run Text="..."/></TextBlock>
+        <RadioButton x:Name="status1" Content="TITLE" Width="75" Height="15" HorizontalAlignment="Left" AutomationProperties.Name="TITLE" IsChecked="True" Margin="720,75,0,530" Click="dynamicSearch" Cursor="Hand"/>
+        <RadioButton x:Name="status2" Content="AUTHOR" Width="76" Margin="832,75,92,530" Height="15" AutomationProperties.Name="AUTHOR" Click="dynamicSearch" Cursor="Hand"/>
 
-            <!--Clear Button-->
-            <Button Style="{DynamicResource RoundedButtonStyle}" x:Name="confirm" Content="CLEAR"  HorizontalAlignment="Left" Margin="596,108,0,0" VerticalAlignment="Top" Width="150" Height="30" BorderThickness="0,0,0,0" Background="#FF232222" BorderBrush="#00707070" Foreground="White" Click="confirm_Click" Cursor="Hand"/>
+        <!--Clear Button-->
+        <Button Style="{DynamicResource RoundedButtonStyle}" x:Name="confirm" Content="CLEAR"  HorizontalAlignment="Left" Margin="596,108,0,0" VerticalAlignment="Top" Width="150" Height="30" BorderThickness="0,0,0,0" Background="#FF232222" BorderBrush="#00707070" Foreground="White" Click="confirm_Click" Cursor="Hand"/>
 
 
 
@@ -70,10 +70,12 @@
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        
+
         <ScrollViewer x:Name="scroll" Margin="0,163,0,0" Padding="0,0,0,15" VerticalScrollBarVisibility="Auto" >
             <Grid x:Name="kafelki" Width="1000" Button.Click ="deleteRow"/>
         </ScrollViewer>
+        <TextBlock TextAlignment="Center" HorizontalAlignment="Left" Margin="950,2,0,0" TextWrapping="Wrap" Text="_" VerticalAlignment="Top" Width="25" Height="18" IsHitTestVisible="False" FontWeight="Bold"/>
+        <TextBlock  TextAlignment="Center" HorizontalAlignment="Left" Margin="975,3,0,0" TextWrapping="Wrap" Text="x" VerticalAlignment="Top" Width="25" Height="17" IsHitTestVisible="False" FontWeight="Bold"/>
 
 
     </Grid>

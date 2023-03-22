@@ -37,6 +37,7 @@
         <Button Click="close" Style="{StaticResource vanilla_button}" Background="#FF232222" BorderBrush="#FF232222" Margin="175,0,0,245">
             <Ellipse Height="15" Width="15" Fill="Red" Cursor="Hand"/>
         </Button>
+        <TextBlock TextAlignment="Center" HorizontalAlignment="Left" Margin="175,3,0,0" TextWrapping="Wrap" Text="x" VerticalAlignment="Top" Width="25" Height="18" IsHitTestVisible="False" FontWeight="Bold"/>
 
     </Grid>
 </Window>
