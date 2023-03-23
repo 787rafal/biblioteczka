@@ -6,7 +6,7 @@
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
 	<UseWindowsForms>true</UseWindowsForms>
-	<ApplicationIcon>icons8-bookshop-50.ico</ApplicationIcon>
+	<ApplicationIcon>icons8-bookshop-50_white.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="icons8-bookshop-50.ico" />
+    <Content Include="icons8-bookshop-50_white.ico" />
   </ItemGroup>
 
 

@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icons8-bookshop-50.ico")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icons8-bookshop-50_white.ico")]
 
 
