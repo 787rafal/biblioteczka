@@ -6,11 +6,16 @@
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
 	<UseWindowsForms>true</UseWindowsForms>
+	<ApplicationIcon>icons8-bookshop-50.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
     <None Remove="icons8-add-image-30.png" />
     <None Remove="icons8-tear-off-calendar-50.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="icons8-bookshop-50.ico" />
   </ItemGroup>
 
 
