@@ -54,9 +54,11 @@
         </ComboBox>
 
         <Button Style="{DynamicResource imageButton}" x:Name="btn_img" Content="IMAGE..." HorizontalAlignment="Center" Margin="0,370,0,0" VerticalAlignment="Top" Width="310" Height="55" Background="#FF1F1B1B" BorderBrush="{x:Null}" Foreground="#FFB9B9B9" FontSize="20" HorizontalContentAlignment="Left" Padding="24,1,1,1" Click="Image_Button_Click" Cursor="Hand"/>
-
+        <Image IsHitTestVisible="False" HorizontalAlignment="Left" Height="34" Margin="350,380,0,0" VerticalAlignment="Top" Width="36" Source="/icons8-add-image-30.png"/>
+        
         <Button Style="{DynamicResource publicationDateButton}" x:Name="pub_date" Content="PUBLICATION DATE..." HorizontalAlignment="Center" Margin="0,440,0,0" VerticalAlignment="Top" Width="310" Height="55" BorderBrush="{x:Null}" Foreground="#FFB9B9B9" FontSize="20" Click="Date_Button_Click" Cursor="Hand"/>
-
+        <Image IsHitTestVisible="False" HorizontalAlignment="Left" Height="28" Margin="353,454,0,0" VerticalAlignment="Top" Width="30" Source="/icons8-tear-off-calendar-50.png"/>
+        
         <TextBox  x:Name="search_ISBN" HorizontalAlignment="Center" Margin="0,509,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="310" Height="55" Padding="24,13,24,3" BorderThickness="0,0,0,0" Background="#FF1F1B1B" FontSize="20" Foreground="#FFB9B9B9" TextChanged="isbnChange"/>
         <TextBlock x:Name="isbnPH" IsHitTestVisible="False" Text="ISBN..." VerticalAlignment="Top" HorizontalAlignment="Left" Margin="122,523,0,0" Foreground="#FFB9B9B9" FontWeight="Normal" FontSize="20"/>
 
@@ -64,9 +66,6 @@
         <TextBlock x:Name="housePH" IsHitTestVisible="False" Text="PUBLISHING HOUSE..." VerticalAlignment="Top" HorizontalAlignment="Left" Margin="122,592,0,0" Foreground="#FFB9B9B9" FontWeight="Normal" FontSize="20"/>
 
         <Button Style="{DynamicResource buttonAddBook}" Content="ADD BOOK" HorizontalAlignment="Center" Margin="0,672,0,0" VerticalAlignment="Top" Width="310" Height="65" BorderBrush="#FF1F1B1B" Background="{x:Null}" FontSize="32" BorderThickness="4,4,4,4" Click="add_book" Cursor="Hand"/>
-        <Image IsHitTestVisible="False" HorizontalAlignment="Left" Height="34" Margin="350,380,0,0" VerticalAlignment="Top" Width="36" Source="/icons8-add-image-30.png"/>
-        <Image IsHitTestVisible="False" HorizontalAlignment="Left" Height="28" Margin="353,454,0,0" VerticalAlignment="Top" Width="30" Source="/icons8-tear-off-calendar-50.png"/>
-
 
     </Grid>
 
