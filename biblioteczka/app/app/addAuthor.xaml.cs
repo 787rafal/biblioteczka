@@ -96,6 +96,8 @@ namespace app
 
                 }
 
+                conn.close_db();
+
             }
             else
             {

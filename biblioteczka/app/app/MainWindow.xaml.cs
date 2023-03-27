@@ -51,6 +51,8 @@ namespace app
 
             }
 
+            database.close_db();
+
             status1.Content = "TITLE";
             status2.Content = "AUTHOR";
 

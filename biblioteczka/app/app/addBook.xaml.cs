@@ -67,6 +67,8 @@ namespace app
 
             }
 
+            database.close_db();
+
         }
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -128,6 +130,8 @@ namespace app
                     _instance2 = null;
 
                 }
+
+                conn.close_db();
             
             }else
             {
@@ -175,6 +179,8 @@ namespace app
                         }
 
                     }
+
+                    connect.close_db();
                 }
                 else
                 {
