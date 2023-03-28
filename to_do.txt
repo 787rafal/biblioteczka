@@ -1,1 +1,3 @@
-CHYBA MAMY WSZYSTKO!!! ^^
+--hover na plusiku
+--poprawic select zeby doawalo na koniec itd
+--w sumie nie wiem co jeszcze jak masz pomysl to zrob albo napisz tutaj
