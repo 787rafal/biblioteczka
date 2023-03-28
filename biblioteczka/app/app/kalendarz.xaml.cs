@@ -41,7 +41,7 @@ namespace app
         {
 
             string date1 = cal.SelectedDate.ToString();
-            string date2 = DateTime.Now.ToString("dd/MM/yyyy");
+            string date2 = DateTime.Now.AddDays(14).ToString("dd/MM/yyyy");
 
 
             if ( (!String.IsNullOrEmpty(date1)) && (DateTime.Parse(date1) > DateTime.Parse(date2)))

@@ -55,13 +55,13 @@ namespace app
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
-            if (addBook._instance2 != null)
-            {
-                addBook._instance2.Show();
-            }
             if (addAuthor._instance3 != null)
             {
                 addAuthor._instance3.Show();
+            }
+            else if (addBook._instance2 != null)
+            {
+                addBook._instance2.Show();
             }
             if(kalendarz._instance4 != null)
             {

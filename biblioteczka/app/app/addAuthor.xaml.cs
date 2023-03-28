@@ -37,9 +37,16 @@ namespace app
         private void close_btn(object sender, RoutedEventArgs e)
         {
             this.Close();
-            MainWindow._instance.loadData();
-            MainWindow._instance.Show();
             _instance3 = null;
+            if (MainWindow._instance.author == 0)
+            {
+                MainWindow._instance.loadData();
+                MainWindow._instance.Show();
+            }
+            else if (MainWindow._instance.author == 1)
+            {
+                addBook._instance2.Show();
+            }
         }
 
         private void min_btn(object sender, RoutedEventArgs e)
@@ -84,9 +91,18 @@ namespace app
 
                         this.Close();
 
-                        MainWindow._instance.loadData();
-
-                        MainWindow._instance.Show();
+                        if (MainWindow._instance.author == 0)
+                        {
+                            MainWindow._instance.loadData();
+                            MainWindow._instance.Show();
+                        }
+                        else if (MainWindow._instance.author == 1)
+                        {
+                            addBook._instance2.Show();
+                            addBook._instance2.selectAuthor.Items.Clear();
+                            ksiazki.wczytaj_gatunki(conn, addBook._instance2.selectAuthor);
+                            //addBook._instance2.selectAuthor.SelectedIndex = 0;
+                        }
 
                         _instance3 = null;
                     }
@@ -173,9 +189,16 @@ namespace app
         private void Window_Closed(object sender, EventArgs e)
         {
             this.Close();
-            MainWindow._instance.loadData();
-            MainWindow._instance.Show();
             _instance3 = null;
+            if (MainWindow._instance.author == 0)
+            {
+                MainWindow._instance.loadData();
+                MainWindow._instance.Show();
+            }
+            else if (MainWindow._instance.author == 1)
+            {
+                addBook._instance2.Show();
+            }
         }
     }
 }

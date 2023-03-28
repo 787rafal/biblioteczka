@@ -25,6 +25,7 @@ namespace app
     {
         public static MainWindow _instance;
         public int error { get; set; }
+        public int author { get; set; }
 
         public MainWindow()
         {
@@ -144,6 +145,7 @@ namespace app
         {
             addAuthor autor = new addAuthor();
             autor.Show();
+            this.author = 0;
             this.Hide();
         }
 

@@ -38,23 +38,26 @@ namespace app
             if (database.connect_db())
             {
 
-                string query = "SELECT * FROM authors;";
+                //string query = "SELECT * FROM authors;";
                 string query2 = "SELECT * FROM genres;";
-                MySqlCommand cmd = new MySqlCommand(query, database.sql);
+                //MySqlCommand cmd = new MySqlCommand(query, database.sql);
                 MySqlCommand cmd2 = new MySqlCommand(query2, database.sql);
-                MySqlDataReader reader = cmd.ExecuteReader();
+                //MySqlDataReader reader = cmd.ExecuteReader();
 
-                while (reader.Read())
-                {
-                    ComboBoxItem item = new ComboBoxItem();
-                    item.Content = reader["name"] + " " + reader["last_name"];
-                    item.Tag = reader["id_author"];
-                    selectAuthor.Items.Add(item);
+                //while (reader.Read())
+                //{
+                //    ComboBoxItem item = new ComboBoxItem();
+                //    item.Content = reader["name"] + " " + reader["last_name"];
+                //    item.Tag = reader["id_author"];
+                //    selectAuthor.Items.Add(item);
 
 
-                }
+                //}
 
-                reader.Close();
+                //reader.Close();
+
+                ksiazki.wczytaj_gatunki(database, selectAuthor);
+
                 MySqlDataReader reader2 = cmd2.ExecuteReader();
 
                 while (reader2.Read())
@@ -299,6 +302,14 @@ namespace app
             MainWindow._instance.loadData();
             MainWindow._instance.Show();
             _instance2 = null;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
+            addAuthor author = new addAuthor();
+            MainWindow._instance.author = 1;
+            author.Show();
         }
     }
 }

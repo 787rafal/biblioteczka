@@ -200,6 +200,33 @@ namespace app
         }
 
 
+        public static void wczytaj_gatunki(database database, System.Windows.Controls.ComboBox combo)
+        {
+
+            //System.Windows.Controls
+            //System.Windows.Forms
+
+            string query = "SELECT * FROM authors";
+            MySqlCommand cmd = new MySqlCommand(query, database.sql);
+            MySqlDataReader reader = cmd.ExecuteReader();
+
+            combo.Items.Add("AUTHORS: ");
+
+            addBook._instance2.selectAuthor.SelectedIndex = 0;
+
+            while (reader.Read())
+            {
+                ComboBoxItem item = new ComboBoxItem();
+                item.Content = reader["name"] + " " + reader["last_name"];
+                item.Tag = reader["id_author"];
+                combo.Items.Add(item);
+            }
+
+            reader.Close();
+
+        }
+
+
 
 
 
