@@ -17,6 +17,7 @@
                 <ResourceDictionary Source="style_addBook/publicationDateButton.xaml"/>
                 <ResourceDictionary Source="style_addBook/addBook_RoundedSelectStyle.xaml"/>
                 <ResourceDictionary Source="style_addBook/imageButton.xaml"/>
+                <ResourceDictionary Source="style_addBook/xbutton.xaml"/>
 
                 <ResourceDictionary Source="scroll/editableScrollbar.xaml"/>
             </ResourceDictionary.MergedDictionaries>

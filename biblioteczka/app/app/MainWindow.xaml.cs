@@ -79,7 +79,7 @@ namespace app
             var database = new database();
             if (database.connect_db())
             {                
-                string query = "SELECT * FROM books JOIN authors ON author_id = id_author JOIN genres ON genre_id = id_genres;";
+                string query = "SELECT * FROM books JOIN authors ON author_id = id_author JOIN genres ON genre_id = id_genres ORDER BY id_book;";
 
                 ksiazki.wyswietl(query, database, kafelki);
 
@@ -203,30 +203,30 @@ namespace app
                 {
                     if (szukaj == "")
                     {
-                        query = "SELECT * FROM books JOIN authors ON author_id = id_author JOIN genres ON genre_id = id_genres;";
+                        query = "SELECT * FROM books JOIN authors ON author_id = id_author JOIN genres ON genre_id = id_genres ORDER BY id_book;";
                     }
                     else if (radio == "AUTHOR")
                     {
-                        query = "SELECT * FROM books JOIN authors ON author_id = id_author JOIN genres ON genre_id = id_genres WHERE concat(name,' ',last_name) LIKE '%"+ szukaj +"%';";
+                        query = "SELECT * FROM books JOIN authors ON author_id = id_author JOIN genres ON genre_id = id_genres WHERE concat(name,' ',last_name) LIKE '%"+ szukaj +"%' ORDER BY id_book;";
                     }
                     else if (radio == "TITLE")
                     {
-                        query = "SELECT * FROM books JOIN authors ON author_id = id_author JOIN genres ON genre_id = id_genres WHERE TITLE LIKE '" + szukaj + "%' OR TITLE LIKE '%" + szukaj + "%' OR TITLE LIKE '%" + szukaj + "';";
+                        query = "SELECT * FROM books JOIN authors ON author_id = id_author JOIN genres ON genre_id = id_genres WHERE TITLE LIKE '" + szukaj + "%' OR TITLE LIKE '%" + szukaj + "%' OR TITLE LIKE '%" + szukaj + "' ORDER BY id_book;";
                     }
                 }
                 else if (gen != "None" && gen != "GENRES")
                 {
                     if (szukaj == "")
                     {
-                        query = "SELECT * FROM books JOIN authors ON author_id = id_author JOIN genres ON genre_id = id_genres WHERE name_genre = '" + gen + "';";
+                        query = "SELECT * FROM books JOIN authors ON author_id = id_author JOIN genres ON genre_id = id_genres WHERE name_genre = '" + gen + "' ORDER BY id_book;";
                     }
                     else if (radio == "AUTHOR")
                     {
-                        query = "SELECT * FROM books JOIN authors ON author_id = id_author JOIN genres ON genre_id = id_genres WHERE name_genre = '" + gen + "' AND concat(name,' ',last_name) LIKE '%"+ szukaj +"%';";
+                        query = "SELECT * FROM books JOIN authors ON author_id = id_author JOIN genres ON genre_id = id_genres WHERE name_genre = '" + gen + "' AND concat(name,' ',last_name) LIKE '%"+ szukaj +"%' ORDER BY id_book;";
                     }
                     else if (radio == "TITLE")
                     {
-                        query = "SELECT * FROM books JOIN authors ON author_id = id_author JOIN genres ON genre_id = id_genres WHERE name_genre = '" + gen + "' AND (TITLE LIKE '" + szukaj + "%' OR TITLE LIKE '%" + szukaj + "%' OR TITLE LIKE '%" + szukaj + "');";
+                        query = "SELECT * FROM books JOIN authors ON author_id = id_author JOIN genres ON genre_id = id_genres WHERE name_genre = '" + gen + "' AND (TITLE LIKE '" + szukaj + "%' OR TITLE LIKE '%" + szukaj + "%' OR TITLE LIKE '%" + szukaj + "') ORDER BY id_book;";
                     }
                 }
 

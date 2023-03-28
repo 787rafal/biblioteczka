@@ -54,5 +54,8 @@
     <Page Update="style_addBook\publicationDateButton.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="style_addBook\xbutton.xaml">
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
 </Project>
