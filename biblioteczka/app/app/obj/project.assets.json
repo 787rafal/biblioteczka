@@ -1556,19 +1556,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Rafal\\.nuget\\packages\\": {}
+    "C:\\Users\\Rafał\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\STUDIA\\PROGRAMOWANIE IV\\biblioteczka\\biblioteczka\\app\\app\\app.csproj",
+      "projectUniqueName": "C:\\Users\\Rafał\\Desktop\\studia\\Biblioteczka\\biblioteczka\\app\\app\\app.csproj",
       "projectName": "app",
-      "projectPath": "G:\\STUDIA\\PROGRAMOWANIE IV\\biblioteczka\\biblioteczka\\app\\app\\app.csproj",
-      "packagesPath": "C:\\Users\\Rafal\\.nuget\\packages\\",
-      "outputPath": "G:\\STUDIA\\PROGRAMOWANIE IV\\biblioteczka\\biblioteczka\\app\\app\\obj\\",
+      "projectPath": "C:\\Users\\Rafał\\Desktop\\studia\\Biblioteczka\\biblioteczka\\app\\app\\app.csproj",
+      "packagesPath": "C:\\Users\\Rafał\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Rafał\\Desktop\\studia\\Biblioteczka\\biblioteczka\\app\\app\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Rafal\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Rafał\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1622,7 +1622,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

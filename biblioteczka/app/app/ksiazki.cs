@@ -194,6 +194,24 @@ namespace app
                 i++;
             }
             dataReader.Close();
+            if(i == 0)
+
+            {
+                TextBlock title = new TextBlock
+                {
+                    Width = 450,
+                    Height = 25,
+                    FontSize = 20,
+                    Foreground = Brushes.Black,
+                    FontWeight = FontWeights.Bold,
+                    Text = "BRAK KSIĄŻEK DO WYŚWIETLENIA",
+                    VerticalAlignment = VerticalAlignment.Center,
+                    Margin = new Thickness(170, 0, 0, 0),
+                    Background = null,
+                };
+                kafelki.Children.Add(title);
+
+            }
 
             MainWindow._instance.buttonRadius();
 
